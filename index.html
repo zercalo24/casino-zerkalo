@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КАЗИНО-ЗЕРКАЛО | 42 лучших казино</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0b0e14;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ШАПКА С ЗОЛОТОМ */
+        .header {
+            padding: 25px 0;
+            border-bottom: 2px solid #ffaa33;
+            background: linear-gradient(145deg, #0f1219, #1a1f2b);
+            box-shadow: 0 5px 20px rgba(255, 170, 51, 0.2);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* НОВОЕ ЗОЛОТОЕ НАЗВАНИЕ */
+        .logo {
+            font-size: 36px;
+            font-weight: 900;
+            font-family: 'Montserrat', 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(145deg, #FFD700, #FFA500, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.3);
+            animation: goldShine 3s infinite;
+        }
+
+        @keyframes goldShine {
+            0% { filter: brightness(1); }
+            50% { filter: brightness(1.2); text-shadow: 0 0 15px #FFD700, 0 0 30px #FFA500; }
+            100% { filter: brightness(1); }
+        }
+
+        .sub-logo {
+            font-size: 14px;
+            color: #b0b5c0;
+            letter-spacing: 1px;
+            margin-top: -5px;
+            text-align: left;
+        }
+
+        .sub-logo span {
+            color: #ffaa33;
+        }
+
+        .channel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #27A6E5;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+            box-shadow: 0 5px 15px rgba(39, 166, 229, 0.3);
+        }
+
+        .channel-link:hover {
+            background: #3cb3f0;
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(39, 166, 229, 0.5);
+        }
+
+        .hero {
+            padding: 50px 0 30px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #ffaa33;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #b0b5c0;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffaa33;
+            text-shadow: 0 0 10px rgba(255, 170, 51, 0.3);
+        }
+
+        .stat-label {
+            color: #9a9fb0;
+        }
+
+        .casino-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin: 40px 0 60px;
+        }
+
+        /* КАРТОЧКИ С ЗОЛОТЫМ СВЕЧЕНИЕМ ПРИ НАВЕДЕНИИ */
+        .casino-card {
+            background: #1a1f2b;
+            border-radius: 24px;
+            padding: 24px 18px;
+            text-align: center;
+            border: 1px solid #2f3542;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .casino-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 170, 51, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .casino-card:hover {
+            transform: translateY(-6px);
+            border-color: #ffaa33;
+            box-shadow: 0 15px 30px -5px #ffaa33;
+        }
+
+        .casino-card:hover::before {
+            opacity: 1;
+        }
+
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            background: #252c3b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ffaa33;
+            box-shadow: 0 0 15px rgba(255, 170, 51, 0.3);
+        }
+
+        .casino-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            background: #252c3b;
+            border-radius: 50%;
+            display: block;
+        }
+
+        /* 3D СТИЛЬ ДЛЯ НАЗВАНИЙ КАЗИНО */
+        .casino-name {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: linear-gradient(145deg, #fff, #ffaa33);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(255,170,51,0.3);
+            transform: perspective(500px) translateZ(5px);
+        }
+
+        .bonus-badge {
+            background: linear-gradient(145deg, #ffaa33, #ff8c00);
+            color: #0b0e14;
+            font-weight: 800;
+            padding: 6px 12px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 12px auto 10px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(255, 170, 51, 0.3);
+            border: 1px solid #ffd700;
+        }
+
+        .casino-desc {
+            color: #b0b5c0;
+            margin-bottom: 18px;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+
+        .btn-play {
+            display: inline-block;
+            background: linear-gradient(145deg, #ffaa33, #ff8c00);
+            color: #0b0e14;
+            font-weight: 800;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            border-bottom: 4px solid #b8731e;
+            transition: 0.1s;
+            width: 100%;
+            font-size: 15px;
+            word-break: break-word;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(255, 170, 51, 0.2);
+        }
+
+        .btn-play:hover {
+            background: linear-gradient(145deg, #ffb84d, #ff9f1a);
+            border-bottom-width: 2px;
+            transform: translateY(2px);
+            box-shadow: 0 8px 20px rgba(255, 170, 51, 0.4);
+        }
+
+        .features {
+            padding: 40px 0;
+            background: #11161f;
+            border-radius: 40px;
+            margin: 40px 0;
+            border: 1px solid #ffaa33;
+            box-shadow: 0 0 30px rgba(255, 170, 51, 0.1);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 36px;
+            color: #ffaa33;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 8px #ffaa33);
+        }
+
+        .tg-banner {
+            background: linear-gradient(145deg, #27A6E5, #1f7fb0);
+            border-radius: 40px;
+            padding: 50px 30px;
+            text-align: center;
+            margin: 50px 0;
+            border: 1px solid #ffaa33;
+            box-shadow: 0 0 30px rgba(39, 166, 229, 0.3);
+        }
+
+        .tg-banner h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .btn-tg {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #1f7fb0;
+            font-weight: 800;
+            padding: 16px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-size: 20px;
+            border-bottom: 4px solid #ccc;
+            transition: 0.1s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-tg:hover {
+            background: #f0f0f0;
+            border-bottom-width: 2px;
+            transform: translateY(2px);
+        }
+
+        .footer {
+            padding: 40px 0;
+            border-top: 2px solid #ffaa33;
+            text-align: center;
+            color: #7a7f90;
+            background: linear-gradient(145deg, #0f1219, #1a1f2b);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #ffaa33;
+        }
+
+        .eighteen-plus {
+            background: #dc3545;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+        }
+
+        @media (max-width: 700px) {
+            .logo { font-size: 28px; }
+            .hero h1 { font-size: 32px; }
+            .btn-tg { font-size: 18px; padding: 14px 25px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div>
+                <div class="logo">КАЗИНО-ЗЕРКАЛО</div>
+                <div class="sub-logo"><span>✦</span> всегда рабочие ссылки на онлайн казино <span>✦</span></div>
+            </div>
+            <a href="https://t.me/igrovyes_avtomaty" class="channel-link" target="_blank">
+                <i class="fab fa-telegram-plane"></i> Telegram канал
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>🔥 TOP <span>40</span> ONLINE CASINO</h1>
+            <p>Только проверенные проекты с бонусами. Выбирай, забирай бонус и играй.</p>
+            <div class="stats">
+                <div class="stat-item"><div class="stat-number">14 760+</div><div class="stat-label">подписчиков</div></div>
+                <div class="stat-item"><div class="stat-number">42</div><div class="stat-label">казино</div></div>
+                <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">актуальные бонусы</div></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="casino-grid">
+            <!-- Здесь идут все 42 карточки с классом casino-name для 3D эффекта -->
+            <!-- Vavada -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/vavada.png" alt="Vavada" class="casino-logo"></div>
+                <div class="casino-name">VAVADA</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Более 3000 слотов, быстрые выплаты, RTP 98%</p>
+                <a href="https://gate707.com/?promo=d9d43ea1-0cd0-4dd8-9a86-28d352183bfe&target=register" class="btn-play">Играть</a>
+            </div>
+            <!-- Duel Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/duel.png" alt="Duel Casino" class="casino-logo"></div>
+                <div class="casino-name">DUEL CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Лицензия Кюрасао, live-дилеры, быстрые выплаты</p>
+                <a href="https://duel.com/r/RUBLIK" class="btn-play">Играть</a>
+            </div>
+            <!-- 1Win -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/1win.png" alt="1Win" class="casino-logo"></div>
+                <div class="casino-name">1WIN</div>
+                <div class="bonus-badge">Welcome Pack 500% и 500 FS</div>
+                <p class="casino-desc">50000+ игр, турниры, розыгрыши</p>
+                <a href="https://one-vv893.com/?p=sxqe" class="btn-play">Играть</a>
+            </div>
+            <!-- Stake -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/stake.png" alt="Stake" class="casino-logo"></div>
+                <div class="casino-name">STAKE</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Крипто-казино, мгновенные выплаты</p>
+                <a href="http://stake1036.com/?c=UdQh5cRu" class="btn-play">Играть</a>
+            </div>
+            <!-- Fugu Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/fugu.png" alt="Fugu Casino" class="casino-logo"></div>
+                <div class="casino-name">FUGU CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Новый проект на мировом рынке Онлайн Казино</p>
+                <a href="https://fugu-way-one.com/c1536be58" class="btn-play">Играть</a>
+            </div>
+            <!-- Cat Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/cat.png" alt="Cat Casino" class="casino-logo"></div>
+                <div class="casino-name">CAT CASINO</div>
+                <div class="bonus-badge">200% до 100 000₽</div>
+                <p class="casino-desc">Ежедневные фриспины, Бонусы на день рождения</p>
+                <a href="https://triumphant-hall.com/sbrl3ljkm" class="btn-play">Играть</a>
+            </div>
+            <!-- Leebet Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/leebet.png" alt="Leebet Casino" class="casino-logo"></div>
+                <div class="casino-name">LEEBET CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Leebet Бонусы, Розыгрыши, Ежедневное колесо удачи</p>
+                <a href="https://play-leebet-three.com/deyqu7sml" class="btn-play">Играть</a>
+            </div>
+            <!-- Joy Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/joy.png" alt="Joy Casino" class="casino-logo"></div>
+                <div class="casino-name">JOY CASINO</div>
+                <div class="bonus-badge">200% + 200 FS</div>
+                <p class="casino-desc">Огромный выбор слотов, Джекпот, Бонусы новым игрокам</p>
+                <a href="https://clck.ru/3QXq6p" class="btn-play">Играть</a>
+            </div>
+            <!-- Criptoboss -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/cryptoboss.png" alt="Criptoboss" class="casino-logo"></div>
+                <div class="casino-name">CRIPTOBOSS</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Разнообразие игр более 50000, Прозрачные выплаты, Бонусы новым игрокам</p>
+                <a href="https://cryptobossc.online/d247e5ab0" class="btn-play">Играть</a>
+            </div>
+            <!-- Rox Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/rox.png" alt="Rox Casino" class="casino-logo"></div>
+                <div class="casino-name">ROX CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Быстрые выплаты, топовые слоты, джекпот</p>
+                <a href="https://clck.ru/34339T" class="btn-play">Играть</a>
+            </div>
+            <!-- Banda Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/banda.png" alt="Banda Casino" class="casino-logo"></div>
+                <div class="casino-name">BANDA CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Стильный дизайн, Быстрые Выплаты, Оперативная техподдержка</p>
+                <a href="https://playlightzone.com/dmnhefnvq" class="btn-play">Играть</a>
+            </div>
+            <!-- Champion Slots -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/champion.png" alt="Champion Slots" class="casino-logo"></div>
+                <div class="casino-name">CHAMPION SLOTS</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Турниры,фриспины, розыгрыши</p>
+                <a href="https://clck.ru/3PEbRM" class="btn-play">Играть</a>
+            </div>
+            <!-- Ramenbet -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/ramenbet.png" alt="Ramenbet" class="casino-logo"></div>
+                <div class="casino-name">RAMENBET</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Уникальный дизайн, Разнообразие слотов и приветственных Бонусов</p>
+                <a href="https://clck.ru/39JnjJ" class="btn-play">Играть</a>
+            </div>
+            <!-- Casino X -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/casinox.png" alt="Casino X" class="casino-logo"></div>
+                <div class="casino-name">CASINO X</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Популярный бренд, Cashback, Бонусы</p>
+                <a href="https://21631.gameshere.xyz/ru/registration2?partner=p21631p3326886p3e51" class="btn-play">Играть</a>
+            </div>
+            <!-- Gama Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/gama.png" alt="Gama Casino" class="casino-logo"></div>
+                <div class="casino-name">GAMA CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Большой выбор игр, провайдеров, быстрые платежи и выводы</p>
+                <a href="https://starforge-race.com/sfevqs2sr" class="btn-play">Играть</a>
+            </div>
+            <!-- Kent Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/kent.png" alt="Kent Casino" class="casino-logo"></div>
+                <div class="casino-name">KENT CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Премиум уровень, Подарки,Лутбоксы</p>
+                <a href="https://holo-neonrun.com/sntbu9gqi" class="btn-play">Играть</a>
+            </div>
+            <!-- Beef Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/beef.png" alt="Beef Casino" class="casino-logo"></div>
+                <div class="casino-name">BEEF CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Рейкбэк каждый день, неделю, Бонусы</p>
+                <a href="https://beef-route-four.com/c3f6ec874" class="btn-play">Играть</a>
+            </div>
+            <!-- Martin Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/martin.png" alt="Martin Casino" class="casino-logo"></div>
+                <div class="casino-name">MARTIN CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Стильное казино, Мгновенные выплаты</p>
+                <a href="https://clck.ru/3Mnh9o" class="btn-play">Играть</a>
+            </div>
+            <!-- Flagman Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/flagman.png" alt="Flagman Casino" class="casino-logo"></div>
+                <div class="casino-name">FLAGMAN CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Лидер индустрии, Розыгрыши, Турниры</p>
+                <a href="https://flagmanway1.com/c5068b5f6" class="btn-play">Играть</a>
+            </div>
+            <!-- Irvin Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/irvin.png" alt="Irvin Casino" class="casino-logo"></div>
+                <div class="casino-name">IRVIN CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Мгновенные выплаты</p>
+                <a href="https://rwn-blrs21.com/c1452dd34" class="btn-play">Играть</a>
+            </div>
+            <!-- Gizbo Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/gizbo.png" alt="Gizbo Casino" class="casino-logo"></div>
+                <div class="casino-name">GIZBO CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Футуристичный дизайн, приветственные бонусы новым игрокам</p>
+                <a href="https://gzb-way03.com/c2b450be9" class="btn-play">Играть</a>
+            </div>
+            <!-- 1 GO Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/1go.png" alt="1 GO Casino" class="casino-logo"></div>
+                <div class="casino-name">1 GO CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Вперед к победе, Ежедневные Бонусы</p>
+                <a href="https://1go-blrs10.com/ca2275e6d" class="btn-play">Играть</a>
+            </div>
+            <!-- Starda Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/starda.png" alt="Starda Casino" class="casino-logo"></div>
+                <div class="casino-name">STARDA CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Мгновенные выплаты, щедрая политика Бонусов</p>
+                <a href="https://strd-blse21.com/cf2b97cef" class="btn-play">Играть</a>
+            </div>
+            <!-- Monro Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/monro.png" alt="Monro Casino" class="casino-logo"></div>
+                <div class="casino-name">MONRO CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Загадочная атмосфера, 50000 слото, бонусы</p>
+                <a href="https://mnr-blrs21.com/c5335a257" class="btn-play">Играть</a>
+            </div>
+            <!-- Drip Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/drip.png" alt="Drip Casino" class="casino-logo"></div>
+                <div class="casino-name">DRIP CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Мнгновенные выплаты,Кэшбек, Бонусы</p>
+                <a href="https://drp-irrs10.com/c18ebfa90" class="btn-play">Играть</a>
+            </div>
+            <!-- Sol Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/sol.png" alt="Sol Casino" class="casino-logo"></div>
+                <div class="casino-name">SOL CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Топ выплаты, Бонусы, Турниры</p>
+                <a href="https://clck.ru/3433Fz" class="btn-play">Играть</a>
+            </div>
+            <!-- Jet Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/jet.png" alt="Jet Casino" class="casino-logo"></div>
+                <div class="casino-name">JET CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Быстрый старт, помощь новичкам, щедрые бонусы</p>
+                <a href="https://jet-blrs10.com/c7b0bc5b9" class="btn-play">Играть</a>
+            </div>
+            <!-- Izzi Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/izzi.png" alt="Izzi Casino" class="casino-logo"></div>
+                <div class="casino-name">IZZI CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Вкусный бонусы, промокоды, бонусы</p>
+                <a href="https://izzi-blrs10.com/c123e81f2" class="btn-play">Играть</a>
+            </div>
+            <!-- Lexx Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/lexx.png" alt="Lexx Casino" class="casino-logo"></div>
+                <div class="casino-name">LEXX CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Честная игра, Лицензия Кюрасао, мгновенные выплаты</p>
+                <a href="https://lexyway1.com/c8ef27fcf" class="btn-play">Играть</a>
+            </div>
+            <!-- Volna Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/volna.png" alt="Volna Casino" class="casino-logo"></div>
+                <div class="casino-name">VOLNA CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Лицензия Кюрасао, БонусыЮ Кэшбэк</p>
+                <a href="https://vln-blrs10.com/c4e395fcb" class="btn-play">Играть</a>
+            </div>
+            <!-- Legzo Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/legzo.png" alt="Legzo Casino" class="casino-logo"></div>
+                <div class="casino-name">LEGZO CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Много слотов Бонусов </p>
+                <a href="https://clck.ru/3433E2" class="btn-play">Играть</a>
+            </div>
+            <!-- Fresh Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/fresh.png" alt="Fresh Casino" class="casino-logo"></div>
+                <div class="casino-name">FRESH CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Новинки игр, топ турниры слоты</p>
+                <a href="https://clck.ru/3433CW" class="btn-play">Играть</a>
+            </div>
+            <!-- Daddy Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/daddy.png" alt="Daddy Casino" class="casino-logo"></div>
+                <div class="casino-name">DADDY CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Бонусы Каждый День</p>
+                <a href="https://molten-emberpath.com/smaha6mhb" class="btn-play">Играть</a>
+            </div>
+            <!-- R7 Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/r7.png" alt="R7 Casino" class="casino-logo"></div>
+                <div class="casino-name">R7 CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Полетели! Бонусы Промокоды Турниры</p>
+                <a href="https://cosmos-flight.com/stcmmmdge" class="btn-play">Играть</a>
+            </div>
+            <!-- Комета Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/kometa.png" alt="Комета Casino" class="casino-logo"></div>
+                <div class="casino-name">КОМЕТА CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Яркая вспышка, Яркие выигрыши</p>
+                <a href="https://ignited-lavapass.com/sws2h6fse" class="btn-play">Играть</a>
+            </div>
+            <!-- Arkada Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/arkada.png" alt="Arkada Casino" class="casino-logo"></div>
+                <div class="casino-name">ARKADA CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Бонусы Подарки </p>
+                <a href="https://prismed-cyberlane.com/svd9sjada" class="btn-play">Играть</a>
+            </div>
+            <!-- Куш Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/kush.png" alt="Куш Casino" class="casino-logo"></div>
+                <div class="casino-name">КУШ CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Сорви куш своей мечты</p>
+                <a href="https://playzoneksh.com/dqyptbuu1" class="btn-play">Играть</a>
+            </div>
+            <!-- Cactus Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/cactus.png" alt="Cactus Casino" class="casino-logo"></div>
+                <div class="casino-name">CACTUS CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Колкий дизайн, дерзкие выплаты повышенный кэшбэк</p>
+                <a href="https://lavoluntadisabel.xyz/affiliate/c_4wj3z1mk?path=%2Fbonuses" class="btn-play">Играть</a>
+            </div>
+            <!-- Auf Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/auf.png" alt="Auf Casino" class="casino-logo"></div>
+                <div class="casino-name">AUF CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Приветственный бонус, Колесо Удачи</p>
+                <a href="https://aufas.com/d5b5799f1" class="btn-play">Играть</a>
+            </div>
+            <!-- Unlim Casino -->
+            <div class="casino-card">
+                <div class="icon-wrapper"><img src="images/unlim.png" alt="Unlim Casino" class="casino-logo"></div>
+                <div class="casino-name">UNLIM CASINO</div>
+                <div class="bonus-badge">Welcome Pack 250% и 500 FS</div>
+                <p class="casino-desc">Нет границ для Выигрыщей</p>
+                <a href="https://unlimc.net/d2531e71a" class="btn-play">Играть</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="features">
+            <div class="features-grid">
+                <div class="feature-item"><i class="fas fa-chart-line"></i><h4>Честный RTP</h4><p>Проверенная статистика</p></div>
+                <div class="feature-item"><i class="fas fa-gift"></i><h4>Эксклюзивные бонусы</h4><p>Только для подписчиков</p></div>
+                <div class="feature-item"><i class="fas fa-mobile-alt"></i><h4>Демо-режим</h4><p>Играй бесплатно</p></div>
+                <div class="feature-item"><i class="fas fa-clock"></i><h4>Обновления 24/7</h4><p>Новые бонусы каждый день</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tg-banner">
+            <h2>📱 Больше бонусов в Telegram</h2>
+            <p>Подпишись на канал «Игровые автоматы | Бонусы»</p>
+            <a href="https://t.me/igrovyes_avtomaty" class="btn-tg" target="_blank">
+                <i class="fab fa-telegram-plane"></i> @igrovyes_avtomaty
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="logo" style="font-size: 24px; margin-bottom: 15px;">КАЗИНО-ЗЕРКАЛО</div>
+            <div class="sub-logo" style="margin-bottom: 15px;">всегда рабочие ссылки на онлайн казино</div>
+            <div class="footer-links">
+                <a href="#">Политика</a>
+                <a href="#">Ответственная игра</a>
+                <a href="#">Контакты</a>
+            </div>
+            <div class="eighteen-plus">18+</div>
+            <p>© 2026 КАЗИНО-ЗЕРКАЛО | Все права защищены</p>
+        </div>
+    </footer>
+</body>
+</html>
