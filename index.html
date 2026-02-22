@@ -33,53 +33,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: background-color 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: background-color 0.3s, color 0.2s;
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0c12;
+            color: #fff;
             line-height: 1.5;
             -webkit-tap-highlight-color: transparent;
             position: relative;
         }
-        
-        /* ========== ТЁМНО-СИНЯЯ ТЕМА (по умолчанию) ========== */
-        body.theme-blue {
-            background: #0a1a2f;
-            color: #fff;
-        }
-        body.theme-blue .video-background video { filter: brightness(0.3) blur(3px) hue-rotate(200deg); }
-        body.theme-blue .counter-number { color: #ffd700; text-shadow: 0 0 15px #ffd700; }
-        body.theme-blue .bonus-link { background: linear-gradient(145deg, #ffd700, #ffaa00); color: #0a1a2f; border-bottom-color: #b8860b; }
-        body.theme-blue .btn-tg { background: #ffd700; color: #0a1a2f; border-bottom-color: #b8860b; box-shadow: 0 10px 20px -5px #ffd700; }
-        body.theme-blue .casino-day { border-color: #ffd700; }
-        body.theme-blue .section-title { color: #ffd700; text-shadow: 0 0 10px #ffd700; }
-        
-        /* ========== КИБЕРПАНК ТЕМА ========== */
-        body.theme-cyber {
-            background: #0a0a0f;
-            color: #fff;
-        }
-        body.theme-cyber .video-background video { filter: brightness(0.3) blur(3px) hue-rotate(280deg) saturate(2); }
-        body.theme-cyber .counter-number { color: #ff2e63; text-shadow: 0 0 20px #ff2e63, 0 0 40px #ff2e63; }
-        body.theme-cyber .bonus-link { background: linear-gradient(145deg, #ff2e63, #ff0066); color: #fff; border-bottom-color: #b8004f; box-shadow: 0 0 15px #ff2e63; }
-        body.theme-cyber .btn-tg { background: #1e90ff; color: #fff; border-bottom-color: #0f5e9c; box-shadow: 0 0 20px #1e90ff; }
-        body.theme-cyber .casino-day { border-color: #ff2e63; box-shadow: 0 0 30px #ff2e63; }
-        body.theme-cyber .section-title { color: #ff2e63; text-shadow: 0 0 10px #ff2e63, 0 0 20px #ff2e63; }
-        body.theme-cyber .logo-cloud img { filter: drop-shadow(0 0 8px #ff2e63); }
-        
-        /* ========== БОРДОВАЯ ТЕМА ========== */
-        body.theme-burgundy {
-            background: #1a0c0c;
-            color: #fff;
-        }
-        body.theme-burgundy .video-background video { filter: brightness(0.3) blur(3px) hue-rotate(320deg); }
-        body.theme-burgundy .counter-number { color: #b8860b; text-shadow: 0 0 20px #b8860b; }
-        body.theme-burgundy .bonus-link { background: linear-gradient(145deg, #b8860b, #8b6910); color: #1a0c0c; border-bottom-color: #6b4f0c; box-shadow: 0 0 15px #b8860b; }
-        body.theme-burgundy .btn-tg { background: #b8860b; color: #1a0c0c; border-bottom-color: #6b4f0c; box-shadow: 0 10px 20px -5px #b8860b; }
-        body.theme-burgundy .casino-day { border-color: #b8860b; background: linear-gradient(145deg, #2a1a1a, #1a0c0c); }
-        body.theme-burgundy .section-title { color: #b8860b; }
-        
-        /* ========== ОБЩИЕ СТИЛИ ========== */
         .video-background {
             position: fixed;
             top: 0;
@@ -99,7 +62,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             object-fit: cover;
-            transition: filter 0.5s;
+            filter: brightness(0.3) blur(3px);
         }
         .container {
             max-width: 1300px;
@@ -108,34 +71,6 @@
             position: relative;
             z-index: 1;
         }
-        
-        /* Кнопка переключения темы */
-        .theme-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            display: flex;
-            gap: 10px;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(5px);
-            padding: 12px 20px;
-            border-radius: 60px;
-            border: 2px solid #ffaa33;
-        }
-        .theme-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid transparent;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .theme-btn:hover { transform: scale(1.15); border-color: white; }
-        .theme-btn.blue { background: #0a1a2f; box-shadow: 0 0 15px #ffd700; }
-        .theme-btn.cyber { background: #0a0a0f; box-shadow: 0 0 15px #ff2e63; }
-        .theme-btn.burgundy { background: #1a0c0c; box-shadow: 0 0 15px #b8860b; }
-        
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -145,14 +80,13 @@
             opacity: 1;
             transform: translateY(0);
         }
-        
         #scrollToTop {
             position: fixed;
             bottom: 110px;
             right: 30px;
             width: 50px;
             height: 50px;
-            background: currentColor;
+            background: #ffaa33;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -166,7 +100,6 @@
             z-index: 98;
         }
         #scrollToTop.show { opacity: 1; }
-        
         .float-tg {
             position: fixed;
             bottom: 30px;
@@ -186,7 +119,6 @@
             z-index: 99;
             text-decoration: none;
         }
-        
         .hero {
             padding: 60px 0 20px;
             text-align: center;
@@ -204,7 +136,9 @@
                 0 3px 0 #b88a2c,
                 0 4px 0 #a6741b,
                 0 5px 0 #945f0a,
-                0 6px 8px rgba(0,0,0,0.5);
+                0 6px 8px rgba(0,0,0,0.5),
+                0 8px 10px rgba(0,0,0,0.3),
+                0 10px 15px rgba(0,0,0,0.2);
             margin-bottom: 15px;
             line-height: 1.2;
             animation: shine 3s infinite;
@@ -241,8 +175,13 @@
         }
         @keyframes pulseLogo {
             0% { transform: scale(1); opacity: 0.9; }
-            50% { transform: scale(1.08); opacity: 1; }
+            50% { transform: scale(1.08); opacity: 1; filter: brightness(1.1); }
             100% { transform: scale(1); opacity: 0.9; }
+        }
+        .logo-cloud img:hover {
+            filter: grayscale(0) brightness(1.2);
+            transform: scale(1.2) rotate(2deg);
+            animation: none;
         }
         
         .btn-tg {
@@ -250,16 +189,27 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
+            background: #27A6E5;
+            color: white;
             font-size: clamp(24px, 6vw, 32px);
             font-weight: 800;
             padding: 20px 40px;
             border-radius: 70px;
             text-decoration: none;
-            border-bottom: 5px solid;
+            border-bottom: 5px solid #1a7da8;
             transition: 0.2s;
             width: 100%;
             max-width: 600px;
             margin: 30px auto;
+        }
+        .btn-tg i {
+            font-size: clamp(32px, 7vw, 48px);
+        }
+        .btn-tg:hover {
+            background: #3cb3f0;
+            border-bottom-width: 3px;
+            transform: translateY(2px);
+            box-shadow: 0 15px 25px -5px #27A6E5;
         }
         
         .stats-grid {
@@ -269,15 +219,15 @@
             margin: 40px 0;
         }
         .counter-block, .progress-block {
-            background: rgba(255,255,255,0.03);
+            background: #1a1f2b;
             border-radius: 30px;
             padding: 25px;
             text-align: center;
-            backdrop-filter: blur(5px);
         }
         .counter-number {
             font-size: 52px;
             font-weight: 800;
+            color: #ffaa33;
             animation: pulse 2s infinite;
         }
         .progress-bar {
@@ -291,19 +241,23 @@
         .progress-fill {
             height: 100%;
             width: 68%;
-            background: linear-gradient(90deg, currentColor, #ff8c00);
+            background: linear-gradient(90deg, #ffaa33, #ff8c00);
             border-radius: 15px;
             animation: fillAnimation 2s ease-out;
         }
         
         .casino-day {
-            background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(0,0,0,0.3));
+            background: linear-gradient(145deg, #1a1f2b, #11161f);
             border-radius: 40px;
             padding: 35px;
             margin: 40px 0;
-            border: 3px solid;
+            border: 3px solid #ffaa33;
             text-align: center;
-            backdrop-filter: blur(5px);
+        }
+        .casino-day h3 {
+            color: #ffaa33;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
         .casino-day-content {
             display: flex;
@@ -316,14 +270,25 @@
             width: 120px;
             height: 120px;
             object-fit: contain;
+            border: 2px solid #ffaa33;
             border-radius: 30px;
             padding: 10px;
-            background: rgba(0,0,0,0.5);
+            background: #0a0c12;
+        }
+        .casino-day h2 {
+            font-size: 36px;
+            color: #ffaa33;
+            margin-bottom: 10px;
+        }
+        .casino-day p {
+            font-size: 20px;
+            margin-bottom: 20px;
         }
         
         .timer {
             font-size: 36px;
             font-weight: 800;
+            color: #ffaa33;
             margin: 15px 0;
         }
         
@@ -334,16 +299,33 @@
             margin: 40px 0;
         }
         .top-item {
-            background: rgba(255,255,255,0.03);
+            background: #1a1f2b;
             border-radius: 30px;
             padding: 25px;
             text-align: center;
-            border: 2px solid;
-            backdrop-filter: blur(5px);
+            border: 2px solid #ffaa33;
+        }
+        .top-item .rank {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffaa33;
+            margin-bottom: 15px;
+        }
+        .top-item img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .top-item div {
+            font-size: 18px;
+            margin: 5px 0;
         }
         
         .bonus-link {
             display: inline-block;
+            background: linear-gradient(145deg, #ffaa33, #ff8c00);
+            color: #0b0e14;
             font-weight: 800;
             padding: 12px 24px;
             border-radius: 60px;
@@ -352,33 +334,57 @@
             margin-top: 15px;
             font-size: 16px;
             text-transform: uppercase;
-            transition: 0.2s;
-        }
-        .bonus-link:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
         }
         
+        .bonuses {
+            margin: 50px 0;
+        }
+        .section-title {
+            font-size: clamp(28px, 6vw, 36px);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffaa33;
+        }
         .bonus-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
         .bonus-card {
-            background: rgba(255,255,255,0.03);
+            background: #1a1f2b;
             border-radius: 30px;
             padding: 25px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(5px);
+            border: 1px solid #2f3542;
+            transition: 0.3s;
+        }
+        .bonus-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffaa33;
+        }
+        .bonus-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .bonus-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffaa33;
+        }
+        .bonus-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #b0b5c0;
         }
         
         .chart {
-            background: rgba(255,255,255,0.03);
+            background: #1a1f2b;
             border-radius: 30px;
             padding: 25px;
             margin: 40px 0;
-            backdrop-filter: blur(5px);
         }
         .chart-bars {
             display: flex;
@@ -389,16 +395,42 @@
         }
         .bar {
             width: 35px;
-            background: currentColor;
+            background: #ffaa33;
             border-radius: 8px 8px 0 0;
             transition: height 1s;
         }
+        .bar-label {
+            text-align: center;
+            margin-top: 12px;
+            color: #b0b5c0;
+            font-size: 14px;
+        }
+        
+        .partners {
+            margin: 50px 0;
+            text-align: center;
+        }
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 25px;
+        }
+        .partner-logos i {
+            font-size: 56px;
+            color: #ffaa33;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
         
         .footer {
-            border-top: 2px solid rgba(255,255,255,0.1);
+            border-top: 2px solid #2a2f3a;
             padding: 30px 0;
             text-align: center;
+            color: #6a6f80;
             margin-top: 50px;
+            font-size: 16px;
         }
         .eighteen-plus {
             background: #dc3545;
@@ -407,23 +439,19 @@
             border-radius: 50px;
             display: inline-block;
             margin-top: 20px;
+            font-size: 16px;
         }
         
         @media (max-width: 600px) {
             .stats-grid, .top3-grid { grid-template-columns: 1fr; }
             .logo-cloud { grid-template-columns: repeat(4, 1fr); }
-            .theme-switcher { top: 10px; right: 10px; padding: 8px; }
+            .logo-cloud img { width: 55px; height: 55px; }
+            .casino-day img { width: 90px; height: 90px; }
+            .casino-day h2 { font-size: 28px; }
         }
     </style>
 </head>
-<body class="theme-blue">
-    <!-- Переключатель тем -->
-    <div class="theme-switcher">
-        <div class="theme-btn blue" onclick="setTheme('blue')" title="Тёмно-синий + золото"></div>
-        <div class="theme-btn cyber" onclick="setTheme('cyber')" title="Киберпанк неон"></div>
-        <div class="theme-btn burgundy" onclick="setTheme('burgundy')" title="Бордовый + золото"></div>
-    </div>
-
+<body>
     <div class="video-background">
         <video autoplay loop muted playsinline>
             <source src="https://assets.mixkit.co/videos/2497/2497-720.mp4" type="video/mp4">
@@ -442,94 +470,190 @@
 
         <div class="hero reveal">
             <h1>РАБОЧИЕ ЗЕРКАЛА<br>КАЗИНО ОНЛАЙН 24/7</h1>
-            <p>✅ Актуальные зеркала Vavada, 1win, Duel Casino и ещё 40+ казино. Бонусы до 500%</p>
+            <p>✅ Актуальные зеркала Vavada, 1win, Duel Casino, Stake и ещё 40+ казино. Бонусы до 500%, фриспины 2026, быстрый доступ без VPN в Telegram.</p>
         </div>
 
-        <!-- Логотипы (сокращено для читаемости, но в финале все 42) -->
+        <!-- КОЛЛАЖ ЛОГОТИПОВ -->
         <div class="logo-cloud reveal">
-            <img src="images/vavada.png" alt="Vavada" loading="lazy">
-            <img src="images/1win.png" alt="1win" loading="lazy">
-            <img src="images/duel.png" alt="Duel" loading="lazy">
-            <img src="images/stake.png" alt="Stake" loading="lazy">
-            <img src="images/fugu.png" alt="Fugu" loading="lazy">
-            <img src="images/cat.png" alt="Cat" loading="lazy">
+            <img src="images/vavada.png" alt="Vavada зеркало рабочее бонус 100% до 50000" loading="lazy">
+            <img src="images/1win.png" alt="1win актуальное зеркало бонус 500% на депозит" loading="lazy">
+            <img src="images/duel.png" alt="Duel Casino зеркало доступ 120% бонус 250 фриспинов" loading="lazy">
+            <img src="images/stake.png" alt="Stake зеркало крипто казино эксклюзивный бонус" loading="lazy">
+            <img src="images/fugu.png" alt="Fugu Casino зеркало 100% бонус 50 фриспинов" loading="lazy">
+            <img src="images/cat.png" alt="Cat Casino зеркало 200% бонус до 100000" loading="lazy">
+            <img src="images/leebet.png" alt="Leebet Casino зеркало приветственный бонус" loading="lazy">
+            <img src="images/joy.png" alt="Joy Casino зеркало 200% бонус 200 фриспинов" loading="lazy">
+            <img src="images/cryptoboss.png" alt="Criptoboss зеркало крипто казино бонус" loading="lazy">
+            <img src="images/rox.png" alt="Rox Casino зеркало 100% бонус до 50000" loading="lazy">
+            <img src="images/banda.png" alt="Banda Casino зеркало эксклюзивный бонус" loading="lazy">
+            <img src="images/champion.png" alt="Champion Slots зеркало турниры фриспины" loading="lazy">
+            <img src="images/ramenbet.png" alt="Ramenbet зеркало уникальный дизайн бонус" loading="lazy">
+            <img src="images/casinox.png" alt="Casino X зеркало популярный бренд кэшбэк" loading="lazy">
+            <img src="images/gama.png" alt="Gama Casino зеркало большой выбор игр" loading="lazy">
+            <img src="images/kent.png" alt="Kent Casino зеркало премиум уровень подарки" loading="lazy">
+            <img src="images/beef.png" alt="Beef Casino зеркало рейкбэк каждый день" loading="lazy">
+            <img src="images/martin.png" alt="Martin Casino зеркало стильное казино выплаты" loading="lazy">
+            <img src="images/flagman.png" alt="Flagman Casino зеркало лидер индустрии турниры" loading="lazy">
+            <img src="images/irvin.png" alt="Irvin Casino зеркало мгновенные выплаты" loading="lazy">
+            <img src="images/gizbo.png" alt="Gizbo Casino зеркало футуристичный дизайн" loading="lazy">
+            <img src="images/1go.png" alt="1 GO Casino зеркало ежедневные бонусы" loading="lazy">
+            <img src="images/starda.png" alt="Starda Casino зеркало мгновенные выплаты бонусы" loading="lazy">
+            <img src="images/monro.png" alt="Monro Casino зеркало загадочная атмосфера" loading="lazy">
+            <img src="images/drip.png" alt="Drip Casino зеркало мгновенные выплаты кэшбэк" loading="lazy">
+            <img src="images/sol.png" alt="Sol Casino зеркало топ выплаты турниры" loading="lazy">
+            <img src="images/jet.png" alt="Jet Casino зеркало быстрый старт помощь новичкам" loading="lazy">
+            <img src="images/izzi.png" alt="Izzi Casino зеркало вкусные бонусы промокоды" loading="lazy">
+            <img src="images/lexx.png" alt="Lexx Casino зеркало честная игра лицензия Кюрасао" loading="lazy">
+            <img src="images/volna.png" alt="Volna Casino зеркало лицензия Кюрасао бонусы" loading="lazy">
+            <img src="images/legzo.png" alt="Legzo Casino зеркало много слотов бонусов" loading="lazy">
+            <img src="images/fresh.png" alt="Fresh Casino зеркало новинки игр турниры" loading="lazy">
+            <img src="images/daddy.png" alt="Daddy Casino зеркало бонусы каждый день" loading="lazy">
+            <img src="images/r7.png" alt="R7 Casino зеркало космическая тематика турниры" loading="lazy">
+            <img src="images/kometa.png" alt="Комета Casino зеркало яркие выигрыши" loading="lazy">
+            <img src="images/arkada.png" alt="Arkada Casino зеркало аркадные игры подарки" loading="lazy">
+            <img src="images/kush.png" alt="Куш Casino зеркало джекпот крупные выигрыши" loading="lazy">
+            <img src="images/cactus.png" alt="Cactus Casino зеркало пустынная тематика кэшбэк" loading="lazy">
+            <img src="images/auf.png" alt="Auf Casino зеркало приветственный бонус колесо удачи" loading="lazy">
+            <img src="images/unlim.png" alt="Unlim Casino зеркало безлимитные выигрыши" loading="lazy">
         </div>
 
+        <!-- Кнопка Telegram -->
         <div class="tg-button reveal" style="text-align:center;">
             <a href="https://t.me/igrovyes_avtomaty" class="btn-tg" target="_blank">
                 <i class="fab fa-telegram-plane"></i> @igrovyes_avtomaty
             </a>
         </div>
 
+        <!-- Счётчик и прогресс -->
         <div class="stats-grid reveal">
             <div class="counter-block">
                 <span class="counter-number" id="subscriberCount">14 760</span>
-                <div style="font-size:20px; margin-top:10px;">подписчиков</div>
+                <div style="font-size:20px; margin-top:10px;">подписчиков в Telegram</div>
             </div>
             <div class="progress-block">
-                <div style="font-size:20px;">Бонусы сегодня: <span id="bonusCount">342</span>/500</div>
+                <div style="font-size:20px;">🔥 Горячие бонусы 2026: <span id="bonusCount">342</span>/500</div>
                 <div class="progress-bar"><div class="progress-fill"></div></div>
+                <div style="font-size:18px;">Сегодня разобрано 158 бездепозитных бонусов</div>
             </div>
         </div>
 
+        <!-- Таймер -->
         <div class="casino-day reveal">
-            <h3>⏳ Следующее обновление зеркал</h3>
+            <h3>⏳ Следующее обновление зеркал казино</h3>
             <div class="timer" id="timer">02:45:12</div>
         </div>
 
+        <!-- КАЗИНО ДНЯ -->
         <div class="casino-day reveal" id="casinoOfTheDay">
-            <h3>🎲 КАЗИНО ДНЯ</h3>
+            <h3>🎲 КАЗИНО ДНЯ — рабочее зеркало сегодня</h3>
             <div class="casino-day-content">
                 <img src="" alt="" id="dayCasinoImg">
                 <div>
                     <h2 id="dayCasinoName"></h2>
-                    <p id="dayCasinoBonus"></p>
-                    <a href="#" id="dayCasinoLink" class="bonus-link" style="width:auto; padding:15px 40px;" target="_blank">ЗАБРАТЬ БОНУС</a>
+                    <p id="dayCasinoBonus">Welcome Pack 250% и 500 FS 👑</p>
+                    <a href="#" id="dayCasinoLink" class="bonus-link" style="width:auto; padding:15px 40px; font-size:18px;" target="_blank">ЗАБРАТЬ БОНУС</a>
                 </div>
             </div>
         </div>
 
+        <!-- ТОП-3 КАЗИНО -->
         <div class="top3-grid reveal" id="top3"></div>
+
+        <!-- ГОРЯЧИЕ БОНУСЫ 2026 -->
         <div class="bonuses reveal">
-            <h2 class="section-title">🔥 ГОРЯЧИЕ БОНУСЫ 2026</h2>
+            <h2 class="section-title">🔥 ГОРЯЧИЕ БОНУСЫ КАЗИНО 2026</h2>
             <div class="bonus-grid" id="bonusGrid"></div>
         </div>
 
-        <div class="footer">
-            <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО</div>
-            <div style="margin:15px 0;">
-                <a href="#" style="color:#aaa;">Политика</a> • 
-                <a href="#" style="color:#aaa;">Ответственная игра</a>
+        <!-- ГРАФИК АКТИВНОСТИ -->
+        <div class="chart reveal">
+            <h3 style="text-align:center; color:#ffaa33; font-size:24px;">📊 Активность игроков за 24 часа</h3>
+            <div class="chart-bars">
+                <div><div class="bar" style="height:80px;"></div><div class="bar-label">Пн</div></div>
+                <div><div class="bar" style="height:120px;"></div><div class="bar-label">Вт</div></div>
+                <div><div class="bar" style="height:150px;"></div><div class="bar-label">Ср</div></div>
+                <div><div class="bar" style="height:100px;"></div><div class="bar-label">Чт</div></div>
+                <div><div class="bar" style="height:90px;"></div><div class="bar-label">Пт</div></div>
+                <div><div class="bar" style="height:130px;"></div><div class="bar-label">Сб</div></div>
+                <div><div class="bar" style="height:140px;"></div><div class="bar-label">Вс</div></div>
             </div>
-            <div class="eighteen-plus">18+</div>
+        </div>
+
+        <!-- ПАРТНЁРЫ -->
+        <div class="partners reveal">
+            <h2 class="section-title">🤝 Платежные системы и провайдеры</h2>
+            <div class="partner-logos">
+                <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-bitcoin"></i> <i class="fab fa-ethereum"></i>
+                <i class="fas fa-shield-alt"></i> <i class="fas fa-lock"></i>
+            </div>
+        </div>
+
+        <!-- ФУТЕР -->
+        <div class="footer">
+            <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО ОНЛАЙН 24/7</div>
+            <div style="margin:15px 0;">
+                <a href="#" style="color:#aaa; text-decoration:none;">Политика конфиденциальности</a> • 
+                <a href="#" style="color:#aaa; text-decoration:none;">Ответственная игра</a> • 
+                <a href="#" style="color:#aaa; text-decoration:none;">Правила</a>
+            </div>
+            <div class="eighteen-plus">18+ ТОЛЬКО ДЛЯ СОВЕРШЕННОЛЕТНИХ</div>
         </div>
     </div>
 
     <script>
-        // ========== ДАННЫЕ КАЗИНО ==========
         const casinos = [
-            { name: 'Vavada', img: 'vavada.png', bonus: '100% до 50 000₽ + 100 FS', link: 'https://gate707.com/?promo=d9d43ea1-0cd0-4dd8-9a86-28d352183bfe&target=register' },
-            { name: '1win', img: '1win.png', bonus: '500% на первый депозит', link: 'https://one-vv893.com/?p=sxqe' },
-            { name: 'Duel Casino', img: 'duel.png', bonus: '120% + 250 FS', link: 'https://duel.com/r/RUBLIK' },
-            { name: 'Stake', img: 'stake.png', bonus: 'Эксклюзивный бонус', link: 'http://stake1036.com/?c=UdQh5cRu' },
-            { name: 'Fugu Casino', img: 'fugu.png', bonus: '100% + 50 FS', link: 'https://fugu-way-one.com/c1536be58' },
-            { name: 'Cat Casino', img: 'cat.png', bonus: '200% до 100 000₽', link: 'https://triumphant-hall.com/sbrl3ljkm' }
+            { name: 'Vavada', img: 'vavada.png', link: 'https://gate707.com/?promo=d9d43ea1-0cd0-4dd8-9a86-28d352183bfe&target=register' },
+            { name: '1win', img: '1win.png', link: 'https://one-vv893.com/?p=sxqe' },
+            { name: 'Duel Casino', img: 'duel.png', link: 'https://duel.com/r/RUBLIK' },
+            { name: 'Stake', img: 'stake.png', link: 'http://stake1036.com/?c=UdQh5cRu' },
+            { name: 'Fugu Casino', img: 'fugu.png', link: 'https://fugu-way-one.com/c1536be58' },
+            { name: 'Cat Casino', img: 'cat.png', link: 'https://triumphant-hall.com/sbrl3ljkm' },
+            { name: 'Leebet Casino', img: 'leebet.png', link: 'https://play-leebet-three.com/deyqu7sml' },
+            { name: 'Joy Casino', img: 'joy.png', link: 'https://clck.ru/3QXq6p' },
+            { name: 'Criptoboss', img: 'cryptoboss.png', link: 'https://cryptobossc.online/d247e5ab0' },
+            { name: 'Rox Casino', img: 'rox.png', link: 'https://clck.ru/34339T' },
+            { name: 'Banda Casino', img: 'banda.png', link: 'https://playlightzone.com/dmnhefnvq' },
+            { name: 'Champion Slots', img: 'champion.png', link: 'https://clck.ru/3PEbRM' },
+            { name: 'Ramenbet', img: 'ramenbet.png', link: 'https://clck.ru/39JnjJ' },
+            { name: 'Casino X', img: 'casinox.png', link: 'https://21631.gameshere.xyz/ru/registration2?partner=p21631p3326886p3e51' },
+            { name: 'Gama Casino', img: 'gama.png', link: 'https://starforge-race.com/sfevqs2sr' },
+            { name: 'Kent Casino', img: 'kent.png', link: 'https://holo-neonrun.com/sntbu9gqi' },
+            { name: 'Beef Casino', img: 'beef.png', link: 'https://beef-route-four.com/c3f6ec874' },
+            { name: 'Martin Casino', img: 'martin.png', link: 'https://clck.ru/3Mnh9o' },
+            { name: 'Flagman Casino', img: 'flagman.png', link: 'https://flagmanway1.com/c5068b5f6' },
+            { name: 'Irvin Casino', img: 'irvin.png', link: 'https://rwn-blrs21.com/c1452dd34' },
+            { name: 'Gizbo Casino', img: 'gizbo.png', link: 'https://gzb-way03.com/c2b450be9' },
+            { name: '1 GO Casino', img: '1go.png', link: 'https://1go-blrs10.com/ca2275e6d' },
+            { name: 'Starda Casino', img: 'starda.png', link: 'https://strd-blse21.com/cf2b97cef' },
+            { name: 'Monro Casino', img: 'monro.png', link: 'https://mnr-blrs21.com/c5335a257' },
+            { name: 'Drip Casino', img: 'drip.png', link: 'https://drp-irrs10.com/c18ebfa90' },
+            { name: 'Sol Casino', img: 'sol.png', link: 'https://clck.ru/3433Fz' },
+            { name: 'Jet Casino', img: 'jet.png', link: 'https://jet-blrs10.com/c7b0bc5b9' },
+            { name: 'Izzi Casino', img: 'izzi.png', link: 'https://izzi-blrs10.com/c123e81f2' },
+            { name: 'Lexx Casino', img: 'lexx.png', link: 'https://lexyway1.com/c8ef27fcf' },
+            { name: 'Volna Casino', img: 'volna.png', link: 'https://vln-blrs10.com/c4e395fcb' },
+            { name: 'Legzo Casino', img: 'legzo.png', link: 'https://clck.ru/3433E2' },
+            { name: 'Fresh Casino', img: 'fresh.png', link: 'https://clck.ru/3433CW' },
+            { name: 'Daddy Casino', img: 'daddy.png', link: 'https://molten-emberpath.com/smaha6mhb' },
+            { name: 'R7 Casino', img: 'r7.png', link: 'https://cosmos-flight.com/stcmmmdge' },
+            { name: 'Комета Casino', img: 'kometa.png', link: 'https://ignited-lavapass.com/sws2h6fse' },
+            { name: 'Arkada Casino', img: 'arkada.png', link: 'https://prismed-cyberlane.com/svd9sjada' },
+            { name: 'Куш Casino', img: 'kush.png', link: 'https://playzoneksh.com/dqyptbuu1' },
+            { name: 'Cactus Casino', img: 'cactus.png', link: 'https://lavoluntadisabel.xyz/affiliate/c_4wj3z1mk?path=%2Fbonuses' },
+            { name: 'Auf Casino', img: 'auf.png', link: 'https://aufas.com/d5b5799f1' },
+            { name: 'Unlim Casino', img: 'unlim.png', link: 'https://unlimc.net/d2531e71a' }
         ];
 
-        // ========== ПЕРЕКЛЮЧЕНИЕ ТЕМ ==========
-        function setTheme(theme) {
-            document.body.className = '';
-            document.body.classList.add(`theme-${theme}`);
+        function shuffleArray(arr) {
+            return arr.sort(() => Math.random() - 0.5);
         }
 
-        // ========== ДИНАМИЧЕСКИЕ БЛОКИ ==========
-        function shuffleArray(arr) { return arr.sort(() => Math.random() - 0.5); }
-
         function setCasinoOfTheDay() {
-            const casino = casinos[Math.floor(Math.random() * casinos.length)];
+            const randomIndex = Math.floor(Math.random() * casinos.length);
+            const casino = casinos[randomIndex];
             document.getElementById('dayCasinoName').textContent = casino.name;
             document.getElementById('dayCasinoImg').src = `images/${casino.img}`;
-            document.getElementById('dayCasinoBonus').textContent = casino.bonus;
             document.getElementById('dayCasinoLink').href = casino.link;
         }
 
@@ -537,15 +661,16 @@
             const shuffled = shuffleArray([...casinos]);
             const top3 = shuffled.slice(0, 3);
             const medals = ['🥇', '🥈', '🥉'];
-            const container = document.getElementById('top3');
-            container.innerHTML = '';
-            top3.forEach((c, i) => {
-                container.innerHTML += `
+            const top3Container = document.getElementById('top3');
+            top3Container.innerHTML = '';
+            top3.forEach((casino, index) => {
+                top3Container.innerHTML += `
                     <div class="top-item">
-                        <div class="rank">${medals[i]}</div>
-                        <img src="images/${c.img}" alt="${c.name}">
-                        <div style="font-size:20px;">${c.name}</div>
-                        <a href="${c.link}" class="bonus-link" target="_blank">Играть</a>
+                        <div class="rank">${medals[index]}</div>
+                        <img src="images/${casino.img}" alt="${casino.name}">
+                        <div style="font-size:20px; font-weight:bold;">${casino.name}</div>
+                        <div style="color:#ffaa33; font-size:18px;">Welcome Pack 250% и 500 FS 👑</div>
+                        <a href="${casino.link}" class="bonus-link" target="_blank">Играть</a>
                     </div>
                 `;
             });
@@ -556,13 +681,13 @@
             const top4 = shuffled.slice(0, 4);
             const grid = document.getElementById('bonusGrid');
             grid.innerHTML = '';
-            top4.forEach(c => {
+            top4.forEach(casino => {
                 grid.innerHTML += `
                     <div class="bonus-card">
-                        <img src="images/${c.img}" alt="${c.name}">
-                        <h3>${c.name}</h3>
-                        <p>${c.bonus}</p>
-                        <a href="${c.link}" class="bonus-link" target="_blank">Забрать</a>
+                        <img src="images/${casino.img}" alt="${casino.name}">
+                        <h3>${casino.name}</h3>
+                        <p>Welcome Pack 250% и 500 FS 👑</p>
+                        <a href="${casino.link}" class="bonus-link" target="_blank">Забрать</a>
                     </div>
                 `;
             });
@@ -572,7 +697,6 @@
         setTop3();
         setBonusGrid();
 
-        // ========== ВСПОМОГАТЕЛЬНОЕ ==========
         function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
         window.onscroll = function() {
             document.getElementById('scrollToTop').classList.toggle('show', document.documentElement.scrollTop > 300);
@@ -598,11 +722,15 @@
         setInterval(updateTimer, 1000);
 
         function reveal() {
-            document.querySelectorAll('.reveal').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 150) {
-                    el.classList.add('active');
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
                 }
-            });
+            }
         }
         window.addEventListener('scroll', reveal);
         reveal();
