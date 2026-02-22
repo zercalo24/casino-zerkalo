@@ -41,7 +41,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: background-color 0.3s, color 0.2s;
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -70,10 +69,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             object-fit: cover;
-            filter: brightness(0.3) blur(3px);
+            filter: brightness(0.2) blur(5px);
         }
         .container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
@@ -227,10 +226,13 @@
             margin: 40px 0;
         }
         .counter-block, .progress-block {
-            background: #1a1f2b;
+            background: rgba(26, 31, 43, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 170, 51, 0.3);
             border-radius: 30px;
             padding: 25px;
             text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         .counter-number {
             font-size: 52px;
@@ -255,23 +257,27 @@
         }
         
         .casino-day {
-            background: linear-gradient(145deg, #1a1f2b, #11161f);
-            border-radius: 40px;
-            padding: 35px;
+            background: rgba(26, 31, 43, 0.7);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            border-radius: 50px;
+            padding: 40px;
             margin: 40px 0;
-            border: 3px solid #ffaa33;
             text-align: center;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.2);
         }
         .casino-day h3 {
             color: #ffaa33;
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .casino-day-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 40px;
+            gap: 60px;
             flex-wrap: wrap;
         }
         .day-frame {
@@ -281,75 +287,91 @@
         .day-frame img {
             position: relative;
             z-index: 2;
-            width: 120px;
-            height: 120px;
+            width: 200px;
+            height: 200px;
             object-fit: contain;
-            border: 4px solid #ffd700;
+            border: 6px solid #ffd700;
             border-radius: 50%;
-            padding: 15px;
-            background: #0a0c12;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            padding: 25px;
+            background: rgba(10, 12, 18, 0.8);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
         }
         .casino-day h2 {
-            font-size: 36px;
+            font-size: 48px;
             color: #ffaa33;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(255, 170, 51, 0.5);
         }
         .casino-day p {
-            font-size: 20px;
-            margin-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #fff;
         }
         
         .timer {
-            font-size: 36px;
+            font-size: 42px;
             font-weight: 800;
             color: #ffaa33;
             margin: 15px 0;
+            text-shadow: 0 0 20px rgba(255, 170, 51, 0.5);
         }
         
         .top3-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 30px;
             margin: 40px 0;
         }
         .top-item {
-            background: #1a1f2b;
-            border-radius: 30px;
-            padding: 25px;
+            background: rgba(26, 31, 43, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 170, 51, 0.3);
+            border-radius: 40px;
+            padding: 35px 25px;
             text-align: center;
-            border: 2px solid #ffaa33;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .frame-gold, .frame-silver, .frame-bronze {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
         }
         .frame-gold img, .frame-silver img, .frame-bronze img {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             object-fit: contain;
             border-radius: 50%;
-            padding: 12px;
-            background: #0a0c12;
-            margin-bottom: 15px;
+            padding: 20px;
+            background: rgba(10, 12, 18, 0.8);
         }
         .frame-gold img {
-            border: 4px solid #ffd700;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+            border: 5px solid #ffd700;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
         }
         .frame-silver img {
-            border: 4px solid #c0c0c0;
-            box-shadow: 0 0 25px rgba(192, 192, 192, 0.3);
+            border: 5px solid #c0c0c0;
+            box-shadow: 0 0 40px rgba(192, 192, 192, 0.4);
         }
         .frame-bronze img {
-            border: 4px solid #cd7f32;
-            box-shadow: 0 0 25px rgba(205, 127, 50, 0.3);
+            border: 5px solid #cd7f32;
+            box-shadow: 0 0 40px rgba(205, 127, 50, 0.4);
         }
         .top-item .rank {
-            font-size: 32px;
+            font-size: 42px;
             font-weight: 800;
             color: #ffaa33;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
-        .top-item div {
-            font-size: 18px;
-            margin: 5px 0;
+        .top-item .casino-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 15px 0 10px;
+            color: #fff;
+        }
+        .top-item .bonus-text {
+            color: #ffaa33;
+            font-size: 20px;
+            margin-bottom: 20px;
         }
         
         .bonus-link {
@@ -357,13 +379,21 @@
             background: linear-gradient(145deg, #ffaa33, #ff8c00);
             color: #0b0e14;
             font-weight: 800;
-            padding: 12px 24px;
+            padding: 15px 30px;
             border-radius: 60px;
             text-decoration: none;
             width: 100%;
-            margin-top: 15px;
-            font-size: 16px;
+            margin-top: 20px;
+            font-size: 18px;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 4px solid #b8731e;
+            transition: 0.2s;
+        }
+        .bonus-link:hover {
+            background: linear-gradient(145deg, #ffb84d, #ff9f1a);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 170, 51, 0.4);
         }
         
         .bonuses {
@@ -375,6 +405,7 @@
             text-align: center;
             margin-bottom: 30px;
             color: #ffaa33;
+            text-shadow: 0 0 15px rgba(255, 170, 51, 0.3);
         }
         .bonus-grid {
             display: grid;
@@ -382,20 +413,22 @@
             gap: 25px;
         }
         .bonus-card {
-            background: #1a1f2b;
+            background: rgba(26, 31, 43, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 170, 51, 0.3);
             border-radius: 30px;
             padding: 25px;
             text-align: center;
-            border: 1px solid #2f3542;
             transition: 0.3s;
         }
         .bonus-card:hover {
             transform: translateY(-5px);
             border-color: #ffaa33;
+            box-shadow: 0 0 30px rgba(255, 170, 51, 0.3);
         }
         .bonus-card img {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
             margin-bottom: 15px;
         }
@@ -411,7 +444,9 @@
         }
         
         .chart {
-            background: #1a1f2b;
+            background: rgba(26, 31, 43, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 170, 51, 0.3);
             border-radius: 30px;
             padding: 25px;
             margin: 40px 0;
@@ -453,9 +488,13 @@
             opacity: 0.7;
             transition: 0.3s;
         }
+        .partner-logos i:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
         
         .footer {
-            border-top: 2px solid #2a2f3a;
+            border-top: 2px solid rgba(255, 170, 51, 0.3);
             padding: 30px 0;
             text-align: center;
             color: #6a6f80;
@@ -475,10 +514,10 @@
         @media (max-width: 600px) {
             .stats-grid, .top3-grid { grid-template-columns: 1fr; }
             .logo-cloud { grid-template-columns: repeat(4, 1fr); }
-            .logo-cloud img { width: 55px; height: 55px; }
-            .day-frame img { width: 90px; height: 90px; }
-            .frame-gold img, .frame-silver img, .frame-bronze img { width: 60px; height: 60px; }
-            .casino-day h2 { font-size: 28px; }
+            .day-frame img { width: 150px; height: 150px; }
+            .frame-gold img, .frame-silver img, .frame-bronze img { width: 100px; height: 100px; }
+            .casino-day h2 { font-size: 36px; }
+            .casino-day p { font-size: 20px; }
         }
     </style>
 </head>
@@ -713,8 +752,8 @@
                         <div class="${frameClasses[index]}">
                             <img src="images/${casino.img}" alt="${casino.name}">
                         </div>
-                        <div style="font-size:20px; font-weight:bold; margin-top:10px;">${casino.name}</div>
-                        <div style="color:#ffaa33; font-size:18px;">Welcome Pack 250% и 500 FS 👑</div>
+                        <div class="casino-name">${casino.name}</div>
+                        <div class="bonus-text">Welcome Pack 250% и 500 FS 👑</div>
                         <a href="${casino.link}" class="bonus-link" target="_blank">Играть</a>
                     </div>
                 `;
