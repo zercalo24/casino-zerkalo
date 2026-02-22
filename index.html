@@ -274,35 +274,21 @@
             gap: 40px;
             flex-wrap: wrap;
         }
-        .day-wreath {
+        .day-frame {
             position: relative;
             display: inline-block;
         }
-        .day-wreath img {
+        .day-frame img {
             position: relative;
             z-index: 2;
             width: 120px;
             height: 120px;
             object-fit: contain;
-            border: 3px solid #ffaa33;
+            border: 4px solid #ffd700;
             border-radius: 50%;
-            padding: 10px;
+            padding: 15px;
             background: #0a0c12;
-        }
-        .day-wreath::before {
-            content: "⚜️⚜️⚜️⚜️";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(1.8);
-            font-size: 100px;
-            color: #ffd700;
-            opacity: 0.4;
-            z-index: 1;
-            white-space: nowrap;
-            letter-spacing: -5px;
-            filter: drop-shadow(0 0 10px #ffd700);
-            pointer-events: none;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
         }
         .casino-day h2 {
             font-size: 36px;
@@ -333,68 +319,27 @@
             padding: 25px;
             text-align: center;
             border: 2px solid #ffaa33;
-            position: relative;
         }
-        .wreath-gold, .wreath-silver, .wreath-bronze {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        .wreath-gold img, .wreath-silver img, .wreath-bronze img {
-            position: relative;
-            z-index: 2;
+        .frame-gold img, .frame-silver img, .frame-bronze img {
             width: 80px;
             height: 80px;
             object-fit: contain;
-            border: 2px solid currentColor;
             border-radius: 50%;
-            padding: 8px;
+            padding: 12px;
             background: #0a0c12;
+            margin-bottom: 15px;
         }
-        .wreath-gold::before {
-            content: "⚜️⚜️⚜️⚜️";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(1.6);
-            font-size: 80px;
-            color: #ffd700;
-            opacity: 0.5;
-            z-index: 1;
-            white-space: nowrap;
-            letter-spacing: -5px;
-            filter: drop-shadow(0 0 10px #ffd700);
-            pointer-events: none;
+        .frame-gold img {
+            border: 4px solid #ffd700;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
         }
-        .wreath-silver::before {
-            content: "⚜️⚜️⚜️⚜️";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(1.6);
-            font-size: 80px;
-            color: #c0c0c0;
-            opacity: 0.5;
-            z-index: 1;
-            white-space: nowrap;
-            letter-spacing: -5px;
-            filter: drop-shadow(0 0 10px #c0c0c0);
-            pointer-events: none;
+        .frame-silver img {
+            border: 4px solid #c0c0c0;
+            box-shadow: 0 0 25px rgba(192, 192, 192, 0.3);
         }
-        .wreath-bronze::before {
-            content: "⚜️⚜️⚜️⚜️";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(1.6);
-            font-size: 80px;
-            color: #cd7f32;
-            opacity: 0.5;
-            z-index: 1;
-            white-space: nowrap;
-            letter-spacing: -5px;
-            filter: drop-shadow(0 0 10px #cd7f32);
-            pointer-events: none;
+        .frame-bronze img {
+            border: 4px solid #cd7f32;
+            box-shadow: 0 0 25px rgba(205, 127, 50, 0.3);
         }
         .top-item .rank {
             font-size: 32px;
@@ -531,10 +476,8 @@
             .stats-grid, .top3-grid { grid-template-columns: 1fr; }
             .logo-cloud { grid-template-columns: repeat(4, 1fr); }
             .logo-cloud img { width: 55px; height: 55px; }
-            .day-wreath img { width: 90px; height: 90px; }
-            .day-wreath::before { font-size: 70px; transform: translate(-50%, -50%) scale(1.5); }
-            .wreath-gold img, .wreath-silver img, .wreath-bronze img { width: 60px; height: 60px; }
-            .wreath-gold::before, .wreath-silver::before, .wreath-bronze::before { font-size: 60px; transform: translate(-50%, -50%) scale(1.4); }
+            .day-frame img { width: 90px; height: 90px; }
+            .frame-gold img, .frame-silver img, .frame-bronze img { width: 60px; height: 60px; }
             .casino-day h2 { font-size: 28px; }
         }
     </style>
@@ -640,11 +583,11 @@
             <div class="timer" id="timer">02:45:12</div>
         </div>
 
-        <!-- КАЗИНО ДНЯ С ЗОЛОТЫМ ВЕНКОМ -->
+        <!-- КАЗИНО ДНЯ С ЗОЛОТОЙ РАМКОЙ -->
         <div class="casino-day reveal" id="casinoOfTheDay">
             <h3>🎲 КАЗИНО ДНЯ — рабочее зеркало сегодня</h3>
             <div class="casino-day-content">
-                <div class="day-wreath">
+                <div class="day-frame">
                     <img src="" alt="" id="dayCasinoImg">
                 </div>
                 <div>
@@ -655,7 +598,7 @@
             </div>
         </div>
 
-        <!-- ТОП-3 С ВЕНКАМИ ПО МЕТАЛЛАМ -->
+        <!-- ТОП-3 С ЦВЕТНЫМИ РАМКАМИ -->
         <div class="top3-grid reveal" id="top3"></div>
 
         <!-- ГОРЯЧИЕ БОНУСЫ 2026 -->
@@ -760,14 +703,14 @@
             const shuffled = shuffleArray([...casinos]);
             const top3 = shuffled.slice(0, 3);
             const medals = ['🥇', '🥈', '🥉'];
-            const wreathClasses = ['wreath-gold', 'wreath-silver', 'wreath-bronze'];
+            const frameClasses = ['frame-gold', 'frame-silver', 'frame-bronze'];
             const top3Container = document.getElementById('top3');
             top3Container.innerHTML = '';
             top3.forEach((casino, index) => {
                 top3Container.innerHTML += `
                     <div class="top-item">
                         <div class="rank">${medals[index]}</div>
-                        <div class="${wreathClasses[index]}">
+                        <div class="${frameClasses[index]}">
                             <img src="images/${casino.img}" alt="${casino.name}">
                         </div>
                         <div style="font-size:20px; font-weight:bold; margin-top:10px;">${casino.name}</div>
