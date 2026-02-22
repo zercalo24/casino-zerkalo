@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -33,9 +33,17 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        /* Коллаж из логотипов */
+        /* Анимация появления */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero, .logo-cloud, .tg-button, .counter-block, .bonuses, .testimonials, .seo-text, .features, .footer {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        /* Герой */
         .hero {
-            padding: 60px 0 40px;
+            padding: 40px 0 20px;
             text-align: center;
         }
         .hero h1 {
@@ -44,43 +52,44 @@
             background: linear-gradient(135deg, #ffd966, #ffaa33);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .hero p {
-            font-size: 20px;
+            font-size: 18px;
             color: #b0b5c0;
             max-width: 700px;
-            margin: 0 auto 30px;
+            margin: 0 auto;
         }
-        /* Сетка логотипов */
+        /* Коллаж из логотипов */
         .logo-cloud {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+            gap: 15px;
             align-items: center;
             justify-items: center;
-            margin: 50px 0;
+            margin: 40px 0 20px;
             padding: 20px;
             background: rgba(255,255,255,0.03);
             border-radius: 40px;
             border: 1px solid #2a2f3a;
         }
         .logo-cloud img {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
-            filter: grayscale(0.2) brightness(0.9);
-            transition: 0.2s;
-            opacity: 0.8;
+            filter: grayscale(0.3) brightness(0.9);
+            transition: all 0.4s ease;
+            opacity: 0.9;
+            animation: fadeInUp 0.6s ease-out;
         }
         .logo-cloud img:hover {
-            filter: grayscale(0);
+            filter: grayscale(0) brightness(1.2);
+            transform: scale(1.2) rotate(3deg);
             opacity: 1;
-            transform: scale(1.1);
         }
-        /* Огромная кнопка Telegram */
+        /* Кнопка Telegram */
         .tg-button {
-            margin: 40px 0 30px;
+            margin: 30px 0;
             text-align: center;
         }
         .btn-tg {
@@ -90,40 +99,145 @@
             gap: 15px;
             background: #27A6E5;
             color: white;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
-            padding: 25px 60px;
-            border-radius: 80px;
+            padding: 20px 50px;
+            border-radius: 70px;
             text-decoration: none;
-            border-bottom: 6px solid #1a7da8;
-            transition: 0.1s;
-            box-shadow: 0 15px 30px -10px #27A6E5;
-            letter-spacing: 1px;
+            border-bottom: 5px solid #1a7da8;
+            transition: 0.2s;
+            box-shadow: 0 10px 25px -5px #27A6E5;
+            letter-spacing: 0.5px;
         }
         .btn-tg i {
-            font-size: 48px;
+            font-size: 40px;
         }
         .btn-tg:hover {
             background: #3cb3f0;
             border-bottom-width: 3px;
             transform: translateY(3px);
-            box-shadow: 0 20px 40px -10px #27A6E5;
+            box-shadow: 0 15px 30px -5px #27A6E5;
         }
-        /* Блок преимуществ */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
+        /* Счётчик подписчиков (с имитацией динамики) */
+        .counter-block {
             text-align: center;
+            margin: 30px 0;
         }
-        .feature h3 {
+        .counter-number {
+            font-size: 56px;
+            font-weight: 800;
             color: #ffaa33;
-            font-size: 22px;
-            margin-bottom: 10px;
+            display: inline-block;
+            animation: pulse 2s infinite;
         }
-        .feature p {
-            color: #9a9fb0;
+        @keyframes pulse {
+            0% { text-shadow: 0 0 10px #ffaa33; }
+            50% { text-shadow: 0 0 20px #ffaa33, 0 0 30px #ffaa33; }
+            100% { text-shadow: 0 0 10px #ffaa33; }
+        }
+        .counter-label {
+            font-size: 20px;
+            color: #b0b5c0;
+            margin-top: 5px;
+        }
+        /* Блок бонусов (карусель в виде сетки) */
+        .bonuses {
+            margin: 50px 0;
+        }
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffaa33;
+        }
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .bonus-card {
+            background: #1a1f2b;
+            border-radius: 24px;
+            padding: 25px 20px;
+            text-align: center;
+            border: 1px solid #2f3542;
+            transition: 0.3s;
+        }
+        .bonus-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffaa33;
+            box-shadow: 0 10px 20px -5px #ffaa33;
+        }
+        .bonus-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            background: linear-gradient(145deg, #fff, #ffaa33);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bonus-card p {
+            color: #b0b5c0;
+            margin: 15px 0;
+        }
+        .bonus-link {
+            display: inline-block;
+            background: #ffaa33;
+            color: #0b0e14;
+            font-weight: 700;
+            padding: 12px 25px;
+            border-radius: 40px;
+            text-decoration: none;
+            border-bottom: 3px solid #b8731e;
+            transition: 0.1s;
+            width: 100%;
+        }
+        .bonus-link:hover {
+            background: #ffb84d;
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+        /* Отзывы */
+        .testimonials {
+            margin: 50px 0;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .testimonial-card {
+            background: #1a1f2b;
+            border-radius: 24px;
+            padding: 25px;
+            border: 1px solid #2f3542;
+        }
+        .testimonial-card .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #ffaa33;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #0b0e14;
+        }
+        .testimonial-card .text {
+            font-style: italic;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+        .testimonial-card .name {
+            font-weight: 700;
+            color: #ffaa33;
+        }
+        .rating {
+            color: #ffaa33;
+            margin-top: 10px;
+            font-size: 18px;
         }
         /* SEO-текст */
         .seo-text {
@@ -139,6 +253,21 @@
             color: #ffaa33;
             font-size: 28px;
             margin-bottom: 20px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            text-align: center;
+        }
+        .feature h3 {
+            color: #ffaa33;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            color: #9a9fb0;
         }
         .footer {
             border-top: 1px solid #2a2f3a;
@@ -161,31 +290,31 @@
         }
         @media (max-width: 700px) {
             .hero h1 { font-size: 36px; }
-            .btn-tg { font-size: 24px; padding: 18px 30px; }
-            .btn-tg i { font-size: 32px; }
+            .btn-tg { font-size: 22px; padding: 15px 30px; }
+            .btn-tg i { font-size: 28px; }
+            .counter-number { font-size: 42px; }
             .logo-cloud { grid-template-columns: repeat(4, 1fr); }
         }
         @media (max-width: 400px) {
             .logo-cloud { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
-    <!-- Font Awesome для иконки Telegram -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <!-- Шапка -->
-        <div style="padding: 30px 0; text-align: center;">
-            <div style="font-size: 14px; color: #ffaa33; letter-spacing: 2px;">18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
+        <!-- Шапка 18+ -->
+        <div style="padding: 20px 0; text-align: center;">
+            <div style="font-size: 14px; color: #ffaa33; letter-spacing: 2px;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
         </div>
 
         <!-- Герой -->
         <div class="hero">
             <h1>CASINO ZERKALO</h1>
-            <p>Всегда рабочие ссылки и бонусы<br>в нашем Telegram-канале</p>
+            <p>Всегда рабочие ссылки и бонусы в Telegram</p>
         </div>
 
-        <!-- Коллаж из логотипов (если картинки лежат в images) -->
+        <!-- Коллаж из логотипов -->
         <div class="logo-cloud">
             <img src="images/vavada.png" alt="Vavada">
             <img src="images/1win.png" alt="1win">
@@ -229,22 +358,81 @@
             <img src="images/unlim.png" alt="Unlim">
         </div>
 
-        <!-- Огромная кнопка Telegram -->
+        <!-- Кнопка Telegram -->
         <div class="tg-button">
             <a href="https://t.me/igrovyes_avtomaty" class="btn-tg" target="_blank">
                 <i class="fab fa-telegram-plane"></i> @igrovyes_avtomaty
             </a>
         </div>
 
+        <!-- Счётчик подписчиков (имитация динамики) -->
+        <div class="counter-block" id="counter">
+            <span class="counter-number" id="subscriberCount">14 760</span>
+            <span class="counter-number" style="font-size: 40px;">+</span>
+            <div class="counter-label">подписчиков в Telegram</div>
+        </div>
+
+        <!-- Блок бонусов -->
+        <div class="bonuses">
+            <h2 class="section-title">🔥 Горячие бонусы</h2>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <h3>Vavada</h3>
+                    <p>100% до 50 000₽ + 100 FS</p>
+                    <a href="https://t.me/igrovyes_avtomaty" class="bonus-link" target="_blank">Забрать</a>
+                </div>
+                <div class="bonus-card">
+                    <h3>1win</h3>
+                    <p>500% на первый депозит</p>
+                    <a href="https://t.me/igrovyes_avtomaty" class="bonus-link" target="_blank">Забрать</a>
+                </div>
+                <div class="bonus-card">
+                    <h3>Duel Casino</h3>
+                    <p>120% + 250 FS</p>
+                    <a href="https://t.me/igrovyes_avtomaty" class="bonus-link" target="_blank">Забрать</a>
+                </div>
+                <div class="bonus-card">
+                    <h3>Cat Casino</h3>
+                    <p>200% до 100 000₽</p>
+                    <a href="https://t.me/igrovyes_avtomaty" class="bonus-link" target="_blank">Забрать</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Отзывы подписчиков -->
+        <div class="testimonials">
+            <h2 class="section-title">💬 Отзывы</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="avatar">А</div>
+                    <div class="text">«Лучший канал с рабочими зеркалами! Уже несколько раз выводил выигрыши по ссылкам отсюда.»</div>
+                    <div class="name">Алексей</div>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="avatar">Е</div>
+                    <div class="text">«Постоянно пользуюсь, всегда актуальные бонусы. Админ молодчик, быстро отвечает.»</div>
+                    <div class="name">Екатерина</div>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="avatar">Д</div>
+                    <div class="text">«Подписался и не жалею. Ссылки обновляются вовремя, бонусы реально дают.»</div>
+                    <div class="name">Дмитрий</div>
+                    <div class="rating">⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+
         <!-- Преимущества -->
         <div class="features">
             <div class="feature">
                 <h3>🔥 42+ казино</h3>
-                <p>Все популярные проекты в одном канале</p>
+                <p>Все популярные проекты</p>
             </div>
             <div class="feature">
                 <h3>⚡️ Актуальные зеркала</h3>
-                <p>Ссылки обновляются 24/7</p>
+                <p>24/7 обновление</p>
             </div>
             <div class="feature">
                 <h3>🎁 Эксклюзивные бонусы</h3>
@@ -255,8 +443,7 @@
         <!-- SEO-текст -->
         <div class="seo-text">
             <h2>Рабочие зеркала казино 2026</h2>
-            <p>Ищешь актуальные ссылки на Vavada, 1win, Duel Casino, Stake и ещё 40+ казино? В нашем Telegram-канале «Игровые автоматы | Бонусы» ты найдёшь всегда рабочие зеркала, свежие бонусы и промокоды. Мы собираем только проверенные проекты с лицензией и быстрыми выплатами. Подпишись и получай бонусы каждый день!</p>
-            <p style="margin-top: 20px;">#казино #зеркало #бонусы #вавада #1вин #дуэль #стейк #фугу #кэт #либет #джой #криптобосс #рокс #банда #чемпион #раменбет #казиноХ #гама #кент #биф #мартин #флагман #ирвин #гизбо #1го #старда #монро #дрип #сол #джет #ицци #лекс #волна #легзо #фреш #дэдди #р7 #комета #аркада #куш #кактус #ауф #анлим</p>
+            <p>Ищешь актуальные ссылки на Vavada, 1win, Duel Casino, Stake и ещё 40+ казино? В нашем Telegram-канале «Игровые автоматы | Бонусы» ты найдёшь всегда рабочие зеркала, свежие бонусы и промокоды. Подпишись и получай бонусы каждый день!</p>
         </div>
 
         <!-- Футер -->
@@ -269,5 +456,17 @@
             <div class="eighteen-plus">18+</div>
         </div>
     </div>
+
+    <!-- Скрипт для имитации живого счётчика (необязательно, можно убрать) -->
+    <script>
+        // Простая имитация роста подписчиков
+        let count = 14760;
+        const counterElement = document.getElementById('subscriberCount');
+        setInterval(() => {
+            // Увеличиваем на случайное число от 1 до 3
+            count += Math.floor(Math.random() * 3) + 1;
+            counterElement.textContent = count.toLocaleString('ru-RU');
+        }, 8000); // каждые 8 секунд
+    </script>
 </body>
 </html>
