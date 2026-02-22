@@ -160,7 +160,7 @@
             margin: 15px auto 0;
         }
         
-        /* КВАДРАТНЫЕ ИКОНКИ СО СКРУГЛЁННЫМИ УГЛАМИ */
+        /* КОЛЛАЖ С КЛИКАБЕЛЬНЫМИ ИКОНКАМИ */
         .logo-cloud {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
@@ -169,10 +169,26 @@
             justify-items: center;
             margin: 40px 0 25px;
             padding: 25px;
-            background: rgba(15, 20, 30, 0.6);
+            background: rgba(15, 20, 30, 0.5);
             backdrop-filter: blur(8px);
             border-radius: 30px;
             border: 1px solid rgba(255, 170, 51, 0.3);
+        }
+        .logo-cloud a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .logo-cloud a:hover {
+            transform: scale(1.1);
+        }
+        .logo-cloud a:hover img {
+            border-color: #ffaa33;
+            box-shadow: 0 0 30px rgba(255, 170, 51, 0.5);
         }
         .logo-cloud img {
             width: 70px;
@@ -183,11 +199,6 @@
             padding: 10px;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 170, 51, 0.3);
-        }
-        .logo-cloud img:hover {
-            transform: scale(1.1);
-            border-color: #ffaa33;
-            box-shadow: 0 0 30px rgba(255, 170, 51, 0.5);
         }
         
         .btn-tg {
@@ -215,7 +226,7 @@
             box-shadow: 0 0 40px rgba(0, 136, 204, 0.7);
         }
         
-        /* СЧЁТЧИК — ЯРКИЙ И ЧИТАЕМЫЙ */
+        /* СЧЁТЧИК */
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -516,48 +527,48 @@
             <p>✅ Актуальные зеркала Vavada, 1win, Duel Casino, Stake и ещё 40+ казино. Бонусы до 500%, фриспины 2026, быстрый доступ без VPN в Telegram.</p>
         </div>
 
-        <!-- КВАДРАТНЫЕ ЛОГОТИПЫ -->
+        <!-- КЛИКАБЕЛЬНЫЙ КОЛЛАЖ С ПАРТНЁРСКИМИ ССЫЛКАМИ -->
         <div class="logo-cloud reveal">
-            <img src="images/vavada.png" alt="Vavada зеркало рабочее бонус 100% до 50000" loading="lazy">
-            <img src="images/1win.png" alt="1win актуальное зеркало бонус 500% на депозит" loading="lazy">
-            <img src="images/duel.png" alt="Duel Casino зеркало доступ 120% бонус 250 фриспинов" loading="lazy">
-            <img src="images/stake.png" alt="Stake зеркало крипто казино эксклюзивный бонус" loading="lazy">
-            <img src="images/fugu.png" alt="Fugu Casino зеркало 100% бонус 50 фриспинов" loading="lazy">
-            <img src="images/cat.png" alt="Cat Casino зеркало 200% бонус до 100000" loading="lazy">
-            <img src="images/leebet.png" alt="Leebet Casino зеркало приветственный бонус" loading="lazy">
-            <img src="images/joy.png" alt="Joy Casino зеркало 200% бонус 200 фриспинов" loading="lazy">
-            <img src="images/cryptoboss.png" alt="Criptoboss зеркало крипто казино бонус" loading="lazy">
-            <img src="images/rox.png" alt="Rox Casino зеркало 100% бонус до 50000" loading="lazy">
-            <img src="images/banda.png" alt="Banda Casino зеркало эксклюзивный бонус" loading="lazy">
-            <img src="images/champion.png" alt="Champion Slots зеркало турниры фриспины" loading="lazy">
-            <img src="images/ramenbet.png" alt="Ramenbet зеркало уникальный дизайн бонус" loading="lazy">
-            <img src="images/casinox.png" alt="Casino X зеркало популярный бренд кэшбэк" loading="lazy">
-            <img src="images/gama.png" alt="Gama Casino зеркало большой выбор игр" loading="lazy">
-            <img src="images/kent.png" alt="Kent Casino зеркало премиум уровень подарки" loading="lazy">
-            <img src="images/beef.png" alt="Beef Casino зеркало рейкбэк каждый день" loading="lazy">
-            <img src="images/martin.png" alt="Martin Casino зеркало стильное казино выплаты" loading="lazy">
-            <img src="images/flagman.png" alt="Flagman Casino зеркало лидер индустрии турниры" loading="lazy">
-            <img src="images/irvin.png" alt="Irvin Casino зеркало мгновенные выплаты" loading="lazy">
-            <img src="images/gizbo.png" alt="Gizbo Casino зеркало футуристичный дизайн" loading="lazy">
-            <img src="images/1go.png" alt="1 GO Casino зеркало ежедневные бонусы" loading="lazy">
-            <img src="images/starda.png" alt="Starda Casino зеркало мгновенные выплаты бонусы" loading="lazy">
-            <img src="images/monro.png" alt="Monro Casino зеркало загадочная атмосфера" loading="lazy">
-            <img src="images/drip.png" alt="Drip Casino зеркало мгновенные выплаты кэшбэк" loading="lazy">
-            <img src="images/sol.png" alt="Sol Casino зеркало топ выплаты турниры" loading="lazy">
-            <img src="images/jet.png" alt="Jet Casino зеркало быстрый старт помощь новичкам" loading="lazy">
-            <img src="images/izzi.png" alt="Izzi Casino зеркало вкусные бонусы промокоды" loading="lazy">
-            <img src="images/lexx.png" alt="Lexx Casino зеркало честная игра лицензия Кюрасао" loading="lazy">
-            <img src="images/volna.png" alt="Volna Casino зеркало лицензия Кюрасао бонусы" loading="lazy">
-            <img src="images/legzo.png" alt="Legzo Casino зеркало много слотов бонусов" loading="lazy">
-            <img src="images/fresh.png" alt="Fresh Casino зеркало новинки игр турниры" loading="lazy">
-            <img src="images/daddy.png" alt="Daddy Casino зеркало бонусы каждый день" loading="lazy">
-            <img src="images/r7.png" alt="R7 Casino зеркало космическая тематика турниры" loading="lazy">
-            <img src="images/kometa.png" alt="Комета Casino зеркало яркие выигрыши" loading="lazy">
-            <img src="images/arkada.png" alt="Arkada Casino зеркало аркадные игры подарки" loading="lazy">
-            <img src="images/kush.png" alt="Куш Casino зеркало джекпот крупные выигрыши" loading="lazy">
-            <img src="images/cactus.png" alt="Cactus Casino зеркало пустынная тематика кэшбэк" loading="lazy">
-            <img src="images/auf.png" alt="Auf Casino зеркало приветственный бонус колесо удачи" loading="lazy">
-            <img src="images/unlim.png" alt="Unlim Casino зеркало безлимитные выигрыши" loading="lazy">
+            <a href="https://gate707.com/?promo=d9d43ea1-0cd0-4dd8-9a86-28d352183bfe&target=register" target="_blank"><img src="images/vavada.png" alt="Vavada зеркало рабочее бонус 100% до 50000" loading="lazy"></a>
+            <a href="https://one-vv893.com/?p=sxqe" target="_blank"><img src="images/1win.png" alt="1win актуальное зеркало бонус 500% на депозит" loading="lazy"></a>
+            <a href="https://duel.com/r/RUBLIK" target="_blank"><img src="images/duel.png" alt="Duel Casino зеркало доступ 120% бонус 250 фриспинов" loading="lazy"></a>
+            <a href="http://stake1036.com/?c=UdQh5cRu" target="_blank"><img src="images/stake.png" alt="Stake зеркало крипто казино эксклюзивный бонус" loading="lazy"></a>
+            <a href="https://fugu-way-one.com/c1536be58" target="_blank"><img src="images/fugu.png" alt="Fugu Casino зеркало 100% бонус 50 фриспинов" loading="lazy"></a>
+            <a href="https://triumphant-hall.com/sbrl3ljkm" target="_blank"><img src="images/cat.png" alt="Cat Casino зеркало 200% бонус до 100000" loading="lazy"></a>
+            <a href="https://play-leebet-three.com/deyqu7sml" target="_blank"><img src="images/leebet.png" alt="Leebet Casino зеркало приветственный бонус" loading="lazy"></a>
+            <a href="https://clck.ru/3QXq6p" target="_blank"><img src="images/joy.png" alt="Joy Casino зеркало 200% бонус 200 фриспинов" loading="lazy"></a>
+            <a href="https://cryptobossc.online/d247e5ab0" target="_blank"><img src="images/cryptoboss.png" alt="Criptoboss зеркало крипто казино бонус" loading="lazy"></a>
+            <a href="https://clck.ru/34339T" target="_blank"><img src="images/rox.png" alt="Rox Casino зеркало 100% бонус до 50000" loading="lazy"></a>
+            <a href="https://playlightzone.com/dmnhefnvq" target="_blank"><img src="images/banda.png" alt="Banda Casino зеркало эксклюзивный бонус" loading="lazy"></a>
+            <a href="https://clck.ru/3PEbRM" target="_blank"><img src="images/champion.png" alt="Champion Slots зеркало турниры фриспины" loading="lazy"></a>
+            <a href="https://clck.ru/39JnjJ" target="_blank"><img src="images/ramenbet.png" alt="Ramenbet зеркало уникальный дизайн бонус" loading="lazy"></a>
+            <a href="https://21631.gameshere.xyz/ru/registration2?partner=p21631p3326886p3e51" target="_blank"><img src="images/casinox.png" alt="Casino X зеркало популярный бренд кэшбэк" loading="lazy"></a>
+            <a href="https://starforge-race.com/sfevqs2sr" target="_blank"><img src="images/gama.png" alt="Gama Casino зеркало большой выбор игр" loading="lazy"></a>
+            <a href="https://holo-neonrun.com/sntbu9gqi" target="_blank"><img src="images/kent.png" alt="Kent Casino зеркало премиум уровень подарки" loading="lazy"></a>
+            <a href="https://beef-route-four.com/c3f6ec874" target="_blank"><img src="images/beef.png" alt="Beef Casino зеркало рейкбэк каждый день" loading="lazy"></a>
+            <a href="https://clck.ru/3Mnh9o" target="_blank"><img src="images/martin.png" alt="Martin Casino зеркало стильное казино выплаты" loading="lazy"></a>
+            <a href="https://flagmanway1.com/c5068b5f6" target="_blank"><img src="images/flagman.png" alt="Flagman Casino зеркало лидер индустрии турниры" loading="lazy"></a>
+            <a href="https://rwn-blrs21.com/c1452dd34" target="_blank"><img src="images/irvin.png" alt="Irvin Casino зеркало мгновенные выплаты" loading="lazy"></a>
+            <a href="https://gzb-way03.com/c2b450be9" target="_blank"><img src="images/gizbo.png" alt="Gizbo Casino зеркало футуристичный дизайн" loading="lazy"></a>
+            <a href="https://1go-blrs10.com/ca2275e6d" target="_blank"><img src="images/1go.png" alt="1 GO Casino зеркало ежедневные бонусы" loading="lazy"></a>
+            <a href="https://strd-blse21.com/cf2b97cef" target="_blank"><img src="images/starda.png" alt="Starda Casino зеркало мгновенные выплаты бонусы" loading="lazy"></a>
+            <a href="https://mnr-blrs21.com/c5335a257" target="_blank"><img src="images/monro.png" alt="Monro Casino зеркало загадочная атмосфера" loading="lazy"></a>
+            <a href="https://drp-irrs10.com/c18ebfa90" target="_blank"><img src="images/drip.png" alt="Drip Casino зеркало мгновенные выплаты кэшбэк" loading="lazy"></a>
+            <a href="https://clck.ru/3433Fz" target="_blank"><img src="images/sol.png" alt="Sol Casino зеркало топ выплаты турниры" loading="lazy"></a>
+            <a href="https://jet-blrs10.com/c7b0bc5b9" target="_blank"><img src="images/jet.png" alt="Jet Casino зеркало быстрый старт помощь новичкам" loading="lazy"></a>
+            <a href="https://izzi-blrs10.com/c123e81f2" target="_blank"><img src="images/izzi.png" alt="Izzi Casino зеркало вкусные бонусы промокоды" loading="lazy"></a>
+            <a href="https://lexyway1.com/c8ef27fcf" target="_blank"><img src="images/lexx.png" alt="Lexx Casino зеркало честная игра лицензия Кюрасао" loading="lazy"></a>
+            <a href="https://vln-blrs10.com/c4e395fcb" target="_blank"><img src="images/volna.png" alt="Volna Casino зеркало лицензия Кюрасао бонусы" loading="lazy"></a>
+            <a href="https://clck.ru/3433E2" target="_blank"><img src="images/legzo.png" alt="Legzo Casino зеркало много слотов бонусов" loading="lazy"></a>
+            <a href="https://clck.ru/3433CW" target="_blank"><img src="images/fresh.png" alt="Fresh Casino зеркало новинки игр турниры" loading="lazy"></a>
+            <a href="https://molten-emberpath.com/smaha6mhb" target="_blank"><img src="images/daddy.png" alt="Daddy Casino зеркало бонусы каждый день" loading="lazy"></a>
+            <a href="https://cosmos-flight.com/stcmmmdge" target="_blank"><img src="images/r7.png" alt="R7 Casino зеркало космическая тематика турниры" loading="lazy"></a>
+            <a href="https://ignited-lavapass.com/sws2h6fse" target="_blank"><img src="images/kometa.png" alt="Комета Casino зеркало яркие выигрыши" loading="lazy"></a>
+            <a href="https://prismed-cyberlane.com/svd9sjada" target="_blank"><img src="images/arkada.png" alt="Arkada Casino зеркало аркадные игры подарки" loading="lazy"></a>
+            <a href="https://playzoneksh.com/dqyptbuu1" target="_blank"><img src="images/kush.png" alt="Куш Casino зеркало джекпот крупные выигрыши" loading="lazy"></a>
+            <a href="https://lavoluntadisabel.xyz/affiliate/c_4wj3z1mk?path=%2Fbonuses" target="_blank"><img src="images/cactus.png" alt="Cactus Casino зеркало пустынная тематика кэшбэк" loading="lazy"></a>
+            <a href="https://aufas.com/d5b5799f1" target="_blank"><img src="images/auf.png" alt="Auf Casino зеркало приветственный бонус колесо удачи" loading="lazy"></a>
+            <a href="https://unlimc.net/d2531e71a" target="_blank"><img src="images/unlim.png" alt="Unlim Casino зеркало безлимитные выигрыши" loading="lazy"></a>
         </div>
 
         <!-- Кнопка Telegram -->
@@ -567,7 +578,7 @@
             </a>
         </div>
 
-        <!-- ЯРКИЙ СЧЁТЧИК -->
+        <!-- СЧЁТЧИК -->
         <div class="stats-grid reveal">
             <div class="counter-block">
                 <span class="counter-number" id="subscriberCount">14 760</span>
