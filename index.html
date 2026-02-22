@@ -50,7 +50,7 @@
             position: relative;
         }
         
-        /* НОВЫЙ ПРЕМИАЛЬНЫЙ ФОН */
+        /* ТРЕНДОВЫЙ ФОН 2026 — МЯГКИЙ ГРАДИЕНТ С ЛЁГКИМ ШУМОМ */
         .video-background {
             position: fixed;
             top: 0;
@@ -58,26 +58,20 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            background: radial-gradient(circle at 30% 40%, #1a1e2b, #0b0d14);
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(200, 170, 100, 0.03) 0%, transparent 30%),
-                radial-gradient(circle at 80% 70%, rgba(200, 170, 100, 0.03) 0%, transparent 30%),
-                repeating-linear-gradient(45deg, rgba(200, 170, 100, 0.02) 0px, rgba(200, 170, 100, 0.02) 1px, transparent 1px, transparent 12px);
+                radial-gradient(circle at 70% 60%, rgba(100, 150, 255, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 20% 80%, rgba(200, 170, 255, 0.03) 0%, transparent 40%),
+                repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 20px);
             opacity: 0.9;
         }
         
-        /* Лёгкие золотые частицы (очень деликатно) */
-        .particle {
-            position: absolute;
-            opacity: 0.02;
-            font-size: 60px;
-            color: #c8aa64;
-            pointer-events: none;
-            z-index: -1;
+        /* ЛЁГКАЯ АНИМАЦИЯ (тренд 2026) */
+        @keyframes softShift {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
         }
-        .particle:nth-child(1) { top: 15%; left: 10%; transform: rotate(15deg); }
-        .particle:nth-child(2) { top: 75%; right: 15%; transform: rotate(-10deg); }
-        .particle:nth-child(3) { bottom: 20%; left: 20%; transform: rotate(25deg); }
         
         .container {
             max-width: 1400px;
@@ -101,18 +95,19 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: #c8aa64;
-            border-radius: 50%;
+            background: #00ffaa;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1a1a1a;
+            color: #0b0e14;
             font-size: 24px;
             cursor: pointer;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(0, 255, 170, 0.5);
             opacity: 0;
             transition: opacity 0.3s;
             z-index: 98;
+            box-shadow: 0 0 20px rgba(0, 255, 170, 0.3);
         }
         #scrollToTop.show { opacity: 1; }
         .float-tg {
@@ -121,18 +116,22 @@
             right: 30px;
             width: 70px;
             height: 70px;
-            background: #27A6E5;
-            border-radius: 50%;
+            background: #0088cc;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 36px;
-            box-shadow: 0 10px 25px rgba(39,166,229,0.3);
-            border: 3px solid rgba(255,255,255,0.3);
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.5);
+            border: 1px solid rgba(255,255,255,0.2);
             transition: 0.2s;
             z-index: 99;
             text-decoration: none;
+        }
+        .float-tg:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(0, 136, 204, 0.7);
         }
         .hero {
             padding: 60px 0 20px;
@@ -144,23 +143,19 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #c8aa64;
-            text-shadow: 
-                0 1px 0 #99804b,
-                0 2px 0 #7f693d,
-                0 3px 0 #665230,
-                0 4px 8px rgba(0,0,0,0.5);
+            color: #fff;
+            text-shadow: 0 0 20px rgba(0, 255, 170, 0.5);
             margin-bottom: 15px;
             line-height: 1.2;
         }
         .hero p {
             font-size: clamp(18px, 4vw, 22px);
-            color: #e0e0e0;
+            color: #b0b5c0;
             max-width: 800px;
             margin: 15px auto 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         
+        /* КВАДРАТНЫЕ ИКОНКИ СО СКРУГЛЁННЫМИ УГЛАМИ */
         .logo-cloud {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
@@ -169,21 +164,25 @@
             justify-items: center;
             margin: 40px 0 25px;
             padding: 25px;
-            background: rgba(20,20,20,0.6);
+            background: rgba(20, 25, 35, 0.5);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(200,170,100,0.2);
-            border-radius: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .logo-cloud img {
             width: 70px;
             height: 70px;
             object-fit: contain;
-            filter: brightness(0.95);
+            border-radius: 16px;
+            background: rgba(30, 35, 45, 0.7);
+            padding: 10px;
             transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 170, 0.2);
         }
         .logo-cloud img:hover {
-            filter: brightness(1.1);
             transform: scale(1.1);
+            border-color: #00ffaa;
+            box-shadow: 0 0 30px rgba(0, 255, 170, 0.3);
         }
         
         .btn-tg {
@@ -191,71 +190,87 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
-            background: #27A6E5;
+            background: #0088cc;
             color: white;
             font-size: clamp(24px, 6vw, 32px);
             font-weight: 800;
             padding: 20px 40px;
-            border-radius: 70px;
+            border-radius: 30px;
             text-decoration: none;
-            border-bottom: 4px solid #1a7da8;
+            border: 1px solid rgba(255,255,255,0.2);
             transition: 0.2s;
             width: 100%;
             max-width: 600px;
             margin: 30px auto;
-            box-shadow: 0 10px 25px rgba(39,166,229,0.3);
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.3);
         }
         .btn-tg:hover {
-            background: #3cb3f0;
+            background: #0099dd;
             transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(39,166,229,0.4);
+            box-shadow: 0 0 40px rgba(0, 136, 204, 0.5);
         }
         
+        /* КИБЕРПАНК-СЧЁТЧИК — ОГРОМНЫЙ, БЕЗ РАМКИ, С НЕОНОМ */
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
             margin: 40px 0;
         }
-        .counter-block, .progress-block {
-            background: rgba(20,20,20,0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(200,170,100,0.2);
-            border-radius: 30px;
-            padding: 25px;
+        .counter-block {
             text-align: center;
         }
         .counter-number {
-            font-size: 52px;
-            font-weight: 800;
-            color: #c8aa64;
+            font-size: 120px;
+            font-weight: 900;
+            color: #00ffaa;
+            text-shadow: 0 0 30px #00ffaa, 0 0 60px #00ffaa;
+            line-height: 1;
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .counter-label {
+            font-size: 24px;
+            color: #b0b5c0;
+            letter-spacing: 2px;
+        }
+        .progress-block {
+            background: rgba(20, 25, 35, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .progress-bar {
             width: 100%;
             height: 25px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(0, 255, 170, 0.1);
             border-radius: 15px;
             margin: 15px 0;
             overflow: hidden;
+            border: 1px solid rgba(0, 255, 170, 0.3);
         }
         .progress-fill {
             height: 100%;
             width: 68%;
-            background: linear-gradient(90deg, #c8aa64, #a78b4f);
+            background: linear-gradient(90deg, #00ffaa, #00cc88);
             border-radius: 15px;
         }
         
+        /* КВАДРАТНЫЕ РАМКИ ДЛЯ КАЗИНО */
         .casino-day {
-            background: rgba(20,20,20,0.6);
+            background: rgba(20, 25, 35, 0.5);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(200,170,100,0.3);
-            border-radius: 50px;
+            border-radius: 30px;
             padding: 40px;
             margin: 40px 0;
             text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .casino-day h3 {
-            color: #c8aa64;
+            color: #00ffaa;
             font-size: 32px;
             margin-bottom: 30px;
             letter-spacing: 1px;
@@ -270,14 +285,14 @@
         .day-frame {
             width: 220px;
             height: 220px;
-            border: 3px solid #c8aa64;
-            border-radius: 50%;
-            background: rgba(10,10,10,0.8);
+            border-radius: 30px;
+            background: rgba(30, 35, 45, 0.7);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 0 30px rgba(200,170,100,0.2);
+            border: 2px solid #00ffaa;
+            box-shadow: 0 0 40px rgba(0, 255, 170, 0.3);
         }
         .day-frame img {
             width: 100%;
@@ -287,15 +302,16 @@
         }
         .casino-day h2 {
             font-size: 48px;
-            color: #c8aa64;
+            color: #fff;
             margin-bottom: 15px;
         }
         
         .timer {
             font-size: 42px;
             font-weight: 800;
-            color: #c8aa64;
+            color: #00ffaa;
             margin: 15px 0;
+            text-shadow: 0 0 20px #00ffaa;
         }
         
         .top3-grid {
@@ -305,27 +321,27 @@
             margin: 40px 0;
         }
         .top-item {
-            background: rgba(20,20,20,0.6);
+            background: rgba(20, 25, 35, 0.5);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(200,170,100,0.2);
-            border-radius: 40px;
+            border-radius: 30px;
             padding: 35px 25px;
             text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .frame-gold, .frame-silver, .frame-bronze {
             width: 140px;
             height: 140px;
-            border-radius: 50%;
+            border-radius: 20px;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: rgba(10,10,10,0.8);
+            background: rgba(30, 35, 45, 0.7);
         }
-        .frame-gold { border: 3px solid #c8aa64; }
-        .frame-silver { border: 3px solid #a0a0a0; }
-        .frame-bronze { border: 3px solid #b87c4b; }
+        .frame-gold { border: 2px solid #ffd700; box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
+        .frame-silver { border: 2px solid #c0c0c0; box-shadow: 0 0 30px rgba(192, 192, 192, 0.3); }
+        .frame-bronze { border: 2px solid #cd7f32; box-shadow: 0 0 30px rgba(205, 127, 50, 0.3); }
         .frame-gold img, .frame-silver img, .frame-bronze img {
             width: 100%;
             height: 100%;
@@ -335,7 +351,7 @@
         .top-item .rank {
             font-size: 42px;
             font-weight: 800;
-            color: #c8aa64;
+            color: #00ffaa;
             margin-bottom: 20px;
         }
         .top-item .casino-name {
@@ -345,29 +361,29 @@
             color: #fff;
         }
         .top-item .bonus-text {
-            color: #c8aa64;
+            color: #b0b5c0;
             font-size: 18px;
             margin-bottom: 20px;
         }
         
         .bonus-link {
             display: inline-block;
-            background: #c8aa64;
-            color: #1a1a1a;
+            background: linear-gradient(145deg, #00ffaa, #00cc88);
+            color: #0b0e14;
             font-weight: 800;
             padding: 12px 24px;
-            border-radius: 50px;
+            border-radius: 20px;
             text-decoration: none;
             width: 100%;
             font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-bottom: 3px solid #9f834b;
+            border: 1px solid rgba(255,255,255,0.2);
             transition: 0.2s;
         }
         .bonus-link:hover {
-            background: #d4b87a;
             transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 255, 170, 0.5);
         }
         
         .bonuses {
@@ -378,7 +394,8 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 30px;
-            color: #c8aa64;
+            color: #fff;
+            text-shadow: 0 0 20px #00ffaa;
         }
         .bonus-grid {
             display: grid;
@@ -386,55 +403,62 @@
             gap: 25px;
         }
         .bonus-card {
-            background: rgba(20,20,20,0.6);
+            background: rgba(20, 25, 35, 0.5);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(200,170,100,0.2);
             border-radius: 30px;
             padding: 25px;
             text-align: center;
             transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .bonus-card:hover {
-            border-color: #c8aa64;
+            border-color: #00ffaa;
             transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 255, 170, 0.2);
         }
         .bonus-card img {
             width: 80px;
             height: 80px;
             object-fit: contain;
+            border-radius: 16px;
+            background: rgba(30, 35, 45, 0.7);
+            padding: 12px;
             margin-bottom: 15px;
+            border: 1px solid rgba(0, 255, 170, 0.2);
         }
         .bonus-card h3 {
             font-size: 24px;
             margin-bottom: 10px;
-            color: #c8aa64;
+            color: #fff;
         }
         .bonus-card p {
             font-size: 16px;
             margin-bottom: 15px;
-            color: #e0e0e0;
+            color: #b0b5c0;
         }
         
         .footer {
-            border-top: 1px solid rgba(200,170,100,0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding: 30px 0;
             text-align: center;
-            color: #a0a0a0;
+            color: #6a6f80;
             margin-top: 50px;
         }
         .eighteen-plus {
-            background: #c8aa64;
-            color: #1a1a1a;
+            background: #00ffaa;
+            color: #0b0e14;
             padding: 8px 24px;
-            border-radius: 50px;
+            border-radius: 20px;
             display: inline-block;
             margin-top: 20px;
             font-weight: 700;
+            border: 1px solid rgba(255,255,255,0.2);
         }
         
         @media (max-width: 600px) {
             .stats-grid, .top3-grid { grid-template-columns: 1fr; }
             .logo-cloud { grid-template-columns: repeat(4, 1fr); }
+            .counter-number { font-size: 80px; }
             .day-frame { width: 180px; height: 180px; }
             .frame-gold, .frame-silver, .frame-bronze { width: 120px; height: 120px; }
             .casino-day h2 { font-size: 36px; }
@@ -442,12 +466,7 @@
     </style>
 </head>
 <body>
-    <!-- Очень деликатные частицы -->
-    <div class="particle">♠</div>
-    <div class="particle">♥</div>
-    <div class="particle">♦</div>
-    
-    <!-- Фон -->
+    <!-- ФОН -->
     <div class="video-background"></div>
     
     <a href="https://t.me/igrovyes_avtomaty" class="float-tg" target="_blank">
@@ -457,7 +476,7 @@
     
     <div class="container">
         <div style="padding:20px 0; text-align:center;">
-            <div style="font-size:15px; color:#c8aa64;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
+            <div style="font-size:15px; color:#00ffaa;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
         </div>
 
         <div class="hero reveal">
@@ -465,7 +484,7 @@
             <p>✅ Актуальные зеркала Vavada, 1win, Duel Casino, Stake и ещё 40+ казино. Бонусы до 500%, фриспины 2026, быстрый доступ без VPN в Telegram.</p>
         </div>
 
-        <!-- КОЛЛАЖ ЛОГОТИПОВ -->
+        <!-- КВАДРАТНЫЕ ЛОГОТИПЫ -->
         <div class="logo-cloud reveal">
             <img src="images/vavada.png" alt="Vavada зеркало рабочее бонус 100% до 50000" loading="lazy">
             <img src="images/1win.png" alt="1win актуальное зеркало бонус 500% на депозит" loading="lazy">
@@ -516,16 +535,17 @@
             </a>
         </div>
 
-        <!-- Счётчик и прогресс -->
+        <!-- ОГРОМНЫЙ КИБЕРПАНК-СЧЁТЧИК -->
         <div class="stats-grid reveal">
             <div class="counter-block">
                 <span class="counter-number" id="subscriberCount">14 760</span>
-                <div style="font-size:20px; margin-top:10px;">подписчиков в Telegram</div>
+                <div class="counter-label">ПОДПИСЧИКОВ В TELEGRAM</div>
             </div>
             <div class="progress-block">
-                <div style="font-size:20px;">🔥 Горячие бонусы 2026: <span id="bonusCount">342</span>/500</div>
+                <div style="font-size:24px;">🔥 ГОРЯЧИЕ БОНУСЫ 2026</div>
+                <div style="font-size:18px; margin:10px 0;"><span id="bonusCount">342</span>/500</div>
                 <div class="progress-bar"><div class="progress-fill"></div></div>
-                <div style="font-size:18px;">Сегодня разобрано 158 бездепозитных бонусов</div>
+                <div style="font-size:16px;">Сегодня разобрано 158 бездепозитных бонусов</div>
             </div>
         </div>
 
@@ -563,8 +583,8 @@
         <div class="footer">
             <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО ОНЛАЙН 24/7</div>
             <div style="margin:15px 0;">
-                <a href="#" style="color:#c8aa64; text-decoration:none;">Политика конфиденциальности</a> • 
-                <a href="#" style="color:#c8aa64; text-decoration:none;">Ответственная игра</a>
+                <a href="#" style="color:#00ffaa; text-decoration:none;">Политика конфиденциальности</a> • 
+                <a href="#" style="color:#00ffaa; text-decoration:none;">Ответственная игра</a>
             </div>
             <div class="eighteen-plus">18+ ТОЛЬКО ДЛЯ СОВЕРШЕННОЛЕТНИХ</div>
         </div>
