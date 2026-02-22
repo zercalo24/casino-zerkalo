@@ -65,9 +65,9 @@
             filter: brightness(0.3) blur(3px);
         }
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
             position: relative;
             z-index: 1;
         }
@@ -125,7 +125,7 @@
         }
         .hero h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(28px, 8vw, 56px);
+            font-size: clamp(32px, 8vw, 64px);
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -139,7 +139,7 @@
                 0 6px 8px rgba(0,0,0,0.5),
                 0 8px 10px rgba(0,0,0,0.3),
                 0 10px 15px rgba(0,0,0,0.2);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             line-height: 1.2;
             animation: shine 3s infinite;
         }
@@ -147,71 +147,89 @@
             0%, 100% { text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9a03d, 0 3px 0 #b88a2c, 0 4px 0 #a6741b, 0 5px 0 #945f0a, 0 6px 8px rgba(0,0,0,0.5); }
             50% { text-shadow: 0 1px 0 #ccc, 0 2px 0 #ffaa33, 0 3px 0 #ffaa33, 0 4px 0 #ffaa33, 0 5px 0 #ffaa33, 0 6px 12px #ffaa33; }
         }
+        .hero p {
+            font-size: clamp(18px, 4vw, 22px);
+            color: #b0b5c0;
+            max-width: 800px;
+            margin: 15px auto 0;
+        }
+        
+        /* КОЛЛАЖ ЛОГОТИПОВ - УВЕЛИЧЕНО */
         .logo-cloud {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            gap: 20px;
             align-items: center;
             justify-items: center;
-            margin: 30px 0 15px;
-            padding: 15px;
+            margin: 40px 0 25px;
+            padding: 25px;
             background: rgba(255,255,255,0.03);
-            border-radius: 30px;
+            border-radius: 40px;
         }
         .logo-cloud img {
-            width: 45px;
-            height: 45px;
+            width: 70px;
+            height: 70px;
             object-fit: contain;
-            filter: grayscale(0.3) brightness(0.9);
+            filter: grayscale(0.2) brightness(0.9);
             transition: all 0.3s ease;
             animation: pulseLogo 3s infinite;
         }
         @keyframes pulseLogo {
-            0% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.05); opacity: 1; filter: brightness(1.1); }
-            100% { transform: scale(1); opacity: 0.8; }
+            0% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.08); opacity: 1; filter: brightness(1.1); }
+            100% { transform: scale(1); opacity: 0.9; }
         }
+        .logo-cloud img:hover {
+            filter: grayscale(0) brightness(1.2);
+            transform: scale(1.2) rotate(2deg);
+            animation: none;
+        }
+        
         .btn-tg {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 15px;
             background: #27A6E5;
             color: white;
-            font-size: clamp(22px, 6vw, 28px);
+            font-size: clamp(24px, 6vw, 32px);
             font-weight: 800;
-            padding: 15px 30px;
-            border-radius: 60px;
+            padding: 20px 40px;
+            border-radius: 70px;
             text-decoration: none;
-            border-bottom: 4px solid #1a7da8;
+            border-bottom: 5px solid #1a7da8;
             transition: 0.2s;
             width: 100%;
-            max-width: 500px;
-            margin: 25px auto;
+            max-width: 600px;
+            margin: 30px auto;
         }
+        .btn-tg i {
+            font-size: clamp(32px, 7vw, 48px);
+        }
+        
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 30px 0;
+            gap: 25px;
+            margin: 40px 0;
         }
         .counter-block, .progress-block {
             background: #1a1f2b;
             border-radius: 30px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
         }
         .counter-number {
-            font-size: 42px;
+            font-size: 52px;
             font-weight: 800;
             color: #ffaa33;
             animation: pulse 2s infinite;
         }
         .progress-bar {
             width: 100%;
-            height: 20px;
+            height: 25px;
             background: #2f3542;
-            border-radius: 10px;
+            border-radius: 15px;
             margin: 15px 0;
             overflow: hidden;
         }
@@ -219,99 +237,122 @@
             height: 100%;
             width: 68%;
             background: linear-gradient(90deg, #ffaa33, #ff8c00);
-            border-radius: 10px;
+            border-radius: 15px;
             animation: fillAnimation 2s ease-out;
         }
-        @keyframes fillAnimation {
-            from { width: 0; }
-            to { width: 68%; }
-        }
+        
+        /* КАЗИНО ДНЯ - УВЕЛИЧЕНО */
         .casino-day {
             background: linear-gradient(145deg, #1a1f2b, #11161f);
-            border-radius: 30px;
-            padding: 25px;
-            margin: 30px 0;
-            border: 2px solid #ffaa33;
+            border-radius: 40px;
+            padding: 35px;
+            margin: 40px 0;
+            border: 3px solid #ffaa33;
             text-align: center;
         }
         .casino-day h3 {
             color: #ffaa33;
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
         .casino-day-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            gap: 40px;
             flex-wrap: wrap;
         }
         .casino-day img {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             object-fit: contain;
+            border: 2px solid #ffaa33;
+            border-radius: 30px;
+            padding: 10px;
+            background: #0a0c12;
         }
-        .timer {
-            font-size: 28px;
-            font-weight: 800;
-            color: #ffaa33;
-            margin: 10px 0;
-        }
-        .top3-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 30px 0;
-        }
-        .top-item {
-            background: #1a1f2b;
-            border-radius: 20px;
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ffaa33;
-        }
-        .top-item .rank {
-            font-size: 24px;
-            font-weight: 800;
+        .casino-day h2 {
+            font-size: 36px;
             color: #ffaa33;
             margin-bottom: 10px;
         }
-        .top-item img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
+        .casino-day p {
+            font-size: 20px;
+            margin-bottom: 20px;
         }
+        
+        .timer {
+            font-size: 36px;
+            font-weight: 800;
+            color: #ffaa33;
+            margin: 15px 0;
+        }
+        
+        /* ТОП-3 - УВЕЛИЧЕНО */
+        .top3-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .top-item {
+            background: #1a1f2b;
+            border-radius: 30px;
+            padding: 25px;
+            text-align: center;
+            border: 2px solid #ffaa33;
+        }
+        .top-item .rank {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffaa33;
+            margin-bottom: 15px;
+        }
+        .top-item img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .top-item div {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        
         .bonus-link {
             display: inline-block;
             background: linear-gradient(145deg, #ffaa33, #ff8c00);
             color: #0b0e14;
             font-weight: 800;
-            padding: 8px 16px;
-            border-radius: 50px;
+            padding: 12px 24px;
+            border-radius: 60px;
             text-decoration: none;
             width: 100%;
-            margin-top: 8px;
-            font-size: 14px;
+            margin-top: 15px;
+            font-size: 16px;
+            text-transform: uppercase;
         }
+        
+        /* КАРТОЧКИ БОНУСОВ - УВЕЛИЧЕНЫ */
         .bonuses {
-            margin: 40px 0;
+            margin: 50px 0;
         }
         .section-title {
-            font-size: clamp(24px, 6vw, 32px);
+            font-size: clamp(28px, 6vw, 36px);
             font-weight: 700;
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #ffaa33;
         }
         .bonus-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .bonus-card {
             background: #1a1f2b;
-            border-radius: 24px;
-            padding: 20px 15px;
+            border-radius: 30px;
+            padding: 25px;
             text-align: center;
             border: 1px solid #2f3542;
             transition: 0.3s;
@@ -320,64 +361,92 @@
             transform: translateY(-5px);
             border-color: #ffaa33;
         }
+        .bonus-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
         .bonus-card h3 {
-            font-size: 22px;
-            margin-bottom: 8px;
+            font-size: 24px;
+            margin-bottom: 10px;
             color: #ffaa33;
         }
+        .bonus-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #b0b5c0;
+        }
+        
         .chart {
             background: #1a1f2b;
             border-radius: 30px;
             padding: 25px;
-            margin: 30px 0;
+            margin: 40px 0;
         }
         .chart-bars {
             display: flex;
             justify-content: space-around;
             align-items: flex-end;
-            height: 150px;
+            height: 180px;
             margin-top: 20px;
         }
         .bar {
-            width: 30px;
+            width: 35px;
             background: #ffaa33;
-            border-radius: 5px 5px 0 0;
+            border-radius: 8px 8px 0 0;
             transition: height 1s;
         }
+        .bar-label {
+            text-align: center;
+            margin-top: 12px;
+            color: #b0b5c0;
+            font-size: 14px;
+        }
+        
         .partners {
-            margin: 40px 0;
+            margin: 50px 0;
             text-align: center;
         }
         .partner-logos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
+            gap: 40px;
+            margin-top: 25px;
         }
         .partner-logos i {
-            font-size: 48px;
+            font-size: 56px;
             color: #ffaa33;
             opacity: 0.7;
             transition: 0.3s;
         }
+        
         .footer {
-            border-top: 1px solid #2a2f3a;
-            padding: 25px 0;
+            border-top: 2px solid #2a2f3a;
+            padding: 30px 0;
             text-align: center;
             color: #6a6f80;
-            margin-top: 40px;
+            margin-top: 50px;
+            font-size: 16px;
         }
         .eighteen-plus {
             background: #dc3545;
             color: white;
-            padding: 6px 20px;
+            padding: 8px 24px;
             border-radius: 50px;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 20px;
+            font-size: 16px;
         }
+        
         @media (max-width: 600px) {
-            .stats-grid, .top3-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .top3-grid { grid-template-columns: 1fr; }
+            .logo-cloud { grid-template-columns: repeat(4, 1fr); }
+            .logo-cloud img { width: 55px; height: 55px; }
+            .casino-day img { width: 90px; height: 90px; }
+            .casino-day h2 { font-size: 28px; }
         }
     </style>
 </head>
@@ -394,8 +463,8 @@
     <div id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
     
     <div class="container">
-        <div style="padding:15px 0; text-align:center;">
-            <div style="font-size:13px; color:#ffaa33;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
+        <div style="padding:20px 0; text-align:center;">
+            <div style="font-size:15px; color:#ffaa33;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
         </div>
 
         <div class="hero reveal">
@@ -403,7 +472,7 @@
             <p>Всегда актуальные ссылки и бонусы в Telegram</p>
         </div>
 
-        <!-- ПОЛНЫЙ КОЛЛАЖ ИЗ 42 ЛОГОТИПОВ -->
+        <!-- ПОЛНЫЙ КОЛЛАЖ ИЗ 42 ЛОГОТИПОВ (УВЕЛИЧЕНЫ) -->
         <div class="logo-cloud reveal">
             <img src="images/vavada.png" alt="Vavada" loading="lazy">
             <img src="images/1win.png" alt="1win" loading="lazy">
@@ -458,12 +527,12 @@
         <div class="stats-grid reveal">
             <div class="counter-block">
                 <span class="counter-number" id="subscriberCount">14 760</span>
-                <div>подписчиков</div>
+                <div style="font-size:20px; margin-top:10px;">подписчиков</div>
             </div>
             <div class="progress-block">
-                <div>Бонусы сегодня: <span id="bonusCount">342</span>/500</div>
+                <div style="font-size:20px;">Бонусы сегодня: <span id="bonusCount">342</span>/500</div>
                 <div class="progress-bar"><div class="progress-fill"></div></div>
-                <div>🔥 Осталось 158 бонусов</div>
+                <div style="font-size:18px;">🔥 Осталось 158 бонусов</div>
             </div>
         </div>
 
@@ -481,27 +550,23 @@
                 <div>
                     <h2 id="dayCasinoName"></h2>
                     <p id="dayCasinoBonus"></p>
-                    <a href="#" id="dayCasinoLink" class="bonus-link" style="width:auto; padding:10px 30px;" target="_blank">Забрать бонус</a>
+                    <a href="#" id="dayCasinoLink" class="bonus-link" style="width:auto; padding:15px 40px; font-size:18px;" target="_blank">ЗАБРАТЬ БОНУС</a>
                 </div>
             </div>
         </div>
 
         <!-- ТОП-3 (динамическое) -->
-        <div class="top3-grid reveal" id="top3">
-            <!-- Заполняется скриптом -->
-        </div>
+        <div class="top3-grid reveal" id="top3"></div>
 
         <!-- Бонусная сетка (4 случайных) -->
         <div class="bonuses reveal">
             <h2 class="section-title">🔥 Горячие бонусы 2026</h2>
-            <div class="bonus-grid" id="bonusGrid">
-                <!-- Заполняется скриптом -->
-            </div>
+            <div class="bonus-grid" id="bonusGrid"></div>
         </div>
 
         <!-- График активности -->
         <div class="chart reveal">
-            <h3 style="text-align:center; color:#ffaa33;">📊 Активность за 24 часа</h3>
+            <h3 style="text-align:center; color:#ffaa33; font-size:24px;">📊 Активность за 24 часа</h3>
             <div class="chart-bars">
                 <div><div class="bar" style="height:80px;"></div><div class="bar-label">Пн</div></div>
                 <div><div class="bar" style="height:120px;"></div><div class="bar-label">Вт</div></div>
@@ -526,15 +591,16 @@
         <!-- Футер -->
         <div class="footer">
             <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО</div>
-            <div style="margin:12px 0;">
-                <a href="#">Политика</a> • <a href="#">Ответственная игра</a> • <a href="#">Правила</a>
+            <div style="margin:15px 0;">
+                <a href="#" style="color:#aaa; text-decoration:none;">Политика</a> • 
+                <a href="#" style="color:#aaa; text-decoration:none;">Ответственная игра</a> • 
+                <a href="#" style="color:#aaa; text-decoration:none;">Правила</a>
             </div>
             <div class="eighteen-plus">18+</div>
         </div>
     </div>
 
     <script>
-        // ========== ДАННЫЕ ВСЕХ 42 КАЗИНО ==========
         const casinos = [
             { name: 'Vavada', img: 'vavada.png', bonus: '100% до 50 000₽ + 100 FS', link: 'https://gate707.com/?promo=d9d43ea1-0cd0-4dd8-9a86-28d352183bfe&target=register' },
             { name: '1win', img: '1win.png', bonus: '500% на первый депозит', link: 'https://one-vv893.com/?p=sxqe' },
@@ -578,12 +644,10 @@
             { name: 'Unlim Casino', img: 'unlim.png', bonus: 'Безлимитный', link: 'https://unlimc.net/d2531e71a' }
         ];
 
-        // ========== ФУНКЦИЯ ПЕРЕМЕШИВАНИЯ ==========
         function shuffleArray(arr) {
             return arr.sort(() => Math.random() - 0.5);
         }
 
-        // ========== КАЗИНО ДНЯ ==========
         function setCasinoOfTheDay() {
             const randomIndex = Math.floor(Math.random() * casinos.length);
             const casino = casinos[randomIndex];
@@ -593,7 +657,6 @@
             document.getElementById('dayCasinoLink').href = casino.link;
         }
 
-        // ========== ТОП-3 ==========
         function setTop3() {
             const shuffled = shuffleArray([...casinos]);
             const top3 = shuffled.slice(0, 3);
@@ -605,15 +668,14 @@
                     <div class="top-item">
                         <div class="rank">${medals[index]}</div>
                         <img src="images/${casino.img}" alt="${casino.name}">
-                        <div>${casino.name}</div>
-                        <div style="color:#ffaa33;">${(5 - index * 0.1).toFixed(1)}</div>
+                        <div style="font-size:20px; font-weight:bold;">${casino.name}</div>
+                        <div style="color:#ffaa33; font-size:18px;">${(5 - index * 0.1).toFixed(1)}</div>
                         <a href="${casino.link}" class="bonus-link" target="_blank">Играть</a>
                     </div>
                 `;
             });
         }
 
-        // ========== БОНУСНАЯ СЕТКА ==========
         function setBonusGrid() {
             const shuffled = shuffleArray([...casinos]);
             const top4 = shuffled.slice(0, 4);
@@ -622,6 +684,7 @@
             top4.forEach(casino => {
                 grid.innerHTML += `
                     <div class="bonus-card">
+                        <img src="images/${casino.img}" alt="${casino.name}">
                         <h3>${casino.name}</h3>
                         <p>${casino.bonus}</p>
                         <a href="${casino.link}" class="bonus-link" target="_blank">Забрать</a>
@@ -630,12 +693,10 @@
             });
         }
 
-        // ========== ЗАПУСК ==========
         setCasinoOfTheDay();
         setTop3();
         setBonusGrid();
 
-        // ========== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ==========
         function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
         window.onscroll = function() {
             document.getElementById('scrollToTop').classList.toggle('show', document.documentElement.scrollTop > 300);
@@ -660,7 +721,6 @@
         }
         setInterval(updateTimer, 1000);
 
-        // Анимация при прокрутке
         function reveal() {
             var reveals = document.querySelectorAll('.reveal');
             for (var i = 0; i < reveals.length; i++) {
