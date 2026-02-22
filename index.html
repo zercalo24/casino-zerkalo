@@ -50,7 +50,7 @@
             position: relative;
         }
         
-        /* ТРЕНДОВЫЙ ФОН 2026 — МЯГКИЙ ГРАДИЕНТ С ЛЁГКИМ ШУМОМ */
+        /* ФОН С ИЗОБРАЖЕНИЕМ КАЗИНО */
         .video-background {
             position: fixed;
             top: 0;
@@ -58,19 +58,23 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(circle at 30% 40%, #1a1e2b, #0b0d14);
-            background-image: 
-                radial-gradient(circle at 70% 60%, rgba(100, 150, 255, 0.03) 0%, transparent 40%),
-                radial-gradient(circle at 20% 80%, rgba(200, 170, 255, 0.03) 0%, transparent 40%),
-                repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 20px);
-            opacity: 0.9;
+            background-image: url('https://images.unsplash.com/photo-1596831716170-3cfb4a7c1f7b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.4) contrast(1.1);
         }
         
-        /* ЛЁГКАЯ АНИМАЦИЯ (тренд 2026) */
-        @keyframes softShift {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0% 0%; }
+        /* ТЁМНАЯ ПОДЛОЖКА ДЛЯ ЛУЧШЕЙ ЧИТАЕМОСТИ */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, rgba(10, 15, 25, 0.8), rgba(5, 8, 15, 0.9));
+            z-index: -1;
+            pointer-events: none;
         }
         
         .container {
@@ -78,7 +82,7 @@
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         .reveal {
             opacity: 0;
@@ -95,19 +99,19 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: #00ffaa;
+            background: #ffaa33;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #0b0e14;
+            color: #0a0f1a;
             font-size: 24px;
             cursor: pointer;
-            border: 1px solid rgba(0, 255, 170, 0.5);
+            border: 1px solid rgba(255, 170, 51, 0.5);
             opacity: 0;
             transition: opacity 0.3s;
             z-index: 98;
-            box-shadow: 0 0 20px rgba(0, 255, 170, 0.3);
+            box-shadow: 0 0 20px rgba(255, 170, 51, 0.5);
         }
         #scrollToTop.show { opacity: 1; }
         .float-tg {
@@ -143,14 +147,15 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #fff;
-            text-shadow: 0 0 20px rgba(0, 255, 170, 0.5);
+            color: #ffaa33;
+            text-shadow: 2px 2px 0 #000, 0 0 30px rgba(255, 170, 51, 0.5);
             margin-bottom: 15px;
             line-height: 1.2;
         }
         .hero p {
             font-size: clamp(18px, 4vw, 22px);
-            color: #b0b5c0;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px #000;
             max-width: 800px;
             margin: 15px auto 0;
         }
@@ -164,25 +169,25 @@
             justify-items: center;
             margin: 40px 0 25px;
             padding: 25px;
-            background: rgba(20, 25, 35, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 20, 30, 0.6);
+            backdrop-filter: blur(8px);
             border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .logo-cloud img {
             width: 70px;
             height: 70px;
             object-fit: contain;
             border-radius: 16px;
-            background: rgba(30, 35, 45, 0.7);
+            background: rgba(25, 30, 40, 0.8);
             padding: 10px;
             transition: all 0.3s ease;
-            border: 1px solid rgba(0, 255, 170, 0.2);
+            border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .logo-cloud img:hover {
             transform: scale(1.1);
-            border-color: #00ffaa;
-            box-shadow: 0 0 30px rgba(0, 255, 170, 0.3);
+            border-color: #ffaa33;
+            box-shadow: 0 0 30px rgba(255, 170, 51, 0.5);
         }
         
         .btn-tg {
@@ -202,15 +207,15 @@
             width: 100%;
             max-width: 600px;
             margin: 30px auto;
-            box-shadow: 0 0 30px rgba(0, 136, 204, 0.3);
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.5);
         }
         .btn-tg:hover {
             background: #0099dd;
             transform: translateY(-2px);
-            box-shadow: 0 0 40px rgba(0, 136, 204, 0.5);
+            box-shadow: 0 0 40px rgba(0, 136, 204, 0.7);
         }
         
-        /* КИБЕРПАНК-СЧЁТЧИК — ОГРОМНЫЙ, БЕЗ РАМКИ, С НЕОНОМ */
+        /* СЧЁТЧИК — ЯРКИЙ И ЧИТАЕМЫЙ */
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -219,12 +224,17 @@
         }
         .counter-block {
             text-align: center;
+            background: rgba(15, 20, 30, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 30px;
+            padding: 30px 20px;
+            border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .counter-number {
-            font-size: 120px;
+            font-size: 100px;
             font-weight: 900;
-            color: #00ffaa;
-            text-shadow: 0 0 30px #00ffaa, 0 0 60px #00ffaa;
+            color: #ffffff;
+            text-shadow: 0 0 20px #ffaa33, 0 0 40px #ffaa33;
             line-height: 1;
             display: block;
             margin-bottom: 10px;
@@ -232,48 +242,54 @@
         }
         .counter-label {
             font-size: 24px;
-            color: #b0b5c0;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px #000;
             letter-spacing: 2px;
         }
         .progress-block {
-            background: rgba(20, 25, 35, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 20, 30, 0.5);
+            backdrop-filter: blur(8px);
             border-radius: 30px;
             padding: 25px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 170, 51, 0.3);
+        }
+        .progress-block > div {
+            color: #ffffff;
+            text-shadow: 1px 1px 3px #000;
         }
         .progress-bar {
             width: 100%;
             height: 25px;
-            background: rgba(0, 255, 170, 0.1);
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
             margin: 15px 0;
             overflow: hidden;
-            border: 1px solid rgba(0, 255, 170, 0.3);
+            border: 1px solid rgba(255, 170, 51, 0.5);
         }
         .progress-fill {
             height: 100%;
             width: 68%;
-            background: linear-gradient(90deg, #00ffaa, #00cc88);
+            background: linear-gradient(90deg, #ffaa33, #ff8c00);
             border-radius: 15px;
         }
         
         /* КВАДРАТНЫЕ РАМКИ ДЛЯ КАЗИНО */
         .casino-day {
-            background: rgba(20, 25, 35, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 20, 30, 0.5);
+            backdrop-filter: blur(8px);
             border-radius: 30px;
             padding: 40px;
             margin: 40px 0;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .casino-day h3 {
-            color: #00ffaa;
+            color: #ffaa33;
             font-size: 32px;
             margin-bottom: 30px;
             letter-spacing: 1px;
+            text-shadow: 1px 1px 3px #000;
         }
         .casino-day-content {
             display: flex;
@@ -286,13 +302,13 @@
             width: 220px;
             height: 220px;
             border-radius: 30px;
-            background: rgba(30, 35, 45, 0.7);
+            background: rgba(25, 30, 40, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            border: 2px solid #00ffaa;
-            box-shadow: 0 0 40px rgba(0, 255, 170, 0.3);
+            border: 3px solid #ffaa33;
+            box-shadow: 0 0 40px rgba(255, 170, 51, 0.5);
         }
         .day-frame img {
             width: 100%;
@@ -304,14 +320,19 @@
             font-size: 48px;
             color: #fff;
             margin-bottom: 15px;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .casino-day p {
+            color: #fff;
+            text-shadow: 1px 1px 3px #000;
         }
         
         .timer {
             font-size: 42px;
             font-weight: 800;
-            color: #00ffaa;
+            color: #ffaa33;
             margin: 15px 0;
-            text-shadow: 0 0 20px #00ffaa;
+            text-shadow: 0 0 20px #ffaa33, 1px 1px 3px #000;
         }
         
         .top3-grid {
@@ -321,12 +342,12 @@
             margin: 40px 0;
         }
         .top-item {
-            background: rgba(20, 25, 35, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 20, 30, 0.5);
+            backdrop-filter: blur(8px);
             border-radius: 30px;
             padding: 35px 25px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .frame-gold, .frame-silver, .frame-bronze {
             width: 140px;
@@ -337,11 +358,11 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: rgba(30, 35, 45, 0.7);
+            background: rgba(25, 30, 40, 0.8);
         }
-        .frame-gold { border: 2px solid #ffd700; box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
-        .frame-silver { border: 2px solid #c0c0c0; box-shadow: 0 0 30px rgba(192, 192, 192, 0.3); }
-        .frame-bronze { border: 2px solid #cd7f32; box-shadow: 0 0 30px rgba(205, 127, 50, 0.3); }
+        .frame-gold { border: 3px solid #ffd700; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); }
+        .frame-silver { border: 3px solid #c0c0c0; box-shadow: 0 0 30px rgba(192, 192, 192, 0.5); }
+        .frame-bronze { border: 3px solid #cd7f32; box-shadow: 0 0 30px rgba(205, 127, 50, 0.5); }
         .frame-gold img, .frame-silver img, .frame-bronze img {
             width: 100%;
             height: 100%;
@@ -351,25 +372,28 @@
         .top-item .rank {
             font-size: 42px;
             font-weight: 800;
-            color: #00ffaa;
+            color: #ffaa33;
             margin-bottom: 20px;
+            text-shadow: 0 0 15px #ffaa33;
         }
         .top-item .casino-name {
             font-size: 24px;
             font-weight: 700;
             margin: 10px 0;
             color: #fff;
+            text-shadow: 1px 1px 3px #000;
         }
         .top-item .bonus-text {
-            color: #b0b5c0;
+            color: #fff;
             font-size: 18px;
             margin-bottom: 20px;
+            text-shadow: 1px 1px 3px #000;
         }
         
         .bonus-link {
             display: inline-block;
-            background: linear-gradient(145deg, #00ffaa, #00cc88);
-            color: #0b0e14;
+            background: linear-gradient(145deg, #ffaa33, #ff8c00);
+            color: #0a0f1a;
             font-weight: 800;
             padding: 12px 24px;
             border-radius: 20px;
@@ -383,7 +407,7 @@
         }
         .bonus-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(0, 255, 170, 0.5);
+            box-shadow: 0 0 30px rgba(255, 170, 51, 0.7);
         }
         
         .bonuses {
@@ -395,7 +419,7 @@
             text-align: center;
             margin-bottom: 30px;
             color: #fff;
-            text-shadow: 0 0 20px #00ffaa;
+            text-shadow: 0 0 20px #ffaa33, 1px 1px 3px #000;
         }
         .bonus-grid {
             display: grid;
@@ -403,50 +427,57 @@
             gap: 25px;
         }
         .bonus-card {
-            background: rgba(20, 25, 35, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 20, 30, 0.5);
+            backdrop-filter: blur(8px);
             border-radius: 30px;
             padding: 25px;
             text-align: center;
             transition: 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .bonus-card:hover {
-            border-color: #00ffaa;
+            border-color: #ffaa33;
             transform: translateY(-5px);
-            box-shadow: 0 0 30px rgba(0, 255, 170, 0.2);
+            box-shadow: 0 0 30px rgba(255, 170, 51, 0.3);
         }
         .bonus-card img {
             width: 80px;
             height: 80px;
             object-fit: contain;
             border-radius: 16px;
-            background: rgba(30, 35, 45, 0.7);
+            background: rgba(25, 30, 40, 0.8);
             padding: 12px;
             margin-bottom: 15px;
-            border: 1px solid rgba(0, 255, 170, 0.2);
+            border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .bonus-card h3 {
             font-size: 24px;
             margin-bottom: 10px;
             color: #fff;
+            text-shadow: 1px 1px 3px #000;
         }
         .bonus-card p {
             font-size: 16px;
             margin-bottom: 15px;
-            color: #b0b5c0;
+            color: #fff;
+            text-shadow: 1px 1px 3px #000;
         }
         
         .footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(255, 170, 51, 0.3);
             padding: 30px 0;
             text-align: center;
-            color: #6a6f80;
+            color: #fff;
             margin-top: 50px;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .footer a {
+            color: #ffaa33;
+            text-decoration: none;
         }
         .eighteen-plus {
-            background: #00ffaa;
-            color: #0b0e14;
+            background: #ffaa33;
+            color: #0a0f1a;
             padding: 8px 24px;
             border-radius: 20px;
             display: inline-block;
@@ -458,7 +489,7 @@
         @media (max-width: 600px) {
             .stats-grid, .top3-grid { grid-template-columns: 1fr; }
             .logo-cloud { grid-template-columns: repeat(4, 1fr); }
-            .counter-number { font-size: 80px; }
+            .counter-number { font-size: 70px; }
             .day-frame { width: 180px; height: 180px; }
             .frame-gold, .frame-silver, .frame-bronze { width: 120px; height: 120px; }
             .casino-day h2 { font-size: 36px; }
@@ -466,8 +497,9 @@
     </style>
 </head>
 <body>
-    <!-- ФОН -->
+    <!-- ФОН С ИЗОБРАЖЕНИЕМ КАЗИНО -->
     <div class="video-background"></div>
+    <div class="overlay"></div>
     
     <a href="https://t.me/igrovyes_avtomaty" class="float-tg" target="_blank">
         <i class="fab fa-telegram-plane"></i>
@@ -476,7 +508,7 @@
     
     <div class="container">
         <div style="padding:20px 0; text-align:center;">
-            <div style="font-size:15px; color:#00ffaa;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
+            <div style="font-size:15px; color:#ffaa33; text-shadow:1px 1px 3px #000;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
         </div>
 
         <div class="hero reveal">
@@ -535,17 +567,17 @@
             </a>
         </div>
 
-        <!-- ОГРОМНЫЙ КИБЕРПАНК-СЧЁТЧИК -->
+        <!-- ЯРКИЙ СЧЁТЧИК -->
         <div class="stats-grid reveal">
             <div class="counter-block">
                 <span class="counter-number" id="subscriberCount">14 760</span>
                 <div class="counter-label">ПОДПИСЧИКОВ В TELEGRAM</div>
             </div>
             <div class="progress-block">
-                <div style="font-size:24px;">🔥 ГОРЯЧИЕ БОНУСЫ 2026</div>
+                <div style="font-size:24px; margin-bottom:10px;">🔥 ГОРЯЧИЕ БОНУСЫ 2026</div>
                 <div style="font-size:18px; margin:10px 0;"><span id="bonusCount">342</span>/500</div>
                 <div class="progress-bar"><div class="progress-fill"></div></div>
-                <div style="font-size:16px;">Сегодня разобрано 158 бездепозитных бонусов</div>
+                <div style="font-size:16px; margin-top:10px;">Сегодня разобрано 158 бездепозитных бонусов</div>
             </div>
         </div>
 
@@ -583,8 +615,8 @@
         <div class="footer">
             <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО ОНЛАЙН 24/7</div>
             <div style="margin:15px 0;">
-                <a href="#" style="color:#00ffaa; text-decoration:none;">Политика конфиденциальности</a> • 
-                <a href="#" style="color:#00ffaa; text-decoration:none;">Ответственная игра</a>
+                <a href="#" style="color:#ffaa33; text-decoration:none;">Политика конфиденциальности</a> • 
+                <a href="#" style="color:#ffaa33; text-decoration:none;">Ответственная игра</a>
             </div>
             <div class="eighteen-plus">18+ ТОЛЬКО ДЛЯ СОВЕРШЕННОЛЕТНИХ</div>
         </div>
