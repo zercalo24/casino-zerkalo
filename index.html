@@ -50,7 +50,7 @@
             position: relative;
         }
         
-        /* НОВЫЙ ФОН — комбинация вариантов 1, 4 и 2 */
+        /* НОВЫЙ ПРЕМИАЛЬНЫЙ ФОН */
         .video-background {
             position: fixed;
             top: 0;
@@ -58,41 +58,26 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            overflow: hidden;
-            background: radial-gradient(circle at 30% 40%, #811412, #2a0a08);
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
             background-image: 
-                /* Неоновые акценты (вариант 2) */
-                radial-gradient(circle at 20% 30%, rgba(0, 255, 170, 0.1) 0%, transparent 25%),
-                radial-gradient(circle at 80% 70%, rgba(156, 66, 245, 0.1) 0%, transparent 30%),
-                radial-gradient(circle at 40% 80%, rgba(69, 121, 245, 0.1) 0%, transparent 35%),
-                /* Золотые частицы (вариант 1) */
-                radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.15) 0%, transparent 20%),
-                radial-gradient(circle at 90% 50%, rgba(255, 215, 0, 0.15) 0%, transparent 25%),
-                radial-gradient(circle at 50% 90%, rgba(255, 215, 0, 0.15) 0%, transparent 30%),
-                /* Текстура сукна (вариант 4) */
-                repeating-linear-gradient(45deg, rgba(126, 115, 125, 0.05) 0px, rgba(126, 115, 125, 0.05) 2px, transparent 2px, transparent 8px);
+                radial-gradient(circle at 20% 30%, rgba(200, 170, 100, 0.03) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(200, 170, 100, 0.03) 0%, transparent 30%),
+                repeating-linear-gradient(45deg, rgba(200, 170, 100, 0.02) 0px, rgba(200, 170, 100, 0.02) 1px, transparent 1px, transparent 12px);
+            opacity: 0.9;
         }
         
-        /* Анимированные частицы (карты, фишки) */
+        /* Лёгкие золотые частицы (очень деликатно) */
         .particle {
             position: absolute;
-            opacity: 0.1;
-            font-size: 40px;
-            color: #ffd700;
-            animation: float 12s infinite ease-in-out;
+            opacity: 0.02;
+            font-size: 60px;
+            color: #c8aa64;
             pointer-events: none;
             z-index: -1;
         }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
-            50% { transform: translateY(-30px) rotate(5deg); opacity: 0.2; }
-        }
-        .particle:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; content: "♠"; }
-        .particle:nth-child(2) { top: 70%; left: 85%; font-size: 60px; animation-delay: 2s; content: "♥"; color: #ff4444; opacity: 0.15; }
-        .particle:nth-child(3) { top: 40%; left: 40%; font-size: 50px; animation-delay: 4s; content: "♦"; color: #ff4444; }
-        .particle:nth-child(4) { top: 80%; left: 15%; font-size: 45px; animation-delay: 1s; content: "♣"; }
-        .particle:nth-child(5) { top: 20%; left: 80%; font-size: 55px; animation-delay: 3s; content: "🎰"; color: #ffaa33; }
-        .particle:nth-child(6) { top: 50%; left: 60%; font-size: 35px; animation-delay: 5s; content: "💰"; color: #ffd700; }
+        .particle:nth-child(1) { top: 15%; left: 10%; transform: rotate(15deg); }
+        .particle:nth-child(2) { top: 75%; right: 15%; transform: rotate(-10deg); }
+        .particle:nth-child(3) { bottom: 20%; left: 20%; transform: rotate(25deg); }
         
         .container {
             max-width: 1400px;
@@ -116,15 +101,15 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: #ffaa33;
+            background: #c8aa64;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #0b0e14;
+            color: #1a1a1a;
             font-size: 24px;
             cursor: pointer;
-            border: 2px solid white;
+            border: 2px solid rgba(255,255,255,0.3);
             opacity: 0;
             transition: opacity 0.3s;
             z-index: 98;
@@ -143,8 +128,8 @@
             justify-content: center;
             color: white;
             font-size: 36px;
-            box-shadow: 0 10px 25px #27A6E5;
-            border: 3px solid white;
+            box-shadow: 0 10px 25px rgba(39,166,229,0.3);
+            border: 3px solid rgba(255,255,255,0.3);
             transition: 0.2s;
             z-index: 99;
             text-decoration: none;
@@ -159,27 +144,18 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #ffd966;
+            color: #c8aa64;
             text-shadow: 
-                0 1px 0 #ccc,
-                0 2px 0 #c9a03d,
-                0 3px 0 #b88a2c,
-                0 4px 0 #a6741b,
-                0 5px 0 #945f0a,
-                0 6px 8px rgba(0,0,0,0.5),
-                0 8px 10px rgba(0,0,0,0.3),
-                0 10px 15px rgba(0,0,0,0.2);
+                0 1px 0 #99804b,
+                0 2px 0 #7f693d,
+                0 3px 0 #665230,
+                0 4px 8px rgba(0,0,0,0.5);
             margin-bottom: 15px;
             line-height: 1.2;
-            animation: shine 3s infinite;
-        }
-        @keyframes shine {
-            0%, 100% { text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9a03d, 0 3px 0 #b88a2c, 0 4px 0 #a6741b, 0 5px 0 #945f0a, 0 6px 8px rgba(0,0,0,0.5); }
-            50% { text-shadow: 0 1px 0 #ccc, 0 2px 0 #ffaa33, 0 3px 0 #ffaa33, 0 4px 0 #ffaa33, 0 5px 0 #ffaa33, 0 6px 12px #ffaa33; }
         }
         .hero p {
             font-size: clamp(18px, 4vw, 22px);
-            color: #f7eacf;
+            color: #e0e0e0;
             max-width: 800px;
             margin: 15px auto 0;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -193,28 +169,21 @@
             justify-items: center;
             margin: 40px 0 25px;
             padding: 25px;
-            background: rgba(26, 31, 43, 0.5);
+            background: rgba(20,20,20,0.6);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(200,170,100,0.2);
             border-radius: 40px;
         }
         .logo-cloud img {
             width: 70px;
             height: 70px;
             object-fit: contain;
-            filter: grayscale(0.2) brightness(0.9);
+            filter: brightness(0.95);
             transition: all 0.3s ease;
-            animation: pulseLogo 3s infinite;
-        }
-        @keyframes pulseLogo {
-            0% { transform: scale(1); opacity: 0.9; }
-            50% { transform: scale(1.08); opacity: 1; filter: brightness(1.1); }
-            100% { transform: scale(1); opacity: 0.9; }
         }
         .logo-cloud img:hover {
-            filter: grayscale(0) brightness(1.2);
-            transform: scale(1.2) rotate(2deg);
-            animation: none;
+            filter: brightness(1.1);
+            transform: scale(1.1);
         }
         
         .btn-tg {
@@ -229,21 +198,17 @@
             padding: 20px 40px;
             border-radius: 70px;
             text-decoration: none;
-            border-bottom: 5px solid #1a7da8;
+            border-bottom: 4px solid #1a7da8;
             transition: 0.2s;
             width: 100%;
             max-width: 600px;
             margin: 30px auto;
-            box-shadow: 0 0 30px rgba(39, 166, 229, 0.3);
-        }
-        .btn-tg i {
-            font-size: clamp(32px, 7vw, 48px);
+            box-shadow: 0 10px 25px rgba(39,166,229,0.3);
         }
         .btn-tg:hover {
             background: #3cb3f0;
-            border-bottom-width: 3px;
-            transform: translateY(2px);
-            box-shadow: 0 15px 25px -5px #27A6E5;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(39,166,229,0.4);
         }
         
         .stats-grid {
@@ -253,24 +218,22 @@
             margin: 40px 0;
         }
         .counter-block, .progress-block {
-            background: rgba(26, 31, 43, 0.7);
+            background: rgba(20,20,20,0.6);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(200,170,100,0.2);
             border-radius: 30px;
             padding: 25px;
             text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         .counter-number {
             font-size: 52px;
             font-weight: 800;
-            color: #ffaa33;
-            animation: pulse 2s infinite;
+            color: #c8aa64;
         }
         .progress-bar {
             width: 100%;
             height: 25px;
-            background: #2f3542;
+            background: rgba(255,255,255,0.1);
             border-radius: 15px;
             margin: 15px 0;
             overflow: hidden;
@@ -278,27 +241,24 @@
         .progress-fill {
             height: 100%;
             width: 68%;
-            background: linear-gradient(90deg, #ffaa33, #ff8c00);
+            background: linear-gradient(90deg, #c8aa64, #a78b4f);
             border-radius: 15px;
-            animation: fillAnimation 2s ease-out;
         }
         
         .casino-day {
-            background: rgba(26, 31, 43, 0.7);
+            background: rgba(20,20,20,0.6);
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 215, 0, 0.5);
+            border: 1px solid rgba(200,170,100,0.3);
             border-radius: 50px;
             padding: 40px;
             margin: 40px 0;
             text-align: center;
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.2);
         }
         .casino-day h3 {
-            color: #ffaa33;
+            color: #c8aa64;
             font-size: 32px;
             margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         .casino-day-content {
             display: flex;
@@ -308,43 +268,34 @@
             flex-wrap: wrap;
         }
         .day-frame {
-            position: relative;
-            display: inline-block;
             width: 220px;
             height: 220px;
-            border: 6px solid #ffd700;
+            border: 3px solid #c8aa64;
             border-radius: 50%;
-            background: rgba(10, 12, 18, 0.8);
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+            background: rgba(10,10,10,0.8);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            box-shadow: 0 0 30px rgba(200,170,100,0.2);
         }
         .day-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            padding: 15px;
+            padding: 20px;
         }
         .casino-day h2 {
             font-size: 48px;
-            color: #ffaa33;
+            color: #c8aa64;
             margin-bottom: 15px;
-            text-shadow: 0 0 20px rgba(255, 170, 51, 0.5);
-        }
-        .casino-day p {
-            font-size: 24px;
-            margin-bottom: 25px;
-            color: #f7eacf;
         }
         
         .timer {
             font-size: 42px;
             font-weight: 800;
-            color: #ffaa33;
+            color: #c8aa64;
             margin: 15px 0;
-            text-shadow: 0 0 20px rgba(255, 170, 51, 0.5);
         }
         
         .top3-grid {
@@ -354,38 +305,27 @@
             margin: 40px 0;
         }
         .top-item {
-            background: rgba(26, 31, 43, 0.7);
+            background: rgba(20,20,20,0.6);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(200,170,100,0.2);
             border-radius: 40px;
             padding: 35px 25px;
             text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         .frame-gold, .frame-silver, .frame-bronze {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            margin-bottom: 20px;
-            background: rgba(10, 12, 18, 0.8);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
+            background: rgba(10,10,10,0.8);
         }
-        .frame-gold {
-            border: 5px solid #ffd700;
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
-        }
-        .frame-silver {
-            border: 5px solid #c0c0c0;
-            box-shadow: 0 0 40px rgba(192, 192, 192, 0.4);
-        }
-        .frame-bronze {
-            border: 5px solid #cd7f32;
-            box-shadow: 0 0 40px rgba(205, 127, 50, 0.4);
-        }
+        .frame-gold { border: 3px solid #c8aa64; }
+        .frame-silver { border: 3px solid #a0a0a0; }
+        .frame-bronze { border: 3px solid #b87c4b; }
         .frame-gold img, .frame-silver img, .frame-bronze img {
             width: 100%;
             height: 100%;
@@ -395,41 +335,39 @@
         .top-item .rank {
             font-size: 42px;
             font-weight: 800;
-            color: #ffaa33;
+            color: #c8aa64;
             margin-bottom: 20px;
         }
         .top-item .casino-name {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
-            margin: 15px 0 10px;
+            margin: 10px 0;
             color: #fff;
         }
         .top-item .bonus-text {
-            color: #ffaa33;
-            font-size: 20px;
+            color: #c8aa64;
+            font-size: 18px;
             margin-bottom: 20px;
         }
         
         .bonus-link {
             display: inline-block;
-            background: linear-gradient(145deg, #ffaa33, #ff8c00);
-            color: #0b0e14;
+            background: #c8aa64;
+            color: #1a1a1a;
             font-weight: 800;
-            padding: 15px 30px;
-            border-radius: 60px;
+            padding: 12px 24px;
+            border-radius: 50px;
             text-decoration: none;
             width: 100%;
-            margin-top: 20px;
-            font-size: 18px;
+            font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-bottom: 4px solid #b8731e;
+            border-bottom: 3px solid #9f834b;
             transition: 0.2s;
         }
         .bonus-link:hover {
-            background: linear-gradient(145deg, #ffb84d, #ff9f1a);
+            background: #d4b87a;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255, 170, 51, 0.4);
         }
         
         .bonuses {
@@ -440,8 +378,7 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 30px;
-            color: #ffaa33;
-            text-shadow: 0 0 15px rgba(255, 170, 51, 0.3);
+            color: #c8aa64;
         }
         .bonus-grid {
             display: grid;
@@ -449,18 +386,17 @@
             gap: 25px;
         }
         .bonus-card {
-            background: rgba(26, 31, 43, 0.7);
+            background: rgba(20,20,20,0.6);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(200,170,100,0.2);
             border-radius: 30px;
             padding: 25px;
             text-align: center;
             transition: 0.3s;
         }
         .bonus-card:hover {
+            border-color: #c8aa64;
             transform: translateY(-5px);
-            border-color: #ffaa33;
-            box-shadow: 0 0 30px rgba(255, 170, 51, 0.3);
         }
         .bonus-card img {
             width: 80px;
@@ -471,88 +407,29 @@
         .bonus-card h3 {
             font-size: 24px;
             margin-bottom: 10px;
-            color: #ffaa33;
+            color: #c8aa64;
         }
         .bonus-card p {
             font-size: 16px;
             margin-bottom: 15px;
-            color: #f7eacf;
-        }
-        
-        .chart {
-            background: rgba(26, 31, 43, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 30px;
-            padding: 25px;
-            margin: 40px 0;
-        }
-        .chart-bars {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-end;
-            height: 180px;
-            margin-top: 20px;
-        }
-        .bar {
-            width: 35px;
-            background: #ffaa33;
-            border-radius: 8px 8px 0 0;
-            transition: height 1s;
-        }
-        .bar-label {
-            text-align: center;
-            margin-top: 12px;
-            color: #f7eacf;
-            font-size: 14px;
-        }
-        
-        .partners {
-            margin: 50px 0;
-            text-align: center;
-        }
-        .partner-logos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 25px;
-        }
-        .partner-logos i {
-            font-size: 56px;
-            color: #ffaa33;
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-        .partner-logos i:hover {
-            opacity: 1;
-            transform: scale(1.1);
+            color: #e0e0e0;
         }
         
         .footer {
-            border-top: 2px solid rgba(255, 215, 0, 0.3);
+            border-top: 1px solid rgba(200,170,100,0.2);
             padding: 30px 0;
             text-align: center;
-            color: #dbd7d9;
+            color: #a0a0a0;
             margin-top: 50px;
-            font-size: 16px;
-        }
-        .footer a {
-            color: #ffaa33;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #ffd966;
         }
         .eighteen-plus {
-            background: #811412;
-            color: white;
+            background: #c8aa64;
+            color: #1a1a1a;
             padding: 8px 24px;
             border-radius: 50px;
             display: inline-block;
             margin-top: 20px;
-            font-size: 16px;
-            border: 1px solid #ffd700;
+            font-weight: 700;
         }
         
         @media (max-width: 600px) {
@@ -561,20 +438,16 @@
             .day-frame { width: 180px; height: 180px; }
             .frame-gold, .frame-silver, .frame-bronze { width: 120px; height: 120px; }
             .casino-day h2 { font-size: 36px; }
-            .casino-day p { font-size: 20px; }
         }
     </style>
 </head>
 <body>
-    <!-- Частицы (карты, фишки) для анимации фона -->
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+    <!-- Очень деликатные частицы -->
+    <div class="particle">♠</div>
+    <div class="particle">♥</div>
+    <div class="particle">♦</div>
     
-    <!-- НОВЫЙ ФОН (видео убрано, теперь статичный фон) -->
+    <!-- Фон -->
     <div class="video-background"></div>
     
     <a href="https://t.me/igrovyes_avtomaty" class="float-tg" target="_blank">
@@ -584,7 +457,7 @@
     
     <div class="container">
         <div style="padding:20px 0; text-align:center;">
-            <div style="font-size:15px; color:#ffaa33;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
+            <div style="font-size:15px; color:#c8aa64;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
         </div>
 
         <div class="hero reveal">
@@ -662,7 +535,7 @@
             <div class="timer" id="timer">02:45:12</div>
         </div>
 
-        <!-- КАЗИНО ДНЯ С ЗОЛОТОЙ РАМКОЙ -->
+        <!-- КАЗИНО ДНЯ -->
         <div class="casino-day reveal" id="casinoOfTheDay">
             <h3>🎲 КАЗИНО ДНЯ — рабочее зеркало сегодня</h3>
             <div class="casino-day-content">
@@ -677,7 +550,7 @@
             </div>
         </div>
 
-        <!-- ТОП-3 С ЦВЕТНЫМИ РАМКАМИ -->
+        <!-- ТОП-3 -->
         <div class="top3-grid reveal" id="top3"></div>
 
         <!-- ГОРЯЧИЕ БОНУСЫ 2026 -->
@@ -686,37 +559,12 @@
             <div class="bonus-grid" id="bonusGrid"></div>
         </div>
 
-        <!-- ГРАФИК АКТИВНОСТИ -->
-        <div class="chart reveal">
-            <h3 style="text-align:center; color:#ffaa33; font-size:24px;">📊 Активность игроков за 24 часа</h3>
-            <div class="chart-bars">
-                <div><div class="bar" style="height:80px;"></div><div class="bar-label">Пн</div></div>
-                <div><div class="bar" style="height:120px;"></div><div class="bar-label">Вт</div></div>
-                <div><div class="bar" style="height:150px;"></div><div class="bar-label">Ср</div></div>
-                <div><div class="bar" style="height:100px;"></div><div class="bar-label">Чт</div></div>
-                <div><div class="bar" style="height:90px;"></div><div class="bar-label">Пт</div></div>
-                <div><div class="bar" style="height:130px;"></div><div class="bar-label">Сб</div></div>
-                <div><div class="bar" style="height:140px;"></div><div class="bar-label">Вс</div></div>
-            </div>
-        </div>
-
-        <!-- ПАРТНЁРЫ -->
-        <div class="partners reveal">
-            <h2 class="section-title">🤝 Платежные системы и провайдеры</h2>
-            <div class="partner-logos">
-                <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-bitcoin"></i> <i class="fab fa-ethereum"></i>
-                <i class="fas fa-shield-alt"></i> <i class="fas fa-lock"></i>
-            </div>
-        </div>
-
         <!-- ФУТЕР -->
         <div class="footer">
             <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО ОНЛАЙН 24/7</div>
             <div style="margin:15px 0;">
-                <a href="#" style="color:#ffaa33; text-decoration:none;">Политика конфиденциальности</a> • 
-                <a href="#" style="color:#ffaa33; text-decoration:none;">Ответственная игра</a> • 
-                <a href="#" style="color:#ffaa33; text-decoration:none;">Правила</a>
+                <a href="#" style="color:#c8aa64; text-decoration:none;">Политика конфиденциальности</a> • 
+                <a href="#" style="color:#c8aa64; text-decoration:none;">Ответственная игра</a>
             </div>
             <div class="eighteen-plus">18+ ТОЛЬКО ДЛЯ СОВЕРШЕННОЛЕТНИХ</div>
         </div>
