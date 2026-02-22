@@ -6,7 +6,7 @@
     
     <title>РАБОЧИЕ ЗЕРКАЛА КАЗИНО ОНЛАЙН 24/7 — всегда рабочие ссылки и бонусы</title>
     <meta name="description" content="✅ Актуальные зеркала Vavada, 1win, Duel Casino, Stake и ещё 40+ казино. Бонусы до 500%, фриспины 2026, быстрый доступ без VPN в Telegram. 18+">
-    <meta name="keywords" content="рабочие зеркала казино, актуальные зеркала казино, казино онлайн 24/7, зеркало казино сегодня, доступ к казино сейчас, бонусы казино 2026, фриспины за регистрацию, бездепозитный бонус казино, приветственный бонус 500%, вавада зеркало рабочее, 1win актуальное зеркало, дуэль казино доступ, стейк зеркало сегодня, кэт казино вход, джой казино рабочее зеркало, рокс казино бонус, казино без блокировок РФ, зеркала казино для России, казино с выводом на карту РФ, telegram казино">
+    <meta name="keywords" content="рабочие зеркала казино, зеркало казино онлайн, казино 24/7, вавада зеркало, 1вин, дуэль казино, стейк, бонусы казино, фриспины, telegram казино, казино без блокировок">
     <meta name="author" content="РАБОЧИЕ ЗЕРКАЛА КАЗИНО">
     
     <!-- Open Graph теги для соцсетей -->
@@ -274,7 +274,26 @@
             gap: 40px;
             flex-wrap: wrap;
         }
-        .casino-day img {
+        .day-wreath {
+            position: relative;
+            display: inline-block;
+        }
+        .day-wreath::before {
+            content: "🏆";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 140px;
+            color: #ffd700;
+            opacity: 0.4;
+            z-index: 1;
+            text-shadow: 0 0 20px #ffd700;
+            pointer-events: none;
+        }
+        .day-wreath img {
+            position: relative;
+            z-index: 2;
             width: 120px;
             height: 120px;
             object-fit: contain;
@@ -312,18 +331,50 @@
             padding: 25px;
             text-align: center;
             border: 2px solid #ffaa33;
+            position: relative;
+        }
+        .wreath-gold, .wreath-silver, .wreath-bronze {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .wreath-gold::before, .wreath-silver::before, .wreath-bronze::before {
+            content: "🏆🏆";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+            font-size: 90px;
+            letter-spacing: -5px;
+            opacity: 0.3;
+            z-index: 1;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        .wreath-gold::before {
+            color: #ffd700;
+            text-shadow: 0 0 20px #ffd700;
+        }
+        .wreath-silver::before {
+            color: #c0c0c0;
+            text-shadow: 0 0 20px #c0c0c0;
+        }
+        .wreath-bronze::before {
+            color: #cd7f32;
+            text-shadow: 0 0 20px #cd7f32;
+        }
+        .wreath-gold img, .wreath-silver img, .wreath-bronze img {
+            position: relative;
+            z-index: 2;
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
         }
         .top-item .rank {
             font-size: 32px;
             font-weight: 800;
             color: #ffaa33;
             margin-bottom: 15px;
-        }
-        .top-item img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin-bottom: 10px;
         }
         .top-item div {
             font-size: 18px;
@@ -454,7 +505,9 @@
             .stats-grid, .top3-grid { grid-template-columns: 1fr; }
             .logo-cloud { grid-template-columns: repeat(4, 1fr); }
             .logo-cloud img { width: 55px; height: 55px; }
-            .casino-day img { width: 90px; height: 90px; }
+            .day-wreath img { width: 90px; height: 90px; }
+            .day-wreath::before { font-size: 100px; }
+            .wreath-gold::before, .wreath-silver::before, .wreath-bronze::before { font-size: 70px; }
             .casino-day h2 { font-size: 28px; }
         }
     </style>
@@ -560,11 +613,13 @@
             <div class="timer" id="timer">02:45:12</div>
         </div>
 
-        <!-- КАЗИНО ДНЯ -->
+        <!-- КАЗИНО ДНЯ С ЗОЛОТЫМ ВЕНКОМ -->
         <div class="casino-day reveal" id="casinoOfTheDay">
             <h3>🎲 КАЗИНО ДНЯ — рабочее зеркало сегодня</h3>
             <div class="casino-day-content">
-                <img src="" alt="" id="dayCasinoImg">
+                <div class="day-wreath">
+                    <img src="" alt="" id="dayCasinoImg">
+                </div>
                 <div>
                     <h2 id="dayCasinoName"></h2>
                     <p id="dayCasinoBonus">Welcome Pack 250% и 500 FS 👑</p>
@@ -573,7 +628,7 @@
             </div>
         </div>
 
-        <!-- ТОП-3 КАЗИНО -->
+        <!-- ТОП-3 С ВЕНКАМИ ПО МЕТАЛЛАМ -->
         <div class="top3-grid reveal" id="top3"></div>
 
         <!-- ГОРЯЧИЕ БОНУСЫ 2026 -->
@@ -606,21 +661,13 @@
             </div>
         </div>
 
-        <!-- SEO-ТЕКСТ -->
-        <div class="footer" style="border-top: none; padding-top: 0;">
-            <div style="background: #11161f; border-radius: 30px; padding: 30px; margin: 40px 0; border: 1px solid #2a2f3a; text-align: left;">
-                <h2 style="color:#ffaa33; font-size:24px; margin-bottom:20px;">Рабочие зеркала казино онлайн 24/7 без блокировок</h2>
-                <p style="color:#b0b5c0; line-height:1.7;">Ищешь актуальные ссылки на Vavada, 1win, Duel Casino, Stake, Cat Casino и ещё 40+ казино? В нашем Telegram-канале «Игровые автоматы | Бонусы» ты найдёшь всегда рабочие зеркала, свежие бонусы до 500%, фриспины за регистрацию, бездепозитные бонусы и эксклюзивные промокоды. Мы собираем только проверенные проекты с лицензией Кюрасао и быстрыми выплатами на карты РФ. Подпишись и получай бонусы каждый день! Доступ в России и СНГ без VPN. Актуальные зеркала казино 2026: Vavada, 1win, Duel Casino, Stake, Fugu Casino, Cat Casino, Leebet, Joy, Criptoboss, Rox, Banda, Champion Slots, Ramenbet, Casino X, Gama, Kent, Beef, Martin, Flagman, Irvin, Gizbo, 1GO, Starda, Monro, Drip, Sol, Jet, Izzi, Lexx, Volna, Legzo, Fresh, Daddy, R7, Комета, Arkada, Куш, Cactus, Auf, Unlim.</p>
-            </div>
-        </div>
-
         <!-- ФУТЕР -->
         <div class="footer">
             <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО ОНЛАЙН 24/7</div>
             <div style="margin:15px 0;">
-                <a href="/privacy" style="color:#aaa; text-decoration:none;">Политика конфиденциальности</a> • 
-                <a href="/responsible" style="color:#aaa; text-decoration:none;">Ответственная игра</a> • 
-                <a href="/rules" style="color:#aaa; text-decoration:none;">Правила</a>
+                <a href="#" style="color:#aaa; text-decoration:none;">Политика конфиденциальности</a> • 
+                <a href="#" style="color:#aaa; text-decoration:none;">Ответственная игра</a> • 
+                <a href="#" style="color:#aaa; text-decoration:none;">Правила</a>
             </div>
             <div class="eighteen-plus">18+ ТОЛЬКО ДЛЯ СОВЕРШЕННОЛЕТНИХ</div>
         </div>
@@ -686,14 +733,17 @@
             const shuffled = shuffleArray([...casinos]);
             const top3 = shuffled.slice(0, 3);
             const medals = ['🥇', '🥈', '🥉'];
+            const wreathClasses = ['wreath-gold', 'wreath-silver', 'wreath-bronze'];
             const top3Container = document.getElementById('top3');
             top3Container.innerHTML = '';
             top3.forEach((casino, index) => {
                 top3Container.innerHTML += `
                     <div class="top-item">
                         <div class="rank">${medals[index]}</div>
-                        <img src="images/${casino.img}" alt="${casino.name}">
-                        <div style="font-size:20px; font-weight:bold;">${casino.name}</div>
+                        <div class="${wreathClasses[index]}">
+                            <img src="images/${casino.img}" alt="${casino.name}">
+                        </div>
+                        <div style="font-size:20px; font-weight:bold; margin-top:10px;">${casino.name}</div>
                         <div style="color:#ffaa33; font-size:18px;">Welcome Pack 250% и 500 FS 👑</div>
                         <a href="${casino.link}" class="bonus-link" target="_blank">Играть</a>
                     </div>
