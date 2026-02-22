@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Favicon (простая иконка, чтобы не было 404) -->
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎰</text></svg>">
     
     <style>
@@ -39,43 +39,44 @@
             transition: background-color 0.3s, color 0.2s;
         }
         
-        /* Светлая тема */
-        body.light-theme {
-            background: #f5f7fa;
-            color: #1a1e2b;
-        }
-        body.light-theme .casino-card,
-        body.light-theme .bonus-card,
-        body.light-theme .testimonial-card,
-        body.light-theme .faq-item,
-        body.light-theme .seo-text,
-        body.light-theme .features,
-        body.light-theme .logo-cloud {
-            background: #ffffff;
-            border-color: #e0e4e8;
-            color: #2a2f3a;
-        }
-        body.light-theme .hero p,
-        body.light-theme .counter-label,
-        body.light-theme .casino-desc,
-        body.light-theme .bonus-card p,
-        body.light-theme .faq-item p,
-        body.light-theme .seo-text,
-        body.light-theme .feature p {
-            color: #4a5568;
-        }
-        
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #0a0c12;
             color: #fff;
             line-height: 1.5;
             -webkit-tap-highlight-color: transparent;
+            position: relative;
         }
+        
+        /* Видео-фон */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: brightness(0.3) blur(3px);
+        }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
+            position: relative;
+            z-index: 1;
         }
         
         /* Анимация появления при прокрутке */
@@ -89,25 +90,28 @@
             transform: translateY(0);
         }
         
-        /* Кнопка переключения темы */
-        .theme-toggle {
+        /* Кнопка наверх */
+        #scrollToTop {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 100;
-            background: #1a1f2b;
-            border: 2px solid #ffaa33;
-            border-radius: 50px;
-            padding: 8px 16px;
-            color: #fff;
+            bottom: 110px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #ffaa33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0b0e14;
+            font-size: 24px;
             cursor: pointer;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            backdrop-filter: blur(5px);
+            border: 2px solid white;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 98;
         }
-        .theme-toggle i {
-            color: #ffaa33;
-            margin-right: 8px;
+        #scrollToTop.show {
+            opacity: 1;
         }
         
         /* Плавающая кнопка Telegram */
@@ -136,7 +140,7 @@
             background: #3cb3f0;
         }
         
-        /* Герой с 3D-названием */
+        /* Герой */
         .hero {
             padding: 60px 0 20px;
             text-align: center;
@@ -190,7 +194,7 @@
             padding: 0 10px;
         }
         
-        /* Коллаж из логотипов */
+        /* Анимированные логотипы */
         .logo-cloud {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
@@ -210,11 +214,18 @@
             filter: grayscale(0.3) brightness(0.9);
             transition: all 0.3s ease;
             opacity: 0.9;
+            animation: pulseLogo 3s infinite;
+        }
+        @keyframes pulseLogo {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; filter: brightness(1.1); }
+            100% { transform: scale(1); opacity: 0.8; }
         }
         .logo-cloud img:hover {
             filter: grayscale(0) brightness(1.2);
             transform: scale(1.15) rotate(2deg);
             opacity: 1;
+            animation: none;
         }
         
         /* Кнопка Telegram */
@@ -252,46 +263,105 @@
             box-shadow: 0 15px 25px -5px #27A6E5;
         }
         
-        /* Счётчик подписчиков */
-        .counter-block {
-            text-align: center;
-            margin: 25px 0;
+        /* Счётчик и прогресс */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
         }
-        .counter-number {
-            font-size: clamp(42px, 10vw, 56px);
-            font-weight: 800;
-            color: #ffaa33;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { text-shadow: 0 0 10px #ffaa33; }
-            50% { text-shadow: 0 0 20px #ffaa33, 0 0 30px #ffaa33; }
-            100% { text-shadow: 0 0 10px #ffaa33; }
-        }
-        .counter-label {
-            font-size: clamp(16px, 4vw, 20px);
-            color: #b0b5c0;
-            margin-top: 5px;
-        }
-        
-        /* Блок обновлений */
-        .updates {
-            background: linear-gradient(145deg, #1a1f2b, #11161f);
+        .counter-block, .progress-block {
+            background: #1a1f2b;
             border-radius: 30px;
             padding: 20px;
+            text-align: center;
+            border: 1px solid #2f3542;
+        }
+        .counter-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: #ffaa33;
+            animation: pulse 2s infinite;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #2f3542;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 68%;
+            background: linear-gradient(90deg, #ffaa33, #ff8c00);
+            border-radius: 10px;
+            animation: fillAnimation 2s ease-out;
+        }
+        @keyframes fillAnimation {
+            from { width: 0; }
+            to { width: 68%; }
+        }
+        
+        /* Казино дня */
+        .casino-day {
+            background: linear-gradient(145deg, #1a1f2b, #11161f);
+            border-radius: 30px;
+            padding: 25px;
             margin: 30px 0;
-            border: 1px solid #ffaa33;
+            border: 2px solid #ffaa33;
             text-align: center;
         }
-        .updates h3 {
+        .casino-day h3 {
             color: #ffaa33;
-            font-size: 22px;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .casino-day-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .casino-day img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        /* Таймер */
+        .timer {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffaa33;
+            margin: 10px 0;
+        }
+        
+        /* Топ-3 казино */
+        .top3-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .top-item {
+            background: #1a1f2b;
+            border-radius: 20px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ffaa33;
+        }
+        .top-item .rank {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffaa33;
             margin-bottom: 10px;
         }
-        .updates p {
-            color: #b0b5c0;
-            font-size: 16px;
+        .top-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
         }
         
         /* Блок бонусов */
@@ -305,7 +375,6 @@
             margin-bottom: 25px;
             color: #ffaa33;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
         .bonus-grid {
             display: grid;
@@ -323,7 +392,6 @@
         .bonus-card:hover {
             transform: translateY(-5px);
             border-color: #ffaa33;
-            box-shadow: 0 10px 20px -5px #ffaa33;
         }
         .bonus-card h3 {
             font-size: 22px;
@@ -331,12 +399,6 @@
             background: linear-gradient(145deg, #fff, #ffaa33);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 800;
-        }
-        .bonus-card p {
-            color: #b0b5c0;
-            margin: 12px 0;
-            font-size: 15px;
         }
         .bonus-link {
             display: inline-block;
@@ -346,216 +408,86 @@
             padding: 12px 20px;
             border-radius: 50px;
             text-decoration: none;
-            border-bottom: 3px solid #b8731e;
-            transition: 0.1s;
             width: 100%;
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         
-        /* Отзывы */
-        .testimonials {
-            margin: 40px 0;
-        }
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .testimonial-card {
+        /* График активности */
+        .chart {
             background: #1a1f2b;
-            border-radius: 24px;
-            padding: 20px;
-            border: 1px solid #2f3542;
-        }
-        .testimonial-card .avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #ffaa33;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 12px;
-            color: #0b0e14;
-        }
-        .testimonial-card .text {
-            font-style: italic;
-            color: #ddd;
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
-        .testimonial-card .name {
-            font-weight: 700;
-            color: #ffaa33;
-        }
-        .rating {
-            color: #ffaa33;
-            margin-top: 8px;
-            font-size: 16px;
-        }
-        
-        /* Блок доверия */
-        .trust {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-            text-align: center;
-        }
-        .trust-item {
-            background: #1a1f2b;
-            border-radius: 20px;
-            padding: 25px 15px;
-            border: 1px solid #2f3542;
-        }
-        .trust-item i {
-            font-size: 40px;
-            color: #ffaa33;
-            margin-bottom: 15px;
-        }
-        .trust-item h4 {
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-        .trust-item p {
-            color: #b0b5c0;
-            font-size: 14px;
-        }
-        
-        /* FAQ аккордеон */
-        .faq {
-            margin: 40px 0;
-        }
-        .faq-item {
-            background: #1a1f2b;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            border: 1px solid #2f3542;
-            overflow: hidden;
-        }
-        .faq-question {
-            padding: 18px 20px;
-            cursor: pointer;
-            font-weight: 700;
-            color: #ffaa33;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-question i {
-            transition: transform 0.3s;
-        }
-        .faq-question.active i {
-            transform: rotate(180deg);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            padding: 0 20px;
-            background: #11161f;
-            color: #b0b5c0;
-        }
-        .faq-answer.show {
-            max-height: 100px;
-            padding: 0 20px 18px;
-        }
-        
-        /* SEO-текст */
-        .seo-text {
-            background: #11161f;
             border-radius: 30px;
             padding: 25px;
             margin: 30px 0;
-            border: 1px solid #2a2f3a;
-            color: #b0b5c0;
-            line-height: 1.7;
-            font-size: 15px;
+            border: 1px solid #2f3542;
         }
-        .seo-text h2 {
-            color: #ffaa33;
-            font-size: 24px;
-            margin-bottom: 15px;
+        .chart-bars {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 150px;
+            margin-top: 20px;
+        }
+        .bar {
+            width: 30px;
+            background: #ffaa33;
+            border-radius: 5px 5px 0 0;
+            transition: height 1s;
+        }
+        .bar-label {
+            text-align: center;
+            margin-top: 10px;
+            color: #b0b5c0;
+            font-size: 12px;
         }
         
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 20px;
+        /* Партнёры */
+        .partners {
             margin: 40px 0;
             text-align: center;
         }
-        .feature h3 {
-            color: #ffaa33;
-            font-size: 18px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
         }
-        .feature p {
-            color: #9a9fb0;
-            font-size: 14px;
+        .partner-logos i {
+            font-size: 48px;
+            color: #ffaa33;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        .partner-logos i:hover {
+            opacity: 1;
+            transform: scale(1.1);
         }
         
-        .footer {
-            border-top: 1px solid #2a2f3a;
-            padding: 25px 0;
-            text-align: center;
-            color: #6a6f80;
-            font-size: 14px;
-        }
-        .footer a {
-            color: #aaa;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #ffaa33;
-        }
-        .eighteen-plus {
-            background: #dc3545;
-            color: white;
-            padding: 6px 20px;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 15px;
-            font-weight: 700;
-            font-size: 14px;
-        }
-        
+        /* Адаптация */
         @media (max-width: 600px) {
-            .logo-cloud {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            .logo-cloud img {
-                width: 40px;
-                height: 40px;
-            }
-            .bonus-grid {
-                grid-template-columns: 1fr;
-            }
-            .float-tg {
-                width: 60px;
-                height: 60px;
-                font-size: 30px;
-                bottom: 20px;
-                right: 20px;
-            }
+            .stats-grid { grid-template-columns: 1fr; }
+            .top3-grid { grid-template-columns: 1fr; }
+            .float-tg { width: 60px; height: 60px; font-size: 30px; }
+            #scrollToTop { bottom: 100px; right: 20px; }
         }
     </style>
 </head>
 <body>
+    <!-- Видео-фон -->
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="https://assets.mixkit.co/videos/2497/2497-720.mp4" type="video/mp4">
+            <!-- Резервное видео, если не загрузится -->
+        </video>
+    </div>
+    
     <!-- Плавающая кнопка Telegram -->
     <a href="https://t.me/igrovyes_avtomaty" class="float-tg" target="_blank">
         <i class="fab fa-telegram-plane"></i>
     </a>
     
-    <!-- Кнопка переключения темы -->
-    <div class="theme-toggle" onclick="toggleTheme()">
-        <i class="fas fa-sun"></i> <span id="themeText">Светлая</span>
+    <!-- Кнопка наверх -->
+    <div id="scrollToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
     </div>
     
     <div class="container">
@@ -564,13 +496,13 @@
             <div style="font-size: 13px; color: #ffaa33; letter-spacing: 1px;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
         </div>
 
-        <!-- Герой с новым названием -->
+        <!-- Герой -->
         <div class="hero reveal">
             <h1>РАБОЧИЕ ЗЕРКАЛА<br>КАЗИНО ОНЛАЙН 24/7</h1>
             <p>Всегда актуальные ссылки и бонусы в Telegram</p>
         </div>
 
-        <!-- Коллаж из логотипов -->
+        <!-- Анимированные логотипы -->
         <div class="logo-cloud reveal">
             <img src="images/vavada.png" alt="Vavada" loading="lazy">
             <img src="images/1win.png" alt="1win" loading="lazy">
@@ -621,18 +553,60 @@
             </a>
         </div>
 
-        <!-- Счётчик подписчиков -->
-        <div class="counter-block reveal" id="counter">
-            <span class="counter-number" id="subscriberCount">14 760</span>
-            <span class="counter-number" style="font-size: 32px;">+</span>
-            <div class="counter-label">подписчиков в Telegram</div>
+        <!-- Статистика: счётчик и прогресс-бар -->
+        <div class="stats-grid reveal">
+            <div class="counter-block">
+                <span class="counter-number" id="subscriberCount">14 760</span>
+                <div class="counter-label">подписчиков</div>
+            </div>
+            <div class="progress-block">
+                <div>Бонусы сегодня: <span id="bonusCount">342</span>/500</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 68%;"></div>
+                </div>
+                <div>🔥 Осталось 158 бонусов</div>
+            </div>
         </div>
 
-        <!-- Блок последних обновлений -->
-        <div class="updates reveal">
-            <h3>📢 Последние обновления</h3>
-            <p>🔥 Сегодня добавили новые зеркала: Vavada, 1win, Duel Casino, Cat Casino</p>
-            <p>⏰ Обновлено: 22 февраля 2026, 15:30</p>
+        <!-- Таймер до следующего обновления -->
+        <div class="casino-day reveal">
+            <h3>⏳ Следующее обновление зеркал</h3>
+            <div class="timer" id="timer">02:45:12</div>
+        </div>
+
+        <!-- Казино дня (случайное) -->
+        <div class="casino-day reveal" id="casinoOfTheDay">
+            <h3>🎲 КАЗИНО ДНЯ</h3>
+            <div class="casino-day-content">
+                <img src="images/vavada.png" alt="Vavada" id="dayCasinoImg">
+                <div>
+                    <h2 id="dayCasinoName">Vavada</h2>
+                    <p id="dayCasinoBonus">100% до 50 000₽ + 100 FS</p>
+                    <a href="https://t.me/igrovyes_avtomaty" class="bonus-link" style="width: auto; padding: 10px 30px;">Забрать</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Топ-3 казино -->
+        <div class="top3-grid reveal">
+            <div class="top-item">
+                <div class="rank">🥇</div>
+                <img src="images/1win.png" alt="1win">
+                <div>1win</div>
+                <div style="color:#ffaa33;">4.9</div>
+            </div>
+            <div class="top-item">
+                <div class="rank">🥈</div>
+                <img src="images/vavada.png" alt="Vavada">
+                <div>Vavada</div>
+                <div style="color:#ffaa33;">4.8</div>
+            </div>
+            <div class="top-item">
+                <div class="rank">🥉</div>
+                <img src="images/cat.png" alt="Cat Casino">
+                <div>Cat Casino</div>
+                <div style="color:#ffaa33;">4.7</div>
+            </div>
         </div>
 
         <!-- Блок бонусов -->
@@ -662,126 +636,46 @@
             </div>
         </div>
 
-        <!-- Блок "Почему нам доверяют" -->
-        <div class="trust reveal">
-            <div class="trust-item">
-                <i class="fas fa-users"></i>
-                <h4>15 000+</h4>
-                <p>подписчиков</p>
+        <!-- График активности -->
+        <div class="chart reveal">
+            <h3 style="text-align:center; color:#ffaa33;">📊 Активность за 24 часа</h3>
+            <div class="chart-bars">
+                <div style="display:flex; flex-direction:column; align-items:center;">
+                    <div class="bar" style="height:80px;"></div>
+                    <div class="bar-label">Пн</div>
+                </div>
+                <div><div class="bar" style="height:120px;"></div><div class="bar-label">Вт</div></div>
+                <div><div class="bar" style="height:150px;"></div><div class="bar-label">Ср</div></div>
+                <div><div class="bar" style="height:100px;"></div><div class="bar-label">Чт</div></div>
+                <div><div class="bar" style="height:90px;"></div><div class="bar-label">Пт</div></div>
+                <div><div class="bar" style="height:130px;"></div><div class="bar-label">Сб</div></div>
+                <div><div class="bar" style="height:140px;"></div><div class="bar-label">Вс</div></div>
             </div>
-            <div class="trust-item">
+        </div>
+
+        <!-- Партнёры -->
+        <div class="partners reveal">
+            <h2 class="section-title">🤝 Нам доверяют</h2>
+            <div class="partner-logos">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-bitcoin"></i>
+                <i class="fab fa-ethereum"></i>
                 <i class="fas fa-shield-alt"></i>
-                <h4>5 лет</h4>
-                <p>работы</p>
+                <i class="fas fa-lock"></i>
             </div>
-            <div class="trust-item">
-                <i class="fas fa-clock"></i>
-                <p>24/7 поддержка</p>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-check-circle"></i>
-                <h4>42+</h4>
-                <p>проверенных казино</p>
-            </div>
-        </div>
-
-        <!-- Отзывы подписчиков -->
-        <div class="testimonials reveal">
-            <h2 class="section-title">💬 Отзывы</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="avatar">А</div>
-                    <div class="text">«Лучший канал с рабочими зеркалами! Уже несколько раз выводил выигрыши по ссылкам отсюда.»</div>
-                    <div class="name">Алексей</div>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="avatar">Е</div>
-                    <div class="text">«Постоянно пользуюсь, всегда актуальные бонусы. Админ молодчик, быстро отвечает.»</div>
-                    <div class="name">Екатерина</div>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="avatar">Д</div>
-                    <div class="text">«Подписался и не жалею. Ссылки обновляются вовремя, бонусы реально дают.»</div>
-                    <div class="name">Дмитрий</div>
-                    <div class="rating">⭐⭐⭐⭐</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- FAQ (аккордеон) -->
-        <div class="faq reveal">
-            <h2 class="section-title">❓ Часто задаваемые вопросы</h2>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    Как получить бонус? <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Перейди в Telegram-канал, там есть закреплённое сообщение со всеми актуальными бонусами и ссылками.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    Почему ссылки меняются? <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Казино часто блокируют, поэтому мы обновляем зеркала ежедневно, чтобы у тебя всегда был доступ.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    Это безопасно? <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Да, мы проверяем все казино на лицензию и честность. В канале только проверенные проекты.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    Нужно ли платить за подписку? <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Нет, канал абсолютно бесплатный. Переходи и пользуйся!
-                </div>
-            </div>
-        </div>
-
-        <!-- Преимущества -->
-        <div class="features reveal">
-            <div class="feature">
-                <h3>🔥 42+ казино</h3>
-                <p>Все популярные проекты</p>
-            </div>
-            <div class="feature">
-                <h3>⚡️ Актуальные зеркала</h3>
-                <p>24/7 обновление</p>
-            </div>
-            <div class="feature">
-                <h3>🎁 Эксклюзивные бонусы</h3>
-                <p>Только для подписчиков</p>
-            </div>
-        </div>
-
-        <!-- SEO-текст -->
-        <div class="seo-text reveal">
-            <h2>Рабочие зеркала казино онлайн 24/7 без блокировок</h2>
-            <p>Ищешь актуальные ссылки на Vavada, 1win, Duel Casino, Stake, Cat Casino и ещё 40+ казино? В нашем Telegram-канале «Игровые автоматы | Бонусы» ты найдёшь всегда рабочие зеркала, свежие бонусы до 500%, фриспины и промокоды. Мы собираем только проверенные проекты с лицензией и быстрыми выплатами. Подпишись и получай бонусы каждый день! Доступ в России и СНГ без VPN.</p>
         </div>
 
         <!-- Футер -->
-        <div class="footer">
+        <div class="footer reveal">
             <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО</div>
             <div style="margin: 12px 0;">
-                <a href="#">Политика конфиденциальности</a> • 
-                <a href="#">Ответственная игра</a> • 
-                <a href="#">Правила</a>
+                <a href="#">Политика</a> • <a href="#">Ответственная игра</a> • <a href="#">Правила</a>
             </div>
             <div class="eighteen-plus">18+</div>
         </div>
     </div>
 
-    <!-- Скрипты -->
     <script>
         // Анимация при прокрутке
         function reveal() {
@@ -796,37 +690,59 @@
             }
         }
         window.addEventListener('scroll', reveal);
-        reveal(); // Запускаем сразу для видимых элементов
+        reveal();
         
-        // FAQ аккордеон
-        function toggleFAQ(element) {
-            element.classList.toggle('active');
-            var answer = element.nextElementSibling;
-            if (answer.classList.contains('show')) {
-                answer.classList.remove('show');
+        // Кнопка наверх
+        window.onscroll = function() {
+            var btn = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.classList.add('show');
             } else {
-                answer.classList.add('show');
+                btn.classList.remove('show');
             }
+        };
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
         
-        // Переключение темы
-        function toggleTheme() {
-            document.body.classList.toggle('light-theme');
-            var themeText = document.getElementById('themeText');
-            if (document.body.classList.contains('light-theme')) {
-                themeText.textContent = 'Тёмная';
-            } else {
-                themeText.textContent = 'Светлая';
-            }
-        }
-        
-        // Счётчик подписчиков (имитация)
+        // Счётчик подписчиков
         let count = 14760;
-        const counterElement = document.getElementById('subscriberCount');
         setInterval(() => {
             count += Math.floor(Math.random() * 3) + 1;
-            counterElement.textContent = count.toLocaleString('ru-RU');
-        }, 8000);
+            document.getElementById('subscriberCount').textContent = count.toLocaleString('ru-RU');
+        }, 5000);
+        
+        // Таймер до следующего обновления
+        function updateTimer() {
+            let now = new Date();
+            let next = new Date();
+            next.setHours(24, 0, 0, 0); // Полночь
+            if (now.getHours() >= 12) {
+                next.setDate(next.getDate() + 1);
+            }
+            let diff = Math.floor((next - now) / 1000);
+            let hours = Math.floor(diff / 3600);
+            let minutes = Math.floor((diff % 3600) / 60);
+            let seconds = diff % 60;
+            document.getElementById('timer').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        setInterval(updateTimer, 1000);
+        
+        // Случайное казино дня
+        const casinos = [
+            { name: 'Vavada', img: 'vavada.png', bonus: '100% до 50 000₽ + 100 FS' },
+            { name: '1win', img: '1win.png', bonus: '500% на первый депозит' },
+            { name: 'Duel Casino', img: 'duel.png', bonus: '120% + 250 FS' },
+            { name: 'Cat Casino', img: 'cat.png', bonus: '200% до 100 000₽' },
+            { name: 'Stake', img: 'stake.png', bonus: 'Эксклюзивный бонус' },
+            { name: 'Joy Casino', img: 'joy.png', bonus: '200% + 200 FS' }
+        ];
+        let randomIndex = Math.floor(Math.random() * casinos.length);
+        let dayCasino = casinos[randomIndex];
+        document.getElementById('dayCasinoName').textContent = dayCasino.name;
+        document.getElementById('dayCasinoImg').src = `images/${dayCasino.img}`;
+        document.getElementById('dayCasinoBonus').textContent = dayCasino.bonus;
     </script>
 </body>
 </html>
