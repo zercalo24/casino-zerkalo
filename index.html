@@ -80,7 +80,7 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
             position: relative;
             z-index: 2;
         }
@@ -96,16 +96,16 @@
         #scrollToTop {
             position: fixed;
             bottom: 110px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
             background: #ffaa33;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #0a0f1a;
-            font-size: 24px;
+            font-size: 22px;
             cursor: pointer;
             border: 1px solid rgba(255, 170, 51, 0.5);
             opacity: 0;
@@ -116,17 +116,17 @@
         #scrollToTop.show { opacity: 1; }
         .float-tg {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
             background: #0088cc;
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 36px;
+            font-size: 30px;
             box-shadow: 0 0 30px rgba(0, 136, 204, 0.5);
             border: 1px solid rgba(255,255,255,0.2);
             transition: 0.2s;
@@ -138,87 +138,92 @@
             box-shadow: 0 0 40px rgba(0, 136, 204, 0.7);
         }
         .hero {
-            padding: 60px 0 20px;
+            padding: 50px 0 20px;
             text-align: center;
         }
         .hero h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(32px, 8vw, 64px);
+            font-size: clamp(28px, 8vw, 64px);
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #ffaa33;
             text-shadow: 2px 2px 0 #000, 0 0 30px rgba(255, 170, 51, 0.5);
             margin-bottom: 15px;
             line-height: 1.2;
         }
         .hero p {
-            font-size: clamp(18px, 4vw, 22px);
+            font-size: clamp(16px, 4vw, 22px);
             color: #ffffff;
             text-shadow: 1px 1px 3px #000;
             max-width: 800px;
             margin: 15px auto 0;
+            padding: 0 10px;
         }
         
-        /* КОЛЛАЖ С КЛИКАБЕЛЬНЫМИ ИКОНКАМИ */
+        /* КОЛЛАЖ С КЛИКАБЕЛЬНЫМИ ИКОНКАМИ - БЕЗ ЗАЗОРОВ */
         .logo-cloud {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-            gap: 20px;
-            align-items: center;
-            justify-items: center;
-            margin: 40px 0 25px;
-            padding: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 12px;
+            align-items: stretch;
+            justify-items: stretch;
+            margin: 30px 0 20px;
+            padding: 15px;
             background: rgba(15, 20, 30, 0.5);
             backdrop-filter: blur(8px);
-            border-radius: 30px;
+            border-radius: 24px;
             border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .logo-cloud a {
             display: flex;
             align-items: center;
             justify-content: center;
+            aspect-ratio: 1 / 1;
             width: 100%;
-            height: 100%;
-            text-decoration: none;
-            transition: transform 0.3s ease;
+            background: rgba(25, 30, 40, 0.9);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 170, 51, 0.2);
+            transition: all 0.3s ease;
+            overflow: hidden;
         }
         .logo-cloud a:hover {
-            transform: scale(1.1);
-        }
-        .logo-cloud a:hover img {
+            transform: scale(1.05);
             border-color: #ffaa33;
-            box-shadow: 0 0 30px rgba(255, 170, 51, 0.5);
+            box-shadow: 0 0 20px rgba(255, 170, 51, 0.5);
+            background: rgba(35, 40, 50, 0.9);
         }
         .logo-cloud img {
-            width: 70px;
-            height: 70px;
+            width: 90%;
+            height: 90%;
             object-fit: contain;
-            border-radius: 16px;
-            background: rgba(25, 30, 40, 0.8);
-            padding: 10px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 170, 51, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .logo-cloud a:hover img {
+            transform: scale(1.1);
         }
         
         .btn-tg {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             background: #0088cc;
             color: white;
-            font-size: clamp(24px, 6vw, 32px);
+            font-size: clamp(20px, 5vw, 32px);
             font-weight: 800;
-            padding: 20px 40px;
+            padding: 15px 30px;
             border-radius: 30px;
             text-decoration: none;
             border: 1px solid rgba(255,255,255,0.2);
             transition: 0.2s;
             width: 100%;
-            max-width: 600px;
-            margin: 30px auto;
+            max-width: 500px;
+            margin: 20px auto;
             box-shadow: 0 0 30px rgba(0, 136, 204, 0.5);
+        }
+        .btn-tg i {
+            font-size: clamp(24px, 6vw, 40px);
         }
         .btn-tg:hover {
             background: #0099dd;
@@ -226,55 +231,56 @@
             box-shadow: 0 0 40px rgba(0, 136, 204, 0.7);
         }
         
-        /* СЧЁТЧИК */
+        /* СЧЁТЧИК - АДАПТИВНЫЙ */
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin: 40px 0;
+            gap: 15px;
+            margin: 30px 0;
         }
         .counter-block {
             text-align: center;
             background: rgba(15, 20, 30, 0.5);
             backdrop-filter: blur(8px);
-            border-radius: 30px;
-            padding: 30px 20px;
+            border-radius: 24px;
+            padding: 20px 15px;
             border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .counter-number {
-            font-size: 100px;
+            font-size: clamp(50px, 12vw, 100px);
             font-weight: 900;
             color: #ffffff;
             text-shadow: 0 0 20px #ffaa33, 0 0 40px #ffaa33;
             line-height: 1;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-family: 'Montserrat', sans-serif;
         }
         .counter-label {
-            font-size: 24px;
+            font-size: clamp(14px, 3vw, 20px);
             color: #ffffff;
             text-shadow: 1px 1px 3px #000;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         .progress-block {
             background: rgba(15, 20, 30, 0.5);
             backdrop-filter: blur(8px);
-            border-radius: 30px;
-            padding: 25px;
+            border-radius: 24px;
+            padding: 20px 15px;
             text-align: center;
             border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .progress-block > div {
             color: #ffffff;
             text-shadow: 1px 1px 3px #000;
+            font-size: clamp(14px, 3vw, 18px);
         }
         .progress-bar {
             width: 100%;
-            height: 25px;
+            height: 20px;
             background: rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            margin: 15px 0;
+            border-radius: 10px;
+            margin: 10px 0;
             overflow: hidden;
             border: 1px solid rgba(255, 170, 51, 0.5);
         }
@@ -282,7 +288,7 @@
             height: 100%;
             width: 68%;
             background: linear-gradient(90deg, #ffaa33, #ff8c00);
-            border-radius: 15px;
+            border-radius: 10px;
         }
         
         /* КВАДРАТНЫЕ РАМКИ ДЛЯ КАЗИНО */
@@ -290,15 +296,15 @@
             background: rgba(15, 20, 30, 0.5);
             backdrop-filter: blur(8px);
             border-radius: 30px;
-            padding: 40px;
-            margin: 40px 0;
+            padding: 25px 20px;
+            margin: 30px 0;
             text-align: center;
             border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .casino-day h3 {
             color: #ffaa33;
-            font-size: 32px;
-            margin-bottom: 30px;
+            font-size: clamp(22px, 5vw, 32px);
+            margin-bottom: 20px;
             letter-spacing: 1px;
             text-shadow: 1px 1px 3px #000;
         }
@@ -306,14 +312,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 60px;
+            gap: 30px;
             flex-wrap: wrap;
         }
         .day-frame {
-            width: 220px;
-            height: 220px;
-            border-radius: 30px;
-            background: rgba(25, 30, 40, 0.8);
+            width: min(200px, 40vw);
+            height: min(200px, 40vw);
+            border-radius: 20px;
+            background: rgba(25, 30, 40, 0.9);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -322,82 +328,82 @@
             box-shadow: 0 0 40px rgba(255, 170, 51, 0.5);
         }
         .day-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            padding: 20px;
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
         }
         .casino-day h2 {
-            font-size: 48px;
+            font-size: clamp(28px, 6vw, 48px);
             color: #fff;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             text-shadow: 1px 1px 3px #000;
         }
         .casino-day p {
             color: #fff;
             text-shadow: 1px 1px 3px #000;
+            font-size: clamp(16px, 4vw, 20px);
+            margin-bottom: 15px;
         }
         
         .timer {
-            font-size: 42px;
+            font-size: clamp(30px, 8vw, 42px);
             font-weight: 800;
             color: #ffaa33;
-            margin: 15px 0;
+            margin: 10px 0;
             text-shadow: 0 0 20px #ffaa33, 1px 1px 3px #000;
         }
         
         .top3-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 40px 0;
+            gap: 15px;
+            margin: 30px 0;
         }
         .top-item {
             background: rgba(15, 20, 30, 0.5);
             backdrop-filter: blur(8px);
-            border-radius: 30px;
-            padding: 35px 25px;
+            border-radius: 24px;
+            padding: 20px 15px;
             text-align: center;
             border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .frame-gold, .frame-silver, .frame-bronze {
-            width: 140px;
-            height: 140px;
-            border-radius: 20px;
-            margin: 0 auto 20px;
+            width: min(100px, 25vw);
+            height: min(100px, 25vw);
+            border-radius: 16px;
+            margin: 0 auto 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: rgba(25, 30, 40, 0.8);
+            background: rgba(25, 30, 40, 0.9);
         }
         .frame-gold { border: 3px solid #ffd700; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); }
         .frame-silver { border: 3px solid #c0c0c0; box-shadow: 0 0 30px rgba(192, 192, 192, 0.5); }
         .frame-bronze { border: 3px solid #cd7f32; box-shadow: 0 0 30px rgba(205, 127, 50, 0.5); }
         .frame-gold img, .frame-silver img, .frame-bronze img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            padding: 15px;
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
         }
         .top-item .rank {
-            font-size: 42px;
+            font-size: clamp(28px, 6vw, 42px);
             font-weight: 800;
             color: #ffaa33;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-shadow: 0 0 15px #ffaa33;
         }
         .top-item .casino-name {
-            font-size: 24px;
+            font-size: clamp(18px, 4vw, 24px);
             font-weight: 700;
-            margin: 10px 0;
+            margin: 8px 0;
             color: #fff;
             text-shadow: 1px 1px 3px #000;
         }
         .top-item .bonus-text {
             color: #fff;
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: clamp(14px, 3vw, 16px);
+            margin-bottom: 15px;
             text-shadow: 1px 1px 3px #000;
         }
         
@@ -406,11 +412,11 @@
             background: linear-gradient(145deg, #ffaa33, #ff8c00);
             color: #0a0f1a;
             font-weight: 800;
-            padding: 12px 24px;
-            border-radius: 20px;
+            padding: 10px 15px;
+            border-radius: 16px;
             text-decoration: none;
             width: 100%;
-            font-size: 16px;
+            font-size: clamp(14px, 3vw, 16px);
             text-transform: uppercase;
             letter-spacing: 1px;
             border: 1px solid rgba(255,255,255,0.2);
@@ -422,26 +428,26 @@
         }
         
         .bonuses {
-            margin: 50px 0;
+            margin: 40px 0;
         }
         .section-title {
-            font-size: clamp(28px, 6vw, 36px);
+            font-size: clamp(24px, 6vw, 36px);
             font-weight: 700;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: #fff;
             text-shadow: 0 0 20px #ffaa33, 1px 1px 3px #000;
         }
         .bonus-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
         .bonus-card {
             background: rgba(15, 20, 30, 0.5);
             backdrop-filter: blur(8px);
-            border-radius: 30px;
-            padding: 25px;
+            border-radius: 24px;
+            padding: 20px;
             text-align: center;
             transition: 0.3s;
             border: 1px solid rgba(255, 170, 51, 0.3);
@@ -452,23 +458,23 @@
             box-shadow: 0 0 30px rgba(255, 170, 51, 0.3);
         }
         .bonus-card img {
-            width: 80px;
-            height: 80px;
+            width: min(70px, 15vw);
+            height: min(70px, 15vw);
             object-fit: contain;
-            border-radius: 16px;
-            background: rgba(25, 30, 40, 0.8);
-            padding: 12px;
-            margin-bottom: 15px;
+            border-radius: 12px;
+            background: rgba(25, 30, 40, 0.9);
+            padding: 10px;
+            margin-bottom: 10px;
             border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .bonus-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: clamp(18px, 4vw, 22px);
+            margin-bottom: 8px;
             color: #fff;
             text-shadow: 1px 1px 3px #000;
         }
         .bonus-card p {
-            font-size: 16px;
+            font-size: clamp(14px, 3vw, 16px);
             margin-bottom: 15px;
             color: #fff;
             text-shadow: 1px 1px 3px #000;
@@ -476,34 +482,47 @@
         
         .footer {
             border-top: 1px solid rgba(255, 170, 51, 0.3);
-            padding: 30px 0;
+            padding: 25px 0;
             text-align: center;
             color: #fff;
-            margin-top: 50px;
+            margin-top: 40px;
             text-shadow: 1px 1px 3px #000;
+            font-size: clamp(14px, 3vw, 16px);
         }
         .footer a {
             color: #ffaa33;
             text-decoration: none;
         }
+        .footer div {
+            margin: 5px 0;
+        }
         .eighteen-plus {
             background: #ffaa33;
             color: #0a0f1a;
-            padding: 8px 24px;
-            border-radius: 20px;
+            padding: 6px 20px;
+            border-radius: 16px;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 15px;
             font-weight: 700;
+            font-size: clamp(14px, 3vw, 16px);
             border: 1px solid rgba(255,255,255,0.2);
         }
         
+        /* СПЕЦИАЛЬНО ДЛЯ МОБИЛЬНЫХ */
         @media (max-width: 600px) {
             .stats-grid, .top3-grid { grid-template-columns: 1fr; }
-            .logo-cloud { grid-template-columns: repeat(4, 1fr); }
+            .logo-cloud { grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 10px; }
+            .logo-cloud a { border-radius: 8px; }
+            .btn-tg { padding: 12px 20px; font-size: 18px; }
+            .float-tg { width: 50px; height: 50px; font-size: 24px; bottom: 15px; right: 15px; }
+            #scrollToTop { bottom: 90px; right: 15px; width: 40px; height: 40px; font-size: 18px; }
             .counter-number { font-size: 70px; }
-            .day-frame { width: 180px; height: 180px; }
-            .frame-gold, .frame-silver, .frame-bronze { width: 120px; height: 120px; }
-            .casino-day h2 { font-size: 36px; }
+            .day-frame { width: 150px; height: 150px; }
+            .frame-gold, .frame-silver, .frame-bronze { width: 80px; height: 80px; }
+        }
+        
+        @media (max-width: 400px) {
+            .logo-cloud { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>
@@ -518,8 +537,8 @@
     <div id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
     
     <div class="container">
-        <div style="padding:20px 0; text-align:center;">
-            <div style="font-size:15px; color:#ffaa33; text-shadow:1px 1px 3px #000;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
+        <div style="padding:15px 0; text-align:center;">
+            <div style="font-size:14px; color:#ffaa33; text-shadow:1px 1px 3px #000;">🔞 18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
         </div>
 
         <div class="hero reveal">
@@ -527,7 +546,7 @@
             <p>✅ Актуальные зеркала Vavada, 1win, Duel Casino, Stake и ещё 40+ казино. Бонусы до 500%, фриспины 2026, быстрый доступ без VPN в Telegram.</p>
         </div>
 
-        <!-- КЛИКАБЕЛЬНЫЙ КОЛЛАЖ С ПАРТНЁРСКИМИ ССЫЛКАМИ -->
+        <!-- КЛИКАБЕЛЬНЫЙ КОЛЛАЖ С ПАРТНЁРСКИМИ ССЫЛКАМИ - БЕЗ ЗАЗОРОВ -->
         <div class="logo-cloud reveal">
             <a href="https://gate707.com/?promo=d9d43ea1-0cd0-4dd8-9a86-28d352183bfe&target=register" target="_blank"><img src="images/vavada.png" alt="Vavada зеркало рабочее бонус 100% до 50000" loading="lazy"></a>
             <a href="https://one-vv893.com/?p=sxqe" target="_blank"><img src="images/1win.png" alt="1win актуальное зеркало бонус 500% на депозит" loading="lazy"></a>
@@ -585,10 +604,10 @@
                 <div class="counter-label">ПОДПИСЧИКОВ В TELEGRAM</div>
             </div>
             <div class="progress-block">
-                <div style="font-size:24px; margin-bottom:10px;">🔥 ГОРЯЧИЕ БОНУСЫ 2026</div>
-                <div style="font-size:18px; margin:10px 0;"><span id="bonusCount">342</span>/500</div>
+                <div style="font-size:clamp(16px,4vw,20px); margin-bottom:5px;">🔥 ГОРЯЧИЕ БОНУСЫ 2026</div>
+                <div style="font-size:clamp(16px,4vw,18px); margin:5px 0;"><span id="bonusCount">342</span>/500</div>
                 <div class="progress-bar"><div class="progress-fill"></div></div>
-                <div style="font-size:16px; margin-top:10px;">Сегодня разобрано 158 бездепозитных бонусов</div>
+                <div style="font-size:clamp(14px,3vw,16px); margin-top:5px;">Сегодня разобрано 158</div>
             </div>
         </div>
 
@@ -608,7 +627,7 @@
                 <div>
                     <h2 id="dayCasinoName"></h2>
                     <p id="dayCasinoBonus">Welcome Pack 250% и 500 FS 👑</p>
-                    <a href="#" id="dayCasinoLink" class="bonus-link" style="width:auto; padding:15px 40px; font-size:18px;" target="_blank">ЗАБРАТЬ БОНУС</a>
+                    <a href="#" id="dayCasinoLink" class="bonus-link" style="width:auto; padding:12px 30px; font-size:clamp(16px,4vw,18px);" target="_blank">ЗАБРАТЬ БОНУС</a>
                 </div>
             </div>
         </div>
@@ -624,12 +643,12 @@
 
         <!-- ФУТЕР -->
         <div class="footer">
-            <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО ОНЛАЙН 24/7</div>
-            <div style="margin:15px 0;">
-                <a href="#" style="color:#ffaa33; text-decoration:none;">Политика конфиденциальности</a> • 
-                <a href="#" style="color:#ffaa33; text-decoration:none;">Ответственная игра</a>
+            <div>© 2026 РАБОЧИЕ ЗЕРКАЛА КАЗИНО</div>
+            <div>
+                <a href="#" style="color:#ffaa33;">Политика</a> • 
+                <a href="#" style="color:#ffaa33;">Ответственная игра</a>
             </div>
-            <div class="eighteen-plus">18+ ТОЛЬКО ДЛЯ СОВЕРШЕННОЛЕТНИХ</div>
+            <div class="eighteen-plus">18+ ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
         </div>
     </div>
 
