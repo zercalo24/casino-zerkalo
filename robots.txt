@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://casino-zerkalo.online/sitemap.xml
