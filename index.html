@@ -184,18 +184,18 @@
             padding: 0 10px;
         }
         
-        /* КОЛЛАЖ С КЛИКАБЕЛЬНЫМИ ИКОНКАМИ - БЕЗ ЗАЗОРОВ */
+        /* КОЛЛАЖ С КЛИКАБЕЛЬНЫМИ ИКОНКАМИ - УВЕЛИЧЕННЫЙ */
         .logo-cloud {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
             align-items: stretch;
             justify-items: stretch;
-            margin: 30px 0 20px;
-            padding: 15px;
+            margin: 40px 0 30px;
+            padding: 20px;
             background: rgba(15, 20, 30, 0.5);
             backdrop-filter: blur(8px);
-            border-radius: 24px;
+            border-radius: 30px;
             border: 1px solid rgba(255, 170, 51, 0.3);
         }
         .logo-cloud a {
@@ -205,20 +205,21 @@
             aspect-ratio: 1 / 1;
             width: 100%;
             background: rgba(25, 30, 40, 0.9);
-            border-radius: 12px;
+            border-radius: 16px;
             border: 1px solid rgba(255, 170, 51, 0.2);
             transition: all 0.3s ease;
             overflow: hidden;
+            padding: 5px;
         }
         .logo-cloud a:hover {
             transform: scale(1.05);
             border-color: #ffaa33;
-            box-shadow: 0 0 20px rgba(255, 170, 51, 0.5);
+            box-shadow: 0 0 25px rgba(255, 170, 51, 0.5);
             background: rgba(35, 40, 50, 0.9);
         }
         .logo-cloud img {
-            width: 90%;
-            height: 90%;
+            width: 85%;
+            height: 85%;
             object-fit: contain;
             transition: transform 0.3s ease;
         }
@@ -701,8 +702,8 @@
         /* СПЕЦИАЛЬНО ДЛЯ МОБИЛЬНЫХ */
         @media (max-width: 600px) {
             .stats-grid, .top3-grid { grid-template-columns: 1fr; }
-            .logo-cloud { grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 10px; }
-            .logo-cloud a { border-radius: 8px; }
+            .logo-cloud { grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 15px; }
+            .logo-cloud a { border-radius: 12px; }
             .btn-tg { padding: 12px 20px; font-size: 18px; }
             .float-tg { width: 50px; height: 50px; font-size: 24px; bottom: 15px; right: 15px; }
             #scrollToTop { bottom: 90px; right: 15px; width: 40px; height: 40px; font-size: 18px; }
@@ -739,7 +740,7 @@
             <p>✅ Актуальные зеркала Vavada, 1win, Duel Casino, Stake и ещё 40+ казино. Бонусы до 500%, фриспины 2026, быстрый доступ без VPN в Telegram.</p>
         </div>
 
-        <!-- КЛИКАБЕЛЬНЫЙ КОЛЛАЖ С ПАРТНЁРСКИМИ ССЫЛКАМИ -->
+        <!-- КЛИКАБЕЛЬНЫЙ КОЛЛАЖ С ПАРТНЁРСКИМИ ССЫЛКАМИ - УВЕЛИЧЕННЫЙ -->
         <div class="logo-cloud reveal">
             <a href="https://gate707.com/?promo=d9d43ea1-0cd0-4dd8-9a86-28d352183bfe&target=register" target="_blank"><img src="images/vavada.png" alt="Vavada зеркало рабочее бонус 100% до 50000 | Vavada mirror working bonus" loading="lazy"></a>
             <a href="https://one-vv893.com/?p=sxqe" target="_blank"><img src="images/1win.png" alt="1win актуальное зеркало бонус 500% на депозит | 1win mirror bonus 500%" loading="lazy"></a>
