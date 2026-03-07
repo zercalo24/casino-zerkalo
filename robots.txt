@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://casino-zerkalo.online/sitemap.xml
+# Карта сайта
+Sitemap: https://www.casino-zerkalo.online/sitemap.xml
 
-# Запрещаем индексацию служебных файлов
-Disallow: /images/
-Disallow: /README.md
+# Запрещаем индексацию служебных папок (если есть)
+Disallow: /admin/
+Disallow: /private/
