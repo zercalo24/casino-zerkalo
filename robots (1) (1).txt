@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Карта сайта
+Sitemap: https://www.casino-zerkalo.online/sitemap.xml
+
+# Запрещаем индексацию служебных папок (если есть)
+Disallow: /admin/
+Disallow: /private/
