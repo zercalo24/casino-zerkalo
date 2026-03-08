@@ -1,0 +1,11 @@
+# Картинки казино — кэш 1 год
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML — кэш 1 день
+/*.html
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# Корневая страница — обновляем чаще
+/
+  Cache-Control: public, max-age=3600, must-revalidate
