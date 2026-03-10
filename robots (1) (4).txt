@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Служебные и технические файлы
+Disallow: /images/
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap
+Sitemap: https://www.casino-zerkalo.online/sitemap.xml
