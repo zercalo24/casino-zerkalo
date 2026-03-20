@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ✅ FIX: Google Fonts убран — шрифты берутся из style.css с font-display:optional
+       Это устраняет конфликт и полностью убирает CLS от шрифтов -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" as="image" href="images/eva.webp" fetchpriority="high">
+
+
+
+  <!-- ✅ ИСПРАВЛЕНО #3: резервируем размеры под шрифты и элементы — убирает CLS 0.332 → <0.1 -->
+  <style>
+    body { font-family: 'Raleway', Arial, sans-serif; }
+    h1,h2,h3,.logo-title,.card-name,.hero-title,.eva-brand {
+      font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+    }
+    /* Резервируем высоту hero чтобы страница не прыгала */
+    .hero-content { min-height: 420px; }
+    /* eva-modal фиксированный — не влияет на поток документа */
+    .eva-modal { position: fixed !important; }
+    /* Фиксируем размеры картинок карточек — убирает прыжок при lazy-load */
+    .card-img img { width: 120px; height: 80px; }
+  </style>
+  <meta name="description" content="Рабочие зеркала Vavada, 1win, Stake, Duel и 40+ казино. Актуальные ссылки без VPN 24/7. Бонусы до 500%, фриспины. Промокод RUBLIK.">
+  <meta name="keywords" content="зеркало казино, рабочее зеркало, vavada зеркало, 1win зеркало, stake зеркало, казино онлайн 2026, бонусы казино, фриспины">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Рабочие зеркала казино 2026 — доступ без VPN 24/7">
+  <meta property="og:description" content="Актуальные зеркала 43 казино. Бонусы до 500%, фриспины. Промокод RUBLIK.">
+  <meta property="og:url" content="https://www.casino-zerkalo.online/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.casino-zerkalo.online/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Зеркала Казино">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Рабочие зеркала казино 2026 — Vavada, 1win, Stake без VPN">
+  <meta name="twitter:description" content="43 рабочих зеркала казино без VPN. Бонусы до 500%, фриспины. Промокод RUBLIK. Обновление 24/7.">
+  <meta name="twitter:image" content="https://www.casino-zerkalo.online/images/og-preview.png">
+  <link rel="sitemap" type="application/xml" href="https://www.casino-zerkalo.online/sitemap.xml">
+  <link rel="canonical" href="https://www.casino-zerkalo.online/">
+  <title>Рабочие зеркала казино 2026 — Vavada, 1win, Stake без VPN 24/7</title>
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Зеркала Казино",
+      "url": "https://www.casino-zerkalo.online/",
+      "description": "Актуальные рабочие зеркала 43 онлайн-казино. Доступ без VPN 24/7. Бонусы до 500%, фриспины.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.casino-zerkalo.online/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Зеркала Казино",
+      "url": "https://www.casino-zerkalo.online/",
+      "logo": "https://www.casino-zerkalo.online/images/logo.png",
+      "sameAs": ["https://t.me/igrovyes_avtomaty"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "availableLanguage": "Russian"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Главная","item":"https://www.casino-zerkalo.online/"},
+        {"@type":"ListItem","position":2,"name":"Зеркала казино 2026","item":"https://www.casino-zerkalo.online/#casinos"},
+        {"@type":"ListItem","position":3,"name":"Бонусы казино","item":"https://www.casino-zerkalo.online/bonusy/bonusy-kazino-2026.html"},
+        {"@type":"ListItem","position":4,"name":"Обзоры казино","item":"https://www.casino-zerkalo.online/reviews/"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Рабочие зеркала казино 2026",
+      "description": "Топ казино с актуальными зеркалами без VPN",
+      "numberOfItems": 43,
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Vavada Casino — рабочее зеркало 2026","url":"https://www.casino-zerkalo.online/#vavada"},
+        {"@type":"ListItem","position":2,"name":"1win Casino — рабочее зеркало 2026","url":"https://www.casino-zerkalo.online/#1win"},
+        {"@type":"ListItem","position":3,"name":"Stake Casino — рабочее зеркало 2026","url":"https://www.casino-zerkalo.online/#stake"},
+        {"@type":"ListItem","position":4,"name":"Duel Casino — рабочее зеркало 2026","url":"https://www.casino-zerkalo.online/#duel"},
+        {"@type":"ListItem","position":5,"name":"EVA Casino — рабочее зеркало 2026","url":"https://casino-eva-zerkalo.online/"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Что такое зеркало казино?","acceptedAnswer":{"@type":"Answer","text":"Зеркало казино — альтернативный адрес сайта, работающий при блокировке основного домена. Тот же функционал, игры, баланс и бонусы. Зеркало обновляется ежедневно и работает без VPN."}},
+        {"@type":"Question","name":"Как использовать промокод RUBLIK?","acceptedAnswer":{"@type":"Answer","text":"Введите промокод RUBLIK при регистрации в поле «Промокод» для получения дополнительного бонуса до 500% на первый депозит плюс фриспины."}},
+        {"@type":"Question","name":"Нужен ли VPN для доступа к зеркалу казино?","acceptedAnswer":{"@type":"Answer","text":"Нет. Все зеркала на сайте работают без VPN — просто переходите по ссылке. Ссылки обновляются автоматически каждые 24 часа."}},
+        {"@type":"Question","name":"Какой бонус дают в казино в 2026 году?","acceptedAnswer":{"@type":"Answer","text":"Большинство казино предлагают приветственный бонус от 100% до 500% на первый депозит, а также бесплатные вращения (фриспины) от 50 до 500 штук. С промокодом RUBLIK бонус увеличивается."}},
+        {"@type":"Question","name":"Безопасно ли играть через зеркало казино?","acceptedAnswer":{"@type":"Answer","text":"Да, если вы используете официальное зеркало. Все ссылки на нашем сайте — официальные зеркала лицензированных казино. Баланс, бонусы и история игр полностью сохраняются."}}
+      ]
+    }
+  ]
+  </script>
+
+  <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/style.css"></noscript>
+  
+  <script src="/links.js" defer></script>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo">🎰 ЗЕРКАЛА</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-text">ЗАГРУЗКА ЗЕРКАЛ...</div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="header-row1">
+      <!-- Логотип -->
+      <a href="/" class="logo" aria-label="Зеркала казино без VPN — casino-zerkalo.online">
+        <div class="logo-icon">🎰</div>
+        <div class="logo-text">
+          <span class="logo-title">ЗЕРКАЛА КАЗИНО</span>
+          <span class="logo-sub">БЕЗ VPN · 24/7</span>
+        </div>
+      </a>
+
+      <!-- Промокод бейдж -->
+      <div class="promo-badge">
+        <span class="promo-badge-label">Промокод</span>
+        <span class="promo-badge-code">RUBLIK</span>
+      </div>
+    </div>
+
+    <div class="header-row2">
+      <!-- Навигация -->
+      <nav class="header-nav">
+        <a href="#casinos" class="nav-btn nav-btn-rating">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+          Рейтинг
+        </a>
+        <a href="bonusy/bonusy-kazino-2026.html" class="nav-btn nav-btn-bonus">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 12v10H4V12M22 7H2v5h20V7zM12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Бонусы
+        </a>
+        <a href="blog/sravnenie-kazino-2026.html" class="nav-btn nav-btn-guide">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Гайды
+        </a>
+      </nav>
+
+      <!-- Telegram кнопка -->
+      <a href="https://t.me/igrovyes_avtomaty" class="tg-btn" target="_blank" rel="noopener nofollow">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;flex-shrink:0">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z" fill="#229ED9"/>
+          <path d="M5.491 11.74 17.3 7.247c.535-.187 1.004.13.83.943l-1.97 9.28c-.146.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.88 13.47l-2.96-.924c-.643-.204-.657-.643.136-.953z" fill="white"/>
+        </svg>
+        <div class="tg-text">
+          <span class="tg-label">Мы в Telegram</span>
+          <span class="tg-count">14 760</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="live-ticker">
+  <div class="ticker-track" id="ticker">
+    <span class="ticker-item" style="color:#69f0ae"><span class="dot" style="background:#00c853"></span> 🔥 EVA CASINO — <strong>НОВИНКА! 225% + 900 ФС</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Vavada — <strong>зеркало работает</strong></span>
+    <span class="ticker-item"><span class="dot"></span> 1win — <strong>бонус 500% активен</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Stake — <strong>крипто-бонус доступен</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Duel — <strong>250 фриспинов</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Cat Casino — <strong>200% на депозит</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Промокод <strong>RUBLIK</strong> — активен везде</span>
+    <span class="ticker-item"><span class="dot"></span> Joy Casino — <strong>200 FS + 200%</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Rox — <strong>кэшбэк 10%</strong></span>
+    
+    <span class="ticker-item" style="color:#69f0ae"><span class="dot" style="background:#00c853"></span> 🔥 EVA CASINO — <strong>НОВИНКА! 225% + 900 ФС</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Vavada — <strong>зеркало работает</strong></span>
+    <span class="ticker-item"><span class="dot"></span> 1win — <strong>бонус 500% активен</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Stake — <strong>крипто-бонус доступен</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Duel — <strong>250 фриспинов</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Cat Casino — <strong>200% на депозит</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Промокод <strong>RUBLIK</strong> — активен везде</span>
+    <span class="ticker-item"><span class="dot"></span> Joy Casino — <strong>200 FS + 200%</strong></span>
+    <span class="ticker-item"><span class="dot"></span> Rox — <strong>кэшбэк 10%</strong></span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="fire">🔥</span> АКТУАЛЬНО · МАРТ 2026 · БЕЗ VPN
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line1">РАБОЧИЕ</span>
+      <span class="line2">ЗЕРКАЛА</span>
+      <span class="line3">КАЗИНО</span>
+    </h1>
+
+    <p class="hero-sub">
+      43 проверенных казино · бонусы до 500% · фриспины · мгновенный доступ без VPN и блокировок прямо сейчас
+    </p>
+
+    <div class="promo-block">
+      <span class="promo-label">🎁 ПРОМОКОД ДЛЯ БОНУСОВ</span>
+      <span class="promo-code" id="promo-code">RUBLIK</span>
+      <button class="promo-copy" onclick="copyPromo()">КОПИРОВАТЬ</button>
+    </div>
+
+    <div class="fire-counter">
+      <div class="fire-stat">
+        <div class="fire-val" id="counter-casinos">44</div>
+        <div class="fire-lbl">казино</div>
+      </div>
+      <div class="fire-sep">|</div>
+      <div class="fire-stat">
+        <div class="fire-val">500%</div>
+        <div class="fire-lbl">макс. бонус</div>
+      </div>
+      <div class="fire-sep">|</div>
+      <div class="fire-stat">
+        <div class="fire-val" id="counter-claimed">342</div>
+        <div class="fire-lbl">бонусов сегодня</div>
+      </div>
+      <div class="fire-sep">|</div>
+      <div class="fire-stat">
+        <div class="fire-val">24/7</div>
+        <div class="fire-lbl">обновление</div>
+      </div>
+    </div>
+  </div> </div></section>
+
+<div class="timer-strip">
+  <span class="timer-label">⏱ следующее обновление:</span>
+  <div class="timer-digits">
+    <div class="t-block">
+      <div class="t-num" id="t-h">02</div>
+      <div class="t-lbl">ЧАСОВ</div>
+    </div>
+    <div class="t-sep">:</div>
+    <div class="t-block">
+      <div class="t-num" id="t-m">45</div>
+      <div class="t-lbl">МИНУТ</div>
+    </div>
+    <div class="t-sep">:</div>
+    <div class="t-block">
+      <div class="t-num" id="t-s">00</div>
+      <div class="t-lbl">СЕКУНД</div>
+    </div>
+  </div>
+  <div class="live-badge">
+    <span class="live-dot"></span> ВСЕ РАБОТАЮТ
+  </div>
+</div>
+
+<main>
+
+  <section id="casinos">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">🎰 РАБОЧИЕ <span>ЗЕРКАЛА</span></h2>
+      <p class="sec-sub">Все ссылки проверены · Используй промокод <strong style="color:var(--gold)">RUBLIK</strong> для доп. бонусов</p>
+    </div>
+
+    <div class="filters-wrap reveal">
+      <div class="filter-row">
+        <input type="search" class="filter-search" id="casino-search" placeholder="🔍 Поиск казино..." oninput="filterCasinos()" aria-label="Поиск казино">
+      </div>
+      <div class="filter-tags">
+        <span class="ftag active" onclick="setFilter('all',this)">Все</span>
+        <span class="ftag" onclick="setFilter('hot',this)">🔥 Топ</span>
+        <span class="ftag" onclick="setFilter('freespins',this)">🎡 Фриспины</span>
+        <span class="ftag" onclick="setFilter('crypto',this)">₿ Крипто</span>
+        <span class="ftag" onclick="setFilter('bonus500',this)">💰 Бонус 500%+</span>
+        <span class="ftag" onclick="setFilter('cashback',this)">💵 Кэшбэк</span>
+      </div>
+      <div class="results-info" id="results-count">Показано <strong>41</strong> казино</div>
+    </div>
+
+    <div class="casino-grid" id="casino-grid">
+
+      <article class="casino-card eva-featured reveal" data-name="eva ева eva casino" data-tags="hot freespins bonus500 new">
+        <div class="eva-new-banner">🔥 НОВИНКА ДНЯ — ЭКСКЛЮЗИВНЫЙ БОНУС ТОЛЬКО СЕГОДНЯ 🔥</div>
+        <div class="card-img" style="padding-top:28px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#071a0f,#0d2018);">
+          <img src="images/eva.webp" alt="EVA CASINO" fetchpriority="high" decoding="async" style="width:120px;height:80px;object-fit:contain;filter:drop-shadow(0 0 16px rgba(0,200,83,0.6));">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+        </div>
+        <div class="card-body" style="padding-top:32px">
+          <div class="eva-badge-new">⚡ ТОЛЬКО ОТКРЫЛОСЬ</div>
+          <div class="card-name">EVA CASINO</div>
+          <div class="eva-total">
+            <span class="eva-total-icon">🎁</span>
+            <div>
+              <div class="eva-total-text">WELCOME PACK — 3 ДЕПОЗИТА</div>
+              <div class="eva-total-num">225% + 900 ФС</div>
+            </div>
+          </div>
+          <div class="eva-welcome-pack">
+            <div class="eva-dep-block">
+              <div class="eva-dep-label">1-й деп</div>
+              <div class="eva-dep-bonus">100%</div>
+              <div class="eva-dep-fs">400 ФС</div>
+            </div>
+            <div class="eva-dep-block">
+              <div class="eva-dep-label">2-й деп</div>
+              <div class="eva-dep-bonus">75%</div>
+              <div class="eva-dep-fs">200 ФС</div>
+            </div>
+            <div class="eva-dep-block">
+              <div class="eva-dep-label">3-й деп</div>
+              <div class="eva-dep-bonus">50%</div>
+              <div class="eva-dep-fs">300 ФС</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП НОВИНКА</span>
+            <span class="chip chip-fs">🎡 900 ФС</span>
+            <span class="chip chip-default">⚡ от 1200 ₽</span>
+          </div>
+          <p class="card-desc">3200+ слотов · Curacao · Выплата 15 мин · Кэшбэк 25% · Live-дилеры</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="EVA CASINO">
+            ЗАБРАТЬ 225% + 900 ФРИСПИНОВ
+            <small>Перейти на официальное зеркало EVA →</small>
+          </a>
+          <a href="https://casino-eva-zerkalo.online/" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Eva</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="vodka" data-tags="hot freespins">
+        <div class="card-img">
+          <img src="images/vodka.webp" alt="VODKA CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">VODKA CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🍸</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% на первый депозит</div>
+              <div class="bonus-sub">+ фриспины при регистрации</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Русский стиль</span>
+          </div>
+          <p class="card-desc">Казино с русским характером. Поддержка на родном языке 24/7, быстрые выплаты и щедрые бонусы для новых игроков.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="VODKA CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/vodka-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Vodka</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="vavada" data-tags="hot freespins bonus500">
+        <div class="card-img">
+          <img src="images/vavada.webp" alt="VAVADA CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          <span class="badge-top">⭐ ТОП #1</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">VAVADA CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🎁</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% до 50 000 ₽</div>
+              <div class="bonus-sub">+ 100 фриспинов при регистрации</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Быстрый вывод</span>
+          </div>
+          <p class="card-desc">Самое популярное казино в России. 4000+ слотов, лицензия Кюрасао, мгновенные выплаты. Зеркало работает без VPN 24/7.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="VAVADA CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/vavada-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Vavada</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="1win" data-tags="hot freespins bonus500">
+        <div class="card-img">
+          <img src="images/1win.webp" alt="1WIN CASINO рабочее зеркало 2026" loading="lazy" decoding="async" width="120" height="80" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          <span class="badge-top">⭐ ТОП #2</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">1WIN CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">💰</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">500% на 4 депозита</div>
+              <div class="bonus-sub">до 75 000 ₽ суммарно</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Ставки на спорт</span>
+          </div>
+          <p class="card-desc">Крупнейший бонус на рынке — 500% на первые 4 депозита. Казино + ставки на спорт в одном месте.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="1WIN CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/1win-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор 1Win</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="stake" data-tags="crypto hot">
+        <div class="card-img">
+          <img src="images/stake.webp" alt="STAKE CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">STAKE CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">₿</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">Эксклюзивный крипто-бонус</div>
+              <div class="bonus-sub">BTC, ETH, USDT и 20+ монет</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-crypto">₿ Крипто</span><span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-default">Без KYC</span>
+          </div>
+          <p class="card-desc">Мировой лидер крипто-гемблинга. 20+ криптовалют, провабли-фэйр игры, мгновенные выводы.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="STAKE CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/stake-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Stake</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="duel" data-tags="hot freespins">
+        <div class="card-img">
+          <img src="images/duel.webp" alt="DUEL CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">DUEL CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">⚔️</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">120% + 250 фриспинов</div>
+              <div class="bonus-sub">при первом депозите</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 250 FS</span><span class="chip chip-default">PvP игры</span>
+          </div>
+          <p class="card-desc">Уникальный формат PvP-дуэлей. 250 фриспинов при старте — один из лучших welcome-пакетов рынка.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="DUEL CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/duel-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Duel</a>
+        </div>
+      </article>
+
+      <div class="card-new-wrap">
+      <article class="casino-card reveal" data-name="fugu" data-tags="freespins hot" style="border-color:rgba(255,0,128,0.4);">
+        <div class="card-img">
+          <img src="images/fugu.webp" alt="FUGU CASINO рабочее зеркало 2026 — топ новинка марта" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          <span class="badge-new">🔥 НОВИНКА МАРТА</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">FUGU CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🐡</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + 50 фриспинов</div>
+              <div class="bonus-sub">🎌 Топ новинка марта 2026</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 НОВИНКА</span>
+            <span class="chip chip-fs">🎡 50 FS</span>
+            <span class="chip chip-default">Японский стиль</span>
+          </div>
+          <p class="card-desc">🆕 Горячая новинка марта! Экзотическое казино в японском стиле — уникальные азиатские слоты, баккара и маджонг. Заходи первым и забирай максимальный бонус!</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" style="background:linear-gradient(135deg,#ff3cac,#ff0080);" data-casino="FUGU CASINO">
+            🐡 ЗАБРАТЬ БОНУС
+            <small>Топ новинка — войти сейчас →</small>
+          </a>
+          <a href="/fugu-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Fugu</a>
+        </div>
+      </article>
+      </div>
+
+      <article class="casino-card reveal" data-name="kush куш" data-tags="hot bonus500 freespins">
+        <div class="card-img">
+          <img src="images/kush.webp" alt="КУШ CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">КУШ CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">💎</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">200% + 300 фриспинов</div>
+              <div class="bonus-sub">ежедневные джекпоты</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-fs">🎡 300 FS</span><span class="chip chip-default">Джекпоты</span>
+          </div>
+          <p class="card-desc">Казино для тех кто хочет сорвать куш. 200% бонус, 300 фриспинов и ежедневные джекпоты.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="КУШ CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/kush-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Куш</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="beef" data-tags="cashback freespins">
+        <div class="card-img">
+          <img src="images/beef.webp" alt="BEEF CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">BEEF CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🥩</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + ежедневный рейкбэк</div>
+              <div class="bonus-sub">возврат с каждой ставки</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-cash">💵 Рейкбэк</span><span class="chip chip-default">Каждый день</span>
+          </div>
+          <p class="card-desc">Уникальный ежедневный рейкбэк — возврат процента со всех ставок, даже при выигрыше.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="BEEF CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/beef-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Beef</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="cat" data-tags="hot bonus500 cashback">
+        <div class="card-img">
+          <img src="images/cat.webp" alt="CAT CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">CAT CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🐱</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">200% до 100 000 ₽</div>
+              <div class="bonus-sub">+ кэшбэк до 15%</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-cash">💵 Кэшбэк</span><span class="chip chip-default">Турниры</span>
+          </div>
+          <p class="card-desc">200% бонус с высоким потолком, регулярные турниры и программа кэшбэка до 15% для постоянных игроков.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="CAT CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/cat-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Cat</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="joy" data-tags="freespins bonus500">
+        <div class="card-img">
+          <img src="images/joy.webp" alt="JOY CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">JOY CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">😊</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">200% + 200 фриспинов</div>
+              <div class="bonus-sub">приветственный пакет</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 200 FS</span><span class="chip chip-default">Лайв казино</span>
+          </div>
+          <p class="card-desc">Двойной удар — 200% бонус и 200 фриспинов. Отличный выбор живых игр с реальными дилерами.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="JOY CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/joy-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Joy</a>
+        </div>
+      </article>
+
+      <article class="casino-card reveal" data-name="ramenbet" data-tags="freespins bonus500">
+        <div class="card-img">
+          <img src="images/ramenbet.webp" alt="RAMENBET рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">RAMENBET</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🍜</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + 300 фриспинов</div>
+              <div class="bonus-sub">азиатская атмосфера</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 300 FS</span><span class="chip chip-default">Азиатский стиль</span>
+          </div>
+          <p class="card-desc">Казино с уникальным азиатским стилем. 150% бонус и 300 фриспинов при первом депозите.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="RAMENBET">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/ramenbet-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Ramenbet</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="auf" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/auf.webp" alt="AUF CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">AUF CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🎡</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + колесо удачи</div>
+              <div class="bonus-sub">бесплатно каждый день</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Колесо удачи</span>
+          </div>
+          <p class="card-desc">Каждый день бесплатное колесо удачи. Выиграй фриспины, бонусный баланс или реальные деньги.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="AUF CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/auf-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Auf</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="cryptoboss criptoboss" data-tags="crypto">
+        <div class="card-img">
+          <img src="images/cryptoboss.webp" alt="CRYPTOBOSS рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">CRYPTOBOSS</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">💎</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">Крипто-бонус при регистрации</div>
+              <div class="bonus-sub">анонимная игра без KYC</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-crypto">₿ Крипто</span><span class="chip chip-default">Анонимность</span>
+          </div>
+          <p class="card-desc">Специализированное криптоказино без верификации. Приём USDT, BTC, ETH, TRX. Мгновенные выводы.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="CRYPTOBOSS">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/cryptoboss-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Cryptoboss</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="casinox casino-x" data-tags="hot cashback">
+        <div class="card-img">
+          <img src="images/casinox.webp" alt="CASINO X рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">CASINO X</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🎲</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + еженедельный кэшбэк</div>
+              <div class="bonus-sub">3000+ игр в каталоге</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-cash">💵 Кэшбэк</span>
+          </div>
+          <p class="card-desc">Проверенный бренд с многолетней историей. Более 3000 игр, надёжные выплаты, кэшбэк каждую неделю.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="CASINO X">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/casino-x-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Casino</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="banda" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/banda.webp" alt="BANDA CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">BANDA CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🎸</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">125% + 150 фриспинов</div>
+              <div class="bonus-sub">турниры каждую неделю</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 150 FS</span><span class="chip chip-default">Турниры</span>
+          </div>
+          <p class="card-desc">Дерзкое казино с эксклюзивными бонусами. Еженедельные слот-турниры с крупными призовыми фондами.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="BANDA CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/banda-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Banda</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="champion" data-tags="freespins hot">
+        <div class="card-img">
+          <img src="images/champion.webp" alt="CHAMPION SLOTS рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">CHAMPION SLOTS</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🏆</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + 200 фриспинов</div>
+              <div class="bonus-sub">турниры для чемпионов</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-fs">🎡 200 FS</span>
+          </div>
+          <p class="card-desc">Казино для настоящих чемпионов. Регулярные слот-турниры с призами и 200 фриспинов при старте.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="CHAMPION SLOTS">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/champion-slots-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Champion</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="cactus" data-tags="cashback freespins">
+        <div class="card-img">
+          <img src="images/cactus.webp" alt="CACTUS CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">CACTUS CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🌵</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + кэшбэк 10%</div>
+              <div class="bonus-sub">пустынная тематика</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-cash">💵 Кэшбэк</span><span class="chip chip-default">Уникальный стиль</span>
+          </div>
+          <p class="card-desc">Колючий характер и мягкие бонусы. Уникальный пустынный дизайн и кэшбэк 10% каждую неделю.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="CACTUS CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/cactus-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Cactus</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="unlim" data-tags="hot bonus500">
+        <div class="card-img">
+          <img src="images/unlim.webp" alt="UNLIM CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">UNLIM CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">♾️</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + без лимитов на выигрыш</div>
+              <div class="bonus-sub">VIP без ограничений</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-default">Без лимитов</span>
+          </div>
+          <p class="card-desc">Безлимитные выигрыши для VIP-игроков. 150% бонус и снятие лимитов на вывод при высоком статусе.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="UNLIM CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/unlim-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Unlim</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="leebet" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/leebet.webp" alt="LEEBET CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">LEEBET CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🎯</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + 200 фриспинов</div>
+              <div class="bonus-sub">надёжные выплаты</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 200 FS</span><span class="chip chip-default">Надёжность</span>
+          </div>
+          <p class="card-desc">Надёжное казино с прозрачными условиями. 150% бонус и стабильные выплаты без задержек.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="LEEBET CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/leebet-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Leebet</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="gama" data-tags="hot freespins">
+        <div class="card-img">
+          <img src="images/gama.webp" alt="GAMA CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">GAMA CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🚀</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">Приветственный пакет + FS</div>
+              <div class="bonus-sub">4000+ игр в каталоге</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">4000+ игр</span>
+          </div>
+          <p class="card-desc">Один из самых богатых каталогов — свыше 4000 игр. Регулярные промо и отличная поддержка.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="GAMA CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/gama-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Gama</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="kent" data-tags="hot">
+        <div class="card-img">
+          <img src="images/kent.webp" alt="KENT CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">KENT CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">👑</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">Премиум welcome-пакет</div>
+              <div class="bonus-sub">реальные подарки VIP игрокам</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-default">VIP программа</span>
+          </div>
+          <p class="card-desc">Казино премиум-класса. VIP программа с реальными подарками и личным менеджером для топ-игроков.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="KENT CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/kent-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Kent</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="rox" data-tags="hot cashback freespins">
+        <div class="card-img">
+          <img src="images/rox.webp" alt="ROX CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">ROX CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🎸</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% до 50 000 ₽</div>
+              <div class="bonus-sub">+ еженедельный кэшбэк 10%</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-cash">💵 Кэшбэк</span>
+          </div>
+          <p class="card-desc">Рок-тематика и честная игра. Большой каталог слотов, еженедельный кэшбэк до 10%.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="ROX CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/rox-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Rox</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="monro" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/monro.webp" alt="MONRO CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">MONRO CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🌙</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + 180 фриспинов</div>
+              <div class="bonus-sub">уникальная noir-атмосфера</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 180 FS</span><span class="chip chip-default">Уникальный стиль</span>
+          </div>
+          <p class="card-desc">Таинственная noir-атмосфера. Необычный стиль и щедрые бонусы для новых игроков.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="MONRO CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/monro-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Monro</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="daddy" data-tags="cashback freespins">
+        <div class="card-img">
+          <img src="images/daddy.webp" alt="DADDY CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">DADDY CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">👴</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">Ежедневные бонусы</div>
+              <div class="bonus-sub">программа лояльности</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-cash">💵 Кэшбэк</span><span class="chip chip-default">Лояльность</span>
+          </div>
+          <p class="card-desc">Бонусы каждый день — не только при пополнении. Хорошая программа лояльности для постоянных игроков.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="DADDY CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/daddy-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Daddy</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="fresh" data-tags="freespins hot">
+        <div class="card-img">
+          <img src="images/fresh.webp" alt="FRESH CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">FRESH CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🌿</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">175% + 290 фриспинов</div>
+              <div class="bonus-sub">свежие новинки каждую неделю</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 290 FS</span><span class="chip chip-default">Новинки</span>
+          </div>
+          <p class="card-desc">Новые игры каждую неделю. Удобный поиск по провайдерам, турниры и хорошая поддержка.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="FRESH CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/fresh-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Fresh</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="legzo" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/legzo.webp" alt="LEGZO CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">LEGZO CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🎰</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">Пакет бонусов + 200 FS</div>
+              <div class="bonus-sub">3000+ слотов</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 200 FS</span><span class="chip chip-default">3000+ слотов</span>
+          </div>
+          <p class="card-desc">Огромный выбор — свыше 3000 слотов. Щедрые бонусы и фриспины для новых игроков.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="LEGZO CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/legzo-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Legzo</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="volna" data-tags="freespins cashback">
+        <div class="card-img">
+          <img src="images/volna.webp" alt="VOLNA CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">VOLNA CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🌊</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + 200 фриспинов</div>
+              <div class="bonus-sub">лицензия Кюрасао</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 200 FS</span><span class="chip chip-default">Лицензия</span>
+          </div>
+          <p class="card-desc">Волна выгодных бонусов и честная игра под лицензией Кюрасао. Гарантированные выплаты.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="VOLNA CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/volna-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Volna</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="lexx" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/lexx.webp" alt="LEXX CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">LEXX CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🌱</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + честный вейджер x30</div>
+              <div class="bonus-sub">прозрачные условия</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Честная игра</span>
+          </div>
+          <p class="card-desc">Прозрачные условия бонусов. Вейджер x30 — один из самых низких на рынке. Честная игра.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="LEXX CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/lexx-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Lexx</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="izzi" data-tags="freespins hot">
+        <div class="card-img">
+          <img src="images/izzi.webp" alt="IZZI CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">IZZI CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🍭</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + 200 фриспинов</div>
+              <div class="bonus-sub">идеально для новичков</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-fs">🎡 Фриспины</span>
+          </div>
+          <p class="card-desc">Яркое казино с простым интерфейсом. Отлично подходит для тех, кто начинает играть впервые.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="IZZI CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/izzi-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Izzi</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="r7" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/r7.webp" alt="R7 CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">R7 CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🌌</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">Welcome пакет + турниры</div>
+              <div class="bonus-sub">космическая тематика</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Турниры</span>
+          </div>
+          <p class="card-desc">Космический дизайн и регулярные турниры с крупными призовыми фондами.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="R7 CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/r7-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор R7</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="kometa комета" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/kometa.webp" alt="КОМЕТА CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">КОМЕТА CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">☄️</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + 200 фриспинов</div>
+              <div class="bonus-sub">яркие выигрыши</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 200 FS</span><span class="chip chip-default">Турниры</span>
+          </div>
+          <p class="card-desc">Яркое казино с космической скоростью выплат. Еженедельные турниры и щедрые бонусы.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="КОМЕТА CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/kometa-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Комета</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="arkada аркада" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/arkada.webp" alt="ARKADA CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">ARKADA CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🕹️</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + аркадные игры</div>
+              <div class="bonus-sub">уникальный формат</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Аркады</span>
+          </div>
+          <p class="card-desc">Казино в стиле аркадных игр с уникальными механиками. Аркадные мини-игры с мгновенными выплатами.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="ARKADA CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/arkada-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Arkada</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="jet" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/jet.webp" alt="JET CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">JET CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">✈️</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + быстрый старт</div>
+              <div class="bonus-sub">идеально для новичков</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Для новичков</span>
+          </div>
+          <p class="card-desc">Простая регистрация и понятный интерфейс. Лёгкий старт для тех, кто начинает играть.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="JET CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/jet-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Jet</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="sol" data-tags="hot freespins">
+        <div class="card-img">
+          <img src="images/sol.webp" alt="SOL CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">SOL CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">☀️</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + турниры</div>
+              <div class="bonus-sub">высокий RTP слотов</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-default">Высокий RTP</span>
+          </div>
+          <p class="card-desc">Известен высоким процентом отдачи (RTP). Честные турниры и стабильно быстрые выплаты.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="SOL CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/sol-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Sol</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="drip" data-tags="cashback freespins">
+        <div class="card-img">
+          <img src="images/drip.webp" alt="DRIP CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">DRIP CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">💧</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + кэшбэк до 10%</div>
+              <div class="bonus-sub">мгновенные выплаты</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-cash">💵 Кэшбэк 10%</span><span class="chip chip-default">Быстрый вывод</span>
+          </div>
+          <p class="card-desc">Кэшбэк до 10% с проигрышей. Быстрые выплаты и удобный интерфейс.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="DRIP CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/drip-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Drip</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="starda" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/starda.webp" alt="STARDA CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">STARDA CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">⭐</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + мгновенные выплаты</div>
+              <div class="bonus-sub">лицензия Кюрасао</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Лицензия</span>
+          </div>
+          <p class="card-desc">Лицензированное казино с мгновенными выплатами. Надёжное и проверенное среди опытных игроков.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="STARDA CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/starda-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Starda</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="1go" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/1go.webp" alt="1GO CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">1GO CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🚦</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + ежедневные бонусы</div>
+              <div class="bonus-sub">новый бонус каждый день</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Ежедневно</span>
+          </div>
+          <p class="card-desc">Старт с выгодой каждый день. Ежедневные бонусы и акции для всех игроков без исключения.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="1GO CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/1go-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор 1Go</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="gizbo" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/gizbo.webp" alt="GIZBO CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">GIZBO CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🤖</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + футуристичный бонус</div>
+              <div class="bonus-sub">система достижений</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Достижения</span>
+          </div>
+          <p class="card-desc">Футуристичный дизайн и геймификация. Система достижений и наград за активную игру.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="GIZBO CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/gizbo-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Gizbo</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="irvin irwin" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/irvin.webp" alt="IRVIN CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">IRVIN CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">⚡</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + мгновенные выплаты</div>
+              <div class="bonus-sub">авто-обработка до 30 мин</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Мгновенно</span>
+          </div>
+          <p class="card-desc">Акцент на мгновенные выплаты. Автоматическая обработка без ручной верификации для сумм до 100 000 ₽.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="IRVIN CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/irvin-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Irvin</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="flagman" data-tags="hot freespins">
+        <div class="card-img">
+          <img src="images/flagman.webp" alt="FLAGMAN CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">FLAGMAN CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🚩</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + 250 фриспинов</div>
+              <div class="bonus-sub">лидер индустрии</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-hot">🔥 ТОП</span><span class="chip chip-fs">🎡 250 FS</span>
+          </div>
+          <p class="card-desc">Флагман индустрии. Входит в топ-10 казино рунета по выплатам, качеству поддержки и количеству игроков.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="FLAGMAN CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/flagman-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Flagman</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="martin" data-tags="freespins">
+        <div class="card-img">
+          <img src="images/martin.webp" alt="MARTIN CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          
+        </div>
+        <div class="card-body">
+          <div class="card-name">MARTIN CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🎩</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">125% + элегантный сервис</div>
+              <div class="bonus-sub">стильный дизайн</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎡 Фриспины</span><span class="chip chip-default">Премиум стиль</span>
+          </div>
+          <p class="card-desc">Элегантное казино с минималистичным дизайном. Высокое качество обслуживания и быстрые выплаты.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="MARTIN CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/martin-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Martin</a>
+        </div>
+      </article>
+
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="eva eva casino" data-tags="bonus freespins crypto">
+        <div class="card-img" style="background:linear-gradient(160deg,#061a15,#0a2218);">
+          <img src="images/eva.webp" alt="EVA CASINO рабочее зеркало 2026" loading="lazy" decoding="async" style="filter:drop-shadow(0 0 14px rgba(0,200,83,0.5));">
+          <div class="card-img-overlay"></div>
+          <span class="badge-top" style="background:linear-gradient(135deg,#00d48a,#00aa6e);color:#040f0a;">🆕 НОВИНКА</span>
+          <span class="badge-live">РАБОТАЕТ</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">EVA CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">💚</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">100% + 200 фриспинов</div>
+              <div class="bonus-sub">от создателей LEEBET и BANDA</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-fs">🎰 200 FS</span>
+            <span class="chip chip-crypto">₿ Крипта</span>
+            <span class="chip chip-cash">⚡ 15 мин</span>
+          </div>
+          <p class="card-desc">Новейший проект Nova Partners 2025. Чистая база, максимальный конверт. Выплаты за 15 минут, лицензия Curacao.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" style="background:linear-gradient(135deg,#00d48a,#00aa6e);color:#040f0a;box-shadow:0 4px 20px rgba(0,180,110,0.35);" data-casino="EVA CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="https://casino-eva-zerkalo.online/" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Eva</a>
+        </div>
+      </article>
+
+      <article class="casino-card lazy-hidden reveal" data-name="monro casino" data-tags="bonus freespins cashback">
+        <div class="card-img">
+          <img src="images/monro.webp" alt="MONRO CASINO рабочее зеркало 2026" loading="lazy" decoding="async">
+          <div class="card-img-overlay"></div>
+          <span class="badge-live">РАБОТАЕТ</span>
+          <span class="badge-new">HOT</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">MONRO CASINO</div>
+          <div class="card-bonus-block">
+            <span class="bonus-emoji">🌟</span>
+            <div class="bonus-text-wrap">
+              <div class="bonus-main">150% + кэшбэк 20%</div>
+              <div class="bonus-sub">еженедельный возврат потерь</div>
+            </div>
+          </div>
+          <div class="card-chips">
+            <span class="chip chip-cash">💚 Кэшбэк</span>
+            <span class="chip chip-fs">🎡 Фриспины</span>
+          </div>
+          <p class="card-desc">Надёжное казино с акцентом на кэшбэк-программу. До 20% возврата проигрыша каждую неделю без сложных условий.</p>
+          <div class="card-promo">
+            <span class="pl">Промокод:</span>
+            <span class="pc">RUBLIK</span>
+          </div>
+          <a href="#" class="card-btn" target="_blank" rel="noopener sponsored" data-casino="MONRO CASINO">
+            ЗАБРАТЬ БОНУС
+            <small>Перейти на рабочее зеркало →</small>
+          </a>
+          <a href="/monro-casino-zerkalo.html" style="display:block;width:100%;text-align:center;background:#1C1C28;border:2px solid #FFD166;border-radius:10px;padding:12px 16px;color:#FFD166;font-family:Raleway,sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-decoration:none;text-transform:uppercase;margin-top:10px;box-sizing:border-box;">📋 Обзор Monro</a>
+        </div>
+      </article>
+
+      
+  <div id="smw" style="text-align:center;padding:32px 16px 16px">
+    <button onclick="showMore()" style="background:linear-gradient(135deg,#FFD166,#FF8C00);color:#000;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;padding:18px 52px;border:none;border-radius:14px;cursor:pointer;box-shadow:0 4px 24px rgba(255,165,0,.35);width:100%;max-width:400px">ПОКАЗАТЬ ЕЩЁ КАЗИНО ▼</button>
+    <div style="font-size:13px;color:#8888AA;margin-top:10px">Ещё 35 казино с рабочими зеркалами</div>
+  </div>
+      <div class="no-results" id="no-results" style="display:none">
+        <div class="nr-icon">🔍</div>
+        <p>Казино не найдены. Попробуйте другой запрос.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="why-section">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">ПОЧЕМУ <span>ВЫБИРАЮТ НАС</span></h2>
+      <p class="sec-sub">Всё что нужно для доступа к казино — в одном месте</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon">⚡</div><h3>Мгновенные зеркала</h3><p>Ссылки обновляются сразу после блокировки, круглосуточно. Вы всегда найдёте рабочий адрес без VPN.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🎁</div><h3>Промокод RUBLIK</h3><p>Наш промокод даёт дополнительные бонусы сверх стандартных предложений казино — просто введите при регистрации.</p></div>
+      <div class="why-card reveal"><div class="why-icon">✅</div><h3>Только лицензированные</h3><p>Публикуем только проверенные казино с лицензией и реальными выплатами. Никаких скамов.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🛡️</div><h3>Без VPN</h3><p>Все зеркала работают напрямую — никаких дополнительных настроек не нужно.</p></div>
+      <div class="why-card reveal"><div class="why-icon">✈️</div><h3>Telegram 24/7</h3><p>14 760 подписчиков получают свежие зеркала первыми. Присоединяйся бесплатно.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🔒</div><h3>Безопасность</h3><p>Мы не собираем данные. Переходи по ссылке и регистрируйся напрямую на сайте казино.</p></div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">ЧАСТЫЕ <span>ВОПРОСЫ</span></h2>
+      <p class="sec-sub">Ответы на популярные вопросы об онлайн-казино и зеркалах</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Что такое зеркало казино?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-a-inner" itemprop="text">Зеркало казино — это альтернативный адрес сайта, который работает даже при блокировке основного домена. Тот же личный кабинет, те же игры, тот же баланс. VPN не нужен.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Как использовать промокод RUBLIK?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-a-inner" itemprop="text">Введите RUBLIK при регистрации в поле «Промокод» или «Бонусный код». В некоторых казино — в личном кабинете в разделе «Бонусы» после входа. Промокод активирует дополнительный бонус сверх стандартного пакета.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Нужен ли VPN для доступа?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-a-inner" itemprop="text">Нет! Все зеркала на нашем сайте работают без VPN — просто нажмите кнопку «Забрать бонус». Если ссылка вдруг не открывается — подпишитесь на Telegram, там публикуем самые свежие адреса.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Что такое вейджер?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-a-inner" itemprop="text">Вейджер (wagering) — условие отыгрыша бонуса. Например, вейджер x30 означает: получили бонус 5000 ₽ → нужно поставить 5000 × 30 = 150 000 ₽, после чего выигранное можно вывести. Чем ниже вейджер — тем лучше условия.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Какое казино выбрать новичку?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-a-inner" itemprop="text">Для новичка рекомендуем Vavada или Izzi Casino — простой интерфейс, хорошие бонусы и русскоязычная поддержка. Всегда проверяйте наличие лицензии и читайте условия бонуса перед регистрацией.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Что такое EVA Casino и какой у него бонус?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-a-inner" itemprop="text">EVA Casino — новое лицензированное казино (Curacao) с 3200+ слотами. Welcome Pack: 225% суммарно на 3 депозита + 900 фриспинов. 1-й депозит: 100% + 400 ФС, 2-й: 75% + 200 ФС, 3-й: 50% + 300 ФС. Минимальный депозит 15$ или 1200 рублей. Промокод: EVASTART.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin: 80px 0;">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">⭐ РЕЙТИНГ <span>КАЗИНО</span></h2>
+      <p class="sec-sub">Независимые обзоры — оценки, бонусы, плюсы и минусы каждого казино</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:8px;">
+
+      <a href="https://gameshowrlight.com/drqcqyoqp" target="_blank" rel="noopener sponsored" style="background:linear-gradient(135deg,rgba(0,200,83,0.1),rgba(0,230,118,0.05));border:2px solid rgba(0,200,83,0.5);border-radius:18px;padding:20px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:16px;transition:transform 0.2s,border-color 0.2s;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(0,200,83,0.8)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(0,200,83,0.5)'">
+        <span style="position:absolute;top:8px;right:10px;background:#00c853;color:#071a0f;font-size:9px;font-weight:900;padding:2px 8px;border-radius:20px;letter-spacing:1px;">🔥 НОВИНКА</span>
+        <img src="images/eva.webp" alt="EVA Casino" style="width:70px;height:50px;object-fit:contain;" loading="lazy" decoding="async">
+        <div style="flex:1">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;color:#69f0ae;">EVA CASINO</div>
+          <div style="font-size:13px;color:#00c853;font-weight:700;">★★★★★ 9.9/10</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px;">225% + 900 ФС на 3 депозита</div>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:#00c853;letter-spacing:1px;">ИГРАТЬ →</span>
+      </a>
+
+      <a href="reviews/vavada.html" style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:16px;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,165,0,0.45)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border)'">
+        <img src="images/vavada.webp" alt="Vavada" style="width:70px;height:50px;object-fit:contain;" loading="lazy" decoding="async">
+        <div style="flex:1">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;">VAVADA</div>
+          <div style="font-size:13px;color:var(--gold);font-weight:700;">★★★★★ 9.8/10</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px;">100% до 50 000 ₽ + 100 FS</div>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--gold);letter-spacing:1px;">ОБЗОР →</span>
+      </a>
+
+      <a href="reviews/1win.html" style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:16px;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,165,0,0.45)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border)'">
+        <img src="images/1win.webp" alt="1win" style="width:70px;height:50px;object-fit:contain;" loading="lazy" decoding="async">
+        <div style="flex:1">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;">1WIN</div>
+          <div style="font-size:13px;color:var(--gold);font-weight:700;">★★★★★ 9.5/10</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px;">500% на 4 депозита</div>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--gold);letter-spacing:1px;">ОБЗОР →</span>
+      </a>
+
+      <a href="reviews/stake.html" style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:16px;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,165,0,0.45)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border)'">
+        <img src="images/stake.webp" alt="Stake" style="width:70px;height:50px;object-fit:contain;" loading="lazy" decoding="async">
+        <div style="flex:1">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;">STAKE</div>
+          <div style="font-size:13px;color:var(--gold);font-weight:700;">★★★★★ 9.3/10</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px;">Крипто-бонус · Без KYC</div>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--gold);letter-spacing:1px;">ОБЗОР →</span>
+      </a>
+
+      <a href="reviews/duel.html" style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:16px;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,165,0,0.45)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border)'">
+        <img src="images/duel.webp" alt="Duel" style="width:70px;height:50px;object-fit:contain;" loading="lazy" decoding="async">
+        <div style="flex:1">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;">DUEL</div>
+          <div style="font-size:13px;color:var(--gold);font-weight:700;">★★★★☆ 9.1/10</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px;">120% + 250 фриспинов</div>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--gold);letter-spacing:1px;">ОБЗОР →</span>
+      </a>
+
+      <a href="reviews/cat.html" style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:16px;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,165,0,0.45)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border)'">
+        <img src="images/cat.webp" alt="Cat" style="width:70px;height:50px;object-fit:contain;" loading="lazy" decoding="async">
+        <div style="flex:1">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;">CAT CASINO</div>
+          <div style="font-size:13px;color:var(--gold);font-weight:700;">★★★★☆ 8.9/10</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px;">200% до 100 000 ₽</div>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--gold);letter-spacing:1px;">ОБЗОР →</span>
+      </a>
+
+      <a href="reviews/" style="background:linear-gradient(135deg,rgba(255,165,0,0.06),rgba(255,100,0,0.03));border:1px dashed rgba(255,165,0,0.3);border-radius:18px;padding:20px;text-decoration:none;color:var(--text);display:flex;align-items:center;justify-content:center;gap:12px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,165,0,0.6)'" onmouseout="this.style.borderColor='rgba(255,165,0,0.3)'">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--gold);">ВСЕ ОБЗОРЫ →</span>
+      </a>
+
+    </div>
+  </section>
+  
+  <section class="blog-section">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">📖 ПОЛЕЗНЫЕ <span>СТАТЬИ</span></h2>
+      <p class="sec-sub">Гиды и советы для игроков</p>
+    </div>
+    <div class="blog-grid">
+      <a href="blog/kak-nayti-zerkalo.html" class="blog-card reveal">
+        <div class="blog-cat">РУКОВОДСТВО</div>
+        <h3>Как найти рабочее зеркало казино?</h3>
+        <p>Что такое зеркало, зачем нужно и как не попасть на мошенников. Пошаговый гид.</p>
+      </a>
+      <a href="blog/zerkala-kazino-2026.html" class="blog-card reveal">
+        <div class="blog-cat">АКТУАЛЬНО</div>
+        <h3>Рабочие зеркала казино 2026</h3>
+        <p>Полный список 43 казино с актуальными ссылками, бонусами до 500% и фриспинами.</p>
+      </a>
+      <a href="bonusy/bonusy-kazino-2026.html" class="blog-card reveal">
+        <div class="blog-cat">БОНУСЫ</div>
+        <h3>Бонусы казино 2026: полный гид</h3>
+        <p>Приветственные, бездепозитные, фриспины, кэшбэк — как выбрать лучший бонус.</p>
+      </a>
+    </div>
+  </section>
+
+  <div class="resp-block reveal">
+    <div class="resp-icon">⚠️</div>
+    <div>
+      <h3>ОТВЕТСТВЕННАЯ ИГРА</h3>
+      <p>Азартные игры предназначены только для лиц старше 18 лет и могут вызывать зависимость. Устанавливайте лимиты на депозиты и время игры. Никогда не играйте на деньги которые не можете позволить себе потерять. Если вы или ваши близкие испытываете проблемы — <strong>горячая линия 8-800-200-01-76</strong> (бесплатно, анонимно, 24/7). <a href="responsible.html" style="color:#ffaaaa">Подробнее →</a></p>
+    </div>
+  </div>
+
+  <section class="seo-section" aria-label="Информация о зеркалах казино">
+    <div class="seo-inner">
+
+      <div class="seo-nav-links">
+        <span class="seo-nav-label">Разделы сайта:</span>
+        <a href="#casinos">🎰 Зеркала казино</a>
+        <a href="bonusy/bonusy-kazino-2026.html">🎁 Бонусы 2026</a>
+        <a href="reviews/">⭐ Обзоры</a>
+        <a href="blog/kak-nayti-zerkalo.html">📖 Как найти зеркало</a>
+        <a href="blog/zerkala-kazino-2026.html">🔗 Все зеркала</a>
+        <a href="responsible.html">🛡️ Ответственная игра</a>
+      </div>
+
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h2>Рабочие зеркала казино 2026 — актуальные ссылки без VPN</h2>
+          <p>Зеркало казино — это официальная резервная копия сайта на альтернативном домене. Когда основной адрес блокируется интернет-провайдером, рабочее зеркало обеспечивает бесперебойный доступ к игровому счёту, бонусам и слотам. Все ссылки на нашем сайте проверяются ежедневно: мы отслеживаем доступность 43 онлайн-казино в режиме реального времени 24/7.</p>
+          <p>Для использования зеркала не нужен VPN, Tor или прокси — достаточно перейти по актуальной ссылке. Баланс, история ставок, бонусы и уровень программы лояльности полностью сохраняются на зеркале, так как это тот же сервер с другим доменным именем.</p>
+        </div>
+
+        <div class="seo-block">
+          <h2>Как выбрать лучший бонус казино в 2026 году</h2>
+          <p>Приветственный бонус — ключевой критерий выбора казино. Топовые площадки предлагают <strong>бонус от 100% до 500% на первый депозит</strong> плюс бесплатные вращения (фриспины). Важно обращать внимание на вейджер — условие отыгрыша: чем он ниже, тем реальнее вывести выигрыш.</p>
+          <p>Промокод <strong>RUBLIK</strong> даёт дополнительные преимущества в большинстве казино из нашего списка: увеличенный бонус при регистрации, дополнительные фриспины или кэшбэк. Введите промокод в соответствующее поле при создании аккаунта. <a href="bonusy/bonusy-kazino-2026.html">Полный гид по бонусам казино 2026 →</a></p>
+        </div>
+
+        <div class="seo-block">
+          <h2>Популярные зеркала: Vavada, 1win, Stake, EVA Casino</h2>
+          <p><strong>Vavada зеркало</strong> — одно из самых востребованных в СНГ. Казино работает с 2017 года, предлагает 3000+ слотов и щедрую программу лояльности. <strong>1win зеркало</strong> привлекает ставками на спорт и высокими коэффициентами. <strong>Stake зеркало</strong> — выбор любителей крипто-игр и оригинальных игр с открытым кодом.</p>
+          <p>Новый проект <strong>EVA Casino</strong> от создателей Leebet и Banda — самый свежий бренд сети Nova Partners с чистой базой игроков и максимальным приветственным пакетом: <strong>100% на депозит + 200 фриспинов</strong>. <a href="reviews/">Читать обзоры всех казино →</a></p>
+        </div>
+
+        <div class="seo-block">
+          <h2>Безопасность и лицензии онлайн-казино</h2>
+          <p>Все казино в нашем каталоге работают на основании международных лицензий — Curacao eGaming, MGA (Malta Gaming Authority) или UKGC. Лицензия гарантирует честность игр: все слоты используют сертифицированный генератор случайных чисел (RNG), проверенный независимыми аудиторами eCOGRA и iTechLabs.</p>
+          <p>Для защиты данных применяется шифрование SSL 256-bit. Персональная информация и финансовые транзакции надёжно защищены. Перед регистрацией рекомендуем ознакомиться с условиями конкретного казино. <a href="blog/kak-nayti-zerkalo.html">Как отличить официальное зеркало от мошенников →</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEO блок — экспертный контент -->
+  <section style="background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);border-top:1px solid var(--border);padding:64px 20px 72px;">
+    <div style="max-width:900px;margin:0 auto;">
+
+      <!-- Блок 1 -->
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,5vw,40px);letter-spacing:2px;margin-bottom:6px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Зеркало казино — что это на самом деле</h2>
+      <div style="width:48px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:22px;border-radius:2px;"></div>
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:14px;">Зеркало — это не «обход блокировок» в привычном смысле. Это официальная инфраструктура казино: оператор заранее регистрирует десятки резервных доменов и переключает трафик по мере того, как Роскомнадзор блокирует очередной адрес. Для игрока это выглядит как смена URL — всё остальное остаётся прежним: аккаунт, баланс, история ставок, активные бонусы и лимиты вывода.</p>
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:14px;">С технической точки зрения зеркало и основной сайт — один и тот же сервер. Синхронизация происходит в реальном времени через общую базу данных. Именно поэтому сессия, начатая на основном домене, без прерываний продолжается на зеркале: алгоритм аутентификации не различает, через какой URL вошёл пользователь.</p>
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:32px;">Единственная реальная проблема — скорость реакции. Свежезарегистрированный домен попадает под блокировку в среднем через 3–14 дней. Крупные операторы вроде Vavada или 1Win решают это автоматизацией: скрипты мониторят доступность каждого домена и подменяют ссылку раньше, чем пользователь заметит проблему. Именно такой мониторинг работает на этом сайте.</p>
+
+      <!-- Блок 2 -->
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,5vw,40px);letter-spacing:2px;margin-bottom:6px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Как читать бонусные условия: разбор по пунктам</h2>
+      <div style="width:48px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:22px;border-radius:2px;"></div>
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:14px;">Маркетинговые формулировки «бонус 500%» или «300 фриспинов» — это лишь заголовок. Реальная ценность бонуса определяется тремя параметрами, которые прячутся в условиях мелким шрифтом.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:20px 0 28px;">
+        <div style="background:rgba(255,209,102,0.05);border:1px solid rgba(255,209,102,0.15);border-radius:14px;padding:22px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);letter-spacing:1px;margin-bottom:8px;">01 — ВЕЙДЖЕР</div>
+          <p style="color:#b0b0c8;font-size:14px;line-height:1.75;margin:0;">Ключевой параметр. Вейджер x40 означает: получили 1000 ₽ бонуса → нужно поставить 40 000 ₽ перед выводом. При RTP слота 96% ожидаемые потери при отыгрыше — около 1600 ₽. Бонус «стоит» вам больше, чем кажется. Ищите вейджер ниже x30 — это честное предложение.</p>
+        </div>
+        <div style="background:rgba(255,209,102,0.05);border:1px solid rgba(255,209,102,0.15);border-radius:14px;padding:22px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);letter-spacing:1px;margin-bottom:8px;">02 — БАЗА РАСЧЁТА</div>
+          <p style="color:#b0b0c8;font-size:14px;line-height:1.75;margin:0;">Часть казино считает вейджер от суммы бонуса, часть — от суммы «депозит + бонус». Разница двукратная. Депозит 3000 ₽, бонус 3000 ₽, вейджер x40: честный вариант — 120 000 ₽ отыгрыша, скрытый — 240 000 ₽. Всегда уточняйте этот момент в условиях акции.</p>
+        </div>
+        <div style="background:rgba(255,209,102,0.05);border:1px solid rgba(255,209,102,0.15);border-radius:14px;padding:22px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);letter-spacing:1px;margin-bottom:8px;">03 — СРОК ДЕЙСТВИЯ</div>
+          <p style="color:#b0b0c8;font-size:14px;line-height:1.75;margin:0;">Стандартный срок отыгрыша — 7 дней. Если не уложились — бонус и все выигрыши с него аннулируются автоматически. Казино не предупреждают об этом отдельно. Собственные средства при этом остаются на счёте в полном объёме.</p>
+        </div>
+      </div>
+
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:14px;">Кэшбэк — принципиально другой тип бонуса. Он начисляется на реальные проигрыши и в лучших казино не имеет вейджера вообще. Beef Casino возвращает процент ежедневно, Rox Casino — 10% еженедельно без условий отыгрыша. Именно кэшбэк без вейджера эксперты считают самым честным долгосрочным предложением на рынке.</p>
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:32px;">Промокод RUBLIK активирует увеличенную версию приветственного пакета во всех казино нашего рейтинга. Вводите при регистрации — после создания аккаунта изменить условия первого депозита уже не получится.</p>
+
+      <!-- Блок 3 -->
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,5vw,40px);letter-spacing:2px;margin-bottom:6px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">RTP, дисперсия и математика слотов</h2>
+      <div style="width:48px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:22px;border-radius:2px;"></div>
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:14px;">RTP (Return to Player) — теоретический процент возврата за миллионы спинов. Слот с RTP 96% в длинной дистанции возвращает 96 копеек с каждого вложенного рубля. На коротких сессиях результат может быть любым — от нуля до крупного выигрыша. Именно это делает слоты азартными, а не просто «налогом».</p>
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:14px;">Дисперсия (волатильность) описывает распределение выплат. Высокая дисперсия — редкие, но крупные выигрыши (Gates of Olympus, Dog House). Низкая — частые небольшие выплаты с ровным балансом (Starburst, Book of Dead). Для отыгрыша бонуса с ограниченным сроком выгоднее низкая дисперсия: меньше риск обнулиться до выполнения вейджера.</p>
+      <p style="color:#b0b0c8;font-size:15px;line-height:1.9;margin-bottom:32px;">Все слоты в лицензированных казино используют сертифицированный генератор случайных чисел (RNG), проверенный независимыми аудиторами eCOGRA и iTechLabs. Казино физически не может «выключить» RNG или настроить результат под конкретного игрока — это исключено на уровне архитектуры ПО.</p>
+
+      <!-- Блок 4 -->
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,5vw,40px);letter-spacing:2px;margin-bottom:6px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Как выбрать казино под свой стиль игры</h2>
+      <div style="width:48px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:22px;border-radius:2px;"></div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:0 0 28px;">
+        <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px;">
+          <div style="font-weight:800;font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Для новичков</div>
+          <p style="color:#b0b0c8;font-size:14px;line-height:1.75;margin:0;">Lexx Casino (вейджер x25), Cactus Casino (простой интерфейс), 1Go Casino (ежедневные бонусы). Минимальный депозит от 300 ₽. Начинайте с кэшбэк-казино — они защищают от потерь на старте.</p>
+        </div>
+        <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px;">
+          <div style="font-weight:800;font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Для любителей Aviator</div>
+          <p style="color:#b0b0c8;font-size:14px;line-height:1.75;margin:0;">Cat Casino и Gizbo Casino специализируются на краш-играх. Aviator от Spribe имеет RTP 97% — выше большинства слотов. Stake предлагает провабли-фэйр версию с верифицируемой честностью каждого раунда.</p>
+        </div>
+        <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px;">
+          <div style="font-weight:800;font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Для live-казино</div>
+          <p style="color:#b0b0c8;font-size:14px;line-height:1.75;margin:0;">Auf Casino и Kent Casino предлагают русскоязычные столы рулетки и блэкджека от Evolution Gaming. Joy Casino — Crazy Time и Monopoly Live. Высокие лимиты у Gama Casino и Vavada.</p>
+        </div>
+        <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px;">
+          <div style="font-weight:800;font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Для крипто-игроков</div>
+          <p style="color:#b0b0c8;font-size:14px;line-height:1.75;margin:0;">Cryptoboss — анонимно, без KYC, вывод за 5 минут. Stake — мировой лидер крипто-гемблинга, провабли-фэйр. Beef Casino — ежедневный рейкбэк без условий. Все три принимают Bitcoin, Ethereum и USDT.</p>
+        </div>
+      </div>
+
+      <!-- Блок 5 — Ответственная игра -->
+      <div style="background:rgba(255,68,68,0.05);border:1px solid rgba(255,68,68,0.2);border-radius:14px;padding:24px 28px;margin-top:8px;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:#ff8888;margin-bottom:12px;">⚠️ Ответственная игра — не формальность</div>
+        <p style="color:#b0b0c8;font-size:14px;line-height:1.8;margin-bottom:10px;">Казино проектируются так, чтобы удерживать внимание. Это не конспирология — это задокументированная UX-практика: переменное подкрепление, звуки выигрыша, анимации «почти попал». Осознавайте эти механики и устанавливайте личные лимиты депозитов до начала сессии, а не во время.</p>
+        <p style="color:#b0b0c8;font-size:14px;line-height:1.8;margin:0;">Все операторы нашего рейтинга предоставляют инструменты самоограничения: дневные лимиты ставок, временные паузы (cool-off) и полное самоисключение. <a href="otvetstvennaya-igra.html" style="color:var(--gold);font-weight:700;">Подробнее об инструментах защиты →</a></p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">🎰 ЗЕРКАЛА КАЗИНО</div>
+    <p class="footer-desc">Актуальные рабочие зеркала 43 онлайн-казино. Доступ без VPN, бонусы и фриспины. Промокод <strong style="color:var(--gold)">RUBLIK</strong> для дополнительных бонусов.</p>
+    <div class="footer-links">
+      <a href="https://t.me/igrovyes_avtomaty" target="_blank" rel="noopener nofollow">✈️ Telegram-канал</a>
+      <a href="reviews/">⭐ Обзоры казино</a>
+      <a href="blog/kak-nayti-zerkalo.html">🔍 Как найти зеркало</a>
+      <a href="blog/zerkala-kazino-2026.html">🔗 Зеркала 2026</a>
+      <a href="bonusy/bonusy-kazino-2026.html">🎁 Бонусы казино</a>
+      <a href="reviews/#vavada">Vavada зеркало</a>
+      <a href="reviews/#1win">1win зеркало</a>
+      <a href="reviews/#stake">Stake зеркало</a>
+      <a href="https://casino-eva-zerkalo.online/" rel="noopener nofollow" target="_blank">EVA Casino</a>
+      <a href="policy.html">Конфиденциальность</a>
+      <a href="responsible.html">Ответственная игра</a>
+      <a href="about.html">О сайте</a>
+    </div>
+    <div class="footer-age">🔞 18+ — ТОЛЬКО ДЛЯ ВЗРОСЛЫХ</div>
+    <p class="footer-copy">© 2026 casino-zerkalo.online — информационный сайт. Не являемся казино. Все ссылки реферальные.</p>
+  </div>
+</footer>
+
+<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<div id="eva-overlay">
+  <div class="eva-modal">
+    <button class="eva-x" onclick="evaClose()" aria-label="Закрыть">✕</button>
+
+    <div class="eva-top">
+      <div class="eva-new-label"><span class="eva-new-dot"></span>НОВЫЙ ПРОЕКТ</div>
+      <div class="eva-brand">EVA</div>
+      <div class="eva-sub">Casino</div>
+      <div class="eva-nova-badge">от создателей <span>LEEBET · BANDA</span></div>
+    </div>
+
+    <div class="eva-bottom">
+      <div class="eva-pack-title">🎁 WELCOME <span>PACK</span></div>
+
+      <div class="eva-bonus-row">
+        <div class="eva-bonus-item">
+          <div class="eva-bonus-val">100%</div>
+          <div class="eva-bonus-key">На депозит</div>
+        </div>
+        <div class="eva-bonus-item">
+          <div class="eva-bonus-val">200</div>
+          <div class="eva-bonus-key">Фриспинов</div>
+        </div>
+      </div>
+
+      <div class="eva-promo-wrap">
+        <div class="eva-promo-l">Промокод</div>
+        <div class="eva-promo-c">RUBLIK</div>
+        <button class="eva-promo-btn" onclick="evaCopyPromo()">📋</button>
+      </div>
+
+      <a href="https://gameshowrlight.com/drqcqyoqp" target="_blank" rel="noopener nofollow" class="eva-cta-btn">
+        ПОЛУЧИТЬ БОНУС →
+        <small>Регистрация за 30 секунд · без документов</small>
+      </a>
+
+      <div class="eva-disclaimer">⚠️ 18+ · Только для совершеннолетних · Играйте ответственно</div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">✅ Промокод RUBLIK скопирован!</div>
+
+<script>
+// ── ЗАГРУЗЧИК ──
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hide');
+  }, 600);
+});
+
+// ── EVA POPUP ──
+(function() {
+  function evaOpen() {
+    document.getElementById('eva-overlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  // Показываем через 2.8 сек (после загрузчика)
+  if(window.innerWidth > 768) setTimeout(evaOpen, 5000);
+
+  // Закрыть при клике на фон
+  document.getElementById('eva-overlay').addEventListener('click', function(e) {
+    if (e.target === this) evaClose();
+  });
+  // ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') evaClose();
+  });
+})();
+
+function evaClose() {
+  const ov = document.getElementById('eva-overlay');
+  ov.style.opacity = '0';
+  setTimeout(() => { ov.style.visibility = 'hidden'; }, 500);
+  document.body.style.overflow = '';
+}
+
+function evaCopyPromo() {
+  const code = 'RUBLIK';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(code).then(showToast);
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = code; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    showToast();
+  }
+}
+
+// ── ЧАСТИЦЫ ──
+(function() {
+  const wrap = document.getElementById('particles');
+  for (let i = 0; i < 25; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.setProperty('--x', Math.random() * 100 + '%');
+    p.style.setProperty('--dur', (6 + Math.random() * 10) + 's');
+    p.style.setProperty('--delay', (Math.random() * 8) + 's');
+    p.style.width = p.style.height = (1 + Math.random() * 3) + 'px';
+    wrap.appendChild(p);
+  }
+})();
+
+// ── ТАЙМЕР ──
+(function() {
+  let endTime;
+  const now = Date.now();
+  try {
+    const stored = localStorage.getItem('mirror_update_ts');
+    endTime = stored && parseInt(stored) > now ? parseInt(stored) : null;
+  } catch(e) {}
+
+  if (!endTime) {
+    endTime = now + (1 + Math.floor(Math.random() * 3)) * 3600000 + Math.floor(Math.random() * 60) * 60000;
+    try { localStorage.setItem('mirror_update_ts', endTime); } catch(e) {}
+  }
+
+  function tick() {
+    const diff = Math.max(0, endTime - Date.now());
+    document.getElementById('t-h').textContent = String(Math.floor(diff / 3600000)).padStart(2,'0');
+    document.getElementById('t-m').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+    document.getElementById('t-s').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// ── ОГНЕННЫЙ СЧЁТЧИК (анимация чисел) ──
+function animateCounter(el, target, duration) {
+  const start = 0;
+  const startTime = performance.now();
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(start + (target - start) * eased);
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+setTimeout(() => {
+  const cc = document.getElementById('counter-casinos');
+  const cl = document.getElementById('counter-claimed');
+  if (cc) animateCounter(cc, 46, 1200);
+  if (cl) animateCounter(cl, 342, 1500);
+}, 1600);
+
+// ── ФИЛЬТРАЦИЯ ──
+let activeFilter = 'all';
+
+function setFilter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('.ftag').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  filterCasinos();
+}
+
+function filterCasinos() {
+  const q = (document.getElementById('casino-search').value || '').toLowerCase().trim();
+  const cards = document.querySelectorAll('#casino-grid .casino-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const name = (card.dataset.name || '').toLowerCase();
+    const tags = (card.dataset.tags || '').toLowerCase();
+    const matchSearch = !q || name.includes(q);
+    const matchFilter = activeFilter === 'all' || tags.includes(activeFilter);
+    card.classList.toggle('hidden', !(matchSearch && matchFilter));
+    if (matchSearch && matchFilter) visible++;
+  });
+  const noRes = document.getElementById('no-results');
+  noRes.style.display = visible === 0 ? 'block' : 'none';
+  document.getElementById('results-count').innerHTML = `Показано <strong>${visible}</strong> казино`;
+}
+
+// ── FAQ ──
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    el.setAttribute('aria-expanded','true');
+  }
+}
+
+document.querySelectorAll('.faq-q').forEach(el => {
+  el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(el); }
+  });
+});
+
+// ── КОПИРОВАТЬ ПРОМОКОД ──
+function copyPromo() {
+  const code = 'RUBLIK';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(code).then(showToast);
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = code;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast();
+  }
+}
+
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ── КНОПКА НАВЕРХ ──
+window.addEventListener('scroll', () => {
+  document.getElementById('back-top').classList.toggle('visible', window.scrollY > 500);
+}, { passive: true });
+
+// ── SCROLL REVEAL ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(106950340, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106950340" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<style>.lazy-hidden{display:none!important}@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}</style>
+<script>function showMore(){document.querySelectorAll('.lazy-hidden').forEach(function(c,i){setTimeout(function(){c.classList.remove('lazy-hidden');c.style.animation='fu .35s ease forwards'},i*40)});document.getElementById('smw').style.display='none'}</script></body>
+</html>
