@@ -41,7 +41,7 @@ const CASINO_LINKS = {
   // ── КАЗИНО З-Л ──────────────────────────────────────────
   "FLAGMAN CASINO":   "https://flagmanway1.com/c5068b5f6",
   "FRESH CASINO":     "https://clck.ru/3433CW",
-  "FUGU CASINO":      "https://fuguway62.com/cf06cace2",
+  "FUGU CASINO":      "https://fuguway63.com/c1536be58",
   "GAMA CASINO":      "https://starforge-race.com/sfevqs2sr",
   "GIZBO CASINO":     "https://gzb-way03.com/c2b450be9",
   "IRVIN CASINO":     "https://rwn-blrs21.com/c1452dd34",
