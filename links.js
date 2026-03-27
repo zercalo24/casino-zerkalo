@@ -22,13 +22,13 @@ const CASINO_LINKS = {
   "1WIN CASINO":      "https://one-vv893.com/?p=sxqe",
   "STAKE CASINO":     "http://stake1036.com/?c=UdQh5cRu",
   "DUEL CASINO":      "https://duel.com/r/RUBLIK",
-  "КУШ CASINO":       "https://playzoneksh.com/dqyptbuu1",
+  "КУШ CASINO":       "https://pl4y-zn-ksh.com/",
 
   // ── КАЗИНО А-Ж ──────────────────────────────────────────
   "1GO CASINO":       "https://1go-blrs10.com/ca2275e6d",
   "ARKADA CASINO":    "https://prismed-cyberlane.com/svd9sjada",
   "AUF CASINO":       "https://aufas.com/d5b5799f1",
-  "BANDA CASINO":     "https://playlightzone.com/dmnhefnvq",
+  "BANDA CASINO":     "https://play-bnd-zn.com/",
   "BEEF CASINO":      "https://beefway61.com/c2197b5c3",
   "CACTUS CASINO":    "https://lavoluntadisabel.xyz/affiliate/c_4wj3z1mk?path=%2Fbonuses",
   "CASINO X":         "https://21631.gameshere.xyz/ru/registration2?partner=p21631p3326886p3e51",
