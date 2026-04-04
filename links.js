@@ -22,14 +22,14 @@ const CASINO_LINKS = {
   "1WIN CASINO":      "https://one-vv893.com/?p=sxqe",
   "STAKE CASINO":     "http://stake1036.com/?c=UdQh5cRu",
   "DUEL CASINO":      "https://duel.com/r/RUBLIK",
-  "КУШ CASINO":       "https://pl4y-zn-ksh.com/dqyptbuu1",
+  "КУШ CASINO":       "https://playzoneksh.com/dqyptbuu1",
 
   // ── КАЗИНО А-Ж ──────────────────────────────────────────
   "1GO CASINO":       "https://1go-blrs10.com/ca2275e6d",
-  "ARKADA CASINO":    "https://prismed-cyberlane.com/svd9sjada",
+  "ARKADA CASINO":    "https://arcade-nebula.com/sq4d71uil",
   "AUF CASINO":       "https://aufas.com/d5b5799f1",
   "BANDA CASINO":     "https://play-bnd-zn.com/d73571540",
-  "BEEF CASINO":      "https://beefway61.com/c2197b5c3",
+  "BEEF CASINO":      "https://beefway64.com/c3f6ec874",
   "CACTUS CASINO":    "https://lavoluntadisabel.xyz/affiliate/c_4wj3z1mk?path=%2Fbonuses",
   "CASINO X":         "https://21631.gameshere.xyz/ru/registration2?partner=p21631p3326886p3e51",
   "CAT CASINO":       "https://triumphant-hall.com/sbrl3ljkm",
@@ -63,7 +63,7 @@ const CASINO_LINKS = {
   "SOL CASINO":       "https://clck.ru/3433Fz",
   "STARDA CASINO":    "https://stardaway2.com/c2f2d2001",
   "UNLIM CASINO":     "https://unlimc.net/d2531e71a",
-  "VODKA CASINO":     "https://go683.com/?id=17119",
+  "VODKA CASINO":     "https://go052.com/?id=17119",
   "VOLNA CASINO":     "https://vln-blrs10.com/c4e395fcb",
 
 };
