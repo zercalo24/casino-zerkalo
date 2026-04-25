@@ -44,7 +44,7 @@ const CASINO_LINKS = {
   "FUGU CASINO":      "https://fuguway68.com/cf06cace2",
   "GAMA CASINO":      "https://starforge-race.com/sfevqs2sr",
   "GIZBO CASINO":     "https://gzb-way03.com/c2b450be9",
-  "IRVIN CASINO":     "https://rwn-blrs21.com/c1452dd34",
+  "IRVIN CASINO":     "https://irwinway61.com/ceab33ee3",
   "IZZI CASINO":      "https://izzi-blrs10.com/c123e81f2",
   "JET CASINO":       "https://jet-blrs10.com/c7b0bc5b9",
   "JOY CASINO":       "https://clck.ru/3QXq6p",
@@ -55,7 +55,7 @@ const CASINO_LINKS = {
   "LEXX CASINO":      "https://lexyway1.com/c8ef27fcf",
 
   // ── КАЗИНО М-Я ──────────────────────────────────────────
-  "MARTIN CASINO":    "https://clck.ru/3Mnh9o",
+  "MARTIN CASINO":    "https://martinway62.com/cf930f628",
   "MONRO CASINO":     "https://mnr-blrs21.com/c5335a257",
   "R7 CASINO":        "https://cosmos-flight.com/stcmmmdge",
   "RAMENBET":         "https://clck.ru/39JnjJ",
