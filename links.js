@@ -29,7 +29,7 @@ const CASINO_LINKS = {
   "ARKADA CASINO":    "https://arcade-nebula.com/sq4d71uil",
   "AUF CASINO":       "https://aufas.com/d5b5799f1",
   "BANDA CASINO":     "https://play-bnd-zn.com/d73571540",
-  "BEEF CASINO":      "https://beefway64.com/c3f6ec874",
+  "BEEF CASINO":      "https://beefway66.com/c2197b5c3",
   "CACTUS CASINO":    "https://lavoluntadisabel.xyz/affiliate/c_4wj3z1mk?path=%2Fbonuses",
   "CASINO X":         "https://21631.gameshere.xyz/ru/registration2?partner=p21631p3326886p3e51",
   "CAT CASINO":       "https://triumphant-hall.com/sbrl3ljkm",
@@ -41,7 +41,7 @@ const CASINO_LINKS = {
   // ── КАЗИНО З-Л ──────────────────────────────────────────
   "FLAGMAN CASINO":   "https://flagmanway1.com/c5068b5f6",
   "FRESH CASINO":     "https://clck.ru/3433CW",
-  "FUGU CASINO":      "https://fuguway63.com/c1536be58",
+  "FUGU CASINO":      "https://fuguway68.com/cf06cace2",
   "GAMA CASINO":      "https://starforge-race.com/sfevqs2sr",
   "GIZBO CASINO":     "https://gzb-way03.com/c2b450be9",
   "IRVIN CASINO":     "https://rwn-blrs21.com/c1452dd34",
