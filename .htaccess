@@ -1,4 +1,40 @@
-# ── КЭШИРОВАНИЕ ──────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════
+#  casino-zerkalo.online — .htaccess
+#  Обновлено: 2026-05-21
+# ══════════════════════════════════════════════════════════════
+
+Options -Indexes
+
+# ── РЕДИРЕКТЫ ────────────────────────────────────────────────
+# КРИТИЧНО: HTML-файлы попали в папку /images/ — дублируют страницы.
+# 301 → сигнал поисковикам, что канонический URL — в корне сайта.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Редиректы дублей из /images/
+  RewriteRule ^images/1win-zerkalo\.html$              /1win-zerkalo.html              [R=301,L]
+  RewriteRule ^images/arkada-casino-zerkalo\.html$     /arkada-casino-zerkalo.html     [R=301,L]
+  RewriteRule ^images/auf-casino-zerkalo\.html$        /auf-casino-zerkalo.html        [R=301,L]
+  RewriteRule ^images/banda-casino-zerkalo\.html$      /banda-casino-zerkalo.html      [R=301,L]
+  RewriteRule ^images/beef-casino-zerkalo\.html$       /beef-casino-zerkalo.html       [R=301,L]
+  RewriteRule ^images/cactus-casino-zerkalo\.html$     /cactus-casino-zerkalo.html     [R=301,L]
+  RewriteRule ^images/casino-x-zerkalo\.html$          /casino-x-zerkalo.html          [R=301,L]
+  RewriteRule ^images/cat-casino-zerkalo\.html$        /cat-casino-zerkalo.html        [R=301,L]
+  RewriteRule ^images/champion-slots-zerkalo\.html$    /champion-slots-zerkalo.html    [R=301,L]
+  RewriteRule ^images/cryptoboss-zerkalo\.html$        /cryptoboss-zerkalo.html        [R=301,L]
+
+  # Редиректы дублей в корне → правильные папки
+  # bonusy-kazino-2026.html живёт в /bonusy/ — корневая копия → 301
+  RewriteRule ^bonusy-kazino-2026\.html$               /bonusy/bonusy-kazino-2026.html [R=301,L]
+  # zerkala-kazino-2026.html живёт в /blog/ — корневая копия → 301
+  RewriteRule ^zerkala-kazino-2026\.html$              /blog/zerkala-kazino-2026.html  [R=301,L]
+  # kazino-bez-verifikacii-2026.html canonical указывает на /blog/ — редирект
+  RewriteRule ^kazino-bez-verifikacii-2026\.html$      /blog/kazino-bez-verifikacii-2026.html [R=301,L]
+  # kazino-bystryj-vyvod-2026.html canonical указывает на /blog/ — редирект
+  RewriteRule ^kazino-bystryj-vyvod-2026\.html$        /blog/kazino-bystryj-vyvod-2026.html   [R=301,L]
+</IfModule>
+
+# ── КЭШИРОВАНИЕ ──────────────────────────────────────────────
 <IfModule mod_expires.c>
   ExpiresActive On
 
@@ -24,7 +60,7 @@
   ExpiresByType text/html          "access plus 0 seconds"
 </IfModule>
 
-# ── ЗАГОЛОВКИ CACHE-CONTROL ───────────────────────────────
+# ── ЗАГОЛОВКИ CACHE-CONTROL ───────────────────────────────────
 <IfModule mod_headers.c>
   <FilesMatch "\.(png|webp|jpg|jpeg|gif|svg|ico|woff2|woff)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
@@ -32,9 +68,16 @@
   <FilesMatch "\.(css|js)$">
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
+  # Security headers
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
-# ── GZIP СЖАТИЕ ──────────────────────────────────────────
+# ── GZIP СЖАТИЕ ──────────────────────────────────────────────
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json application/xml
 </IfModule>
+
+# ── КАСТОМНЫЕ СТРАНИЦЫ ОШИБОК ────────────────────────────────
+ErrorDocument 404 /index.html
