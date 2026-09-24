@@ -13,7 +13,7 @@ const stars=r=>`<span class="stars" style="--w:${r*10}%">★★★★★</span>`
 const card=(c,cls)=>`<article class="card reveal ${cls}"><button class="heart ${favs.includes(c.id)?"on":""}" data-id="${c.id}" aria-label="В избранное">♥</button>
 ${c.tag?`<span class="badge">${c.tag}</span>`:""}<span class="badge l">${c.license}</span><h3>${c.name}</h3>${stars(c.rating)} <b>${c.rating}</b>
 <p class="bonus">${c.bonus}</p><small>Мин. депозит $${c.minDep} · вывод ~${c.payout} ч</small><div class="bar"><i data-w="${c.rating*10}"></i></div>
-<a class="btn" href="#">Обзор</a> <a class="btn p" href="#">Играть</a></article>`;
+<a class="btn" href="./casino.html?id=${c.id}">Обзор</a> <a class="btn p" href="#">Играть</a></article>`;
 function bento(){$("#bento").innerHTML=D.slice(0,4).map((c,i)=>card(c,i==0?"big":i<3?"wide":"")).join("")+D.slice(4,8).map(c=>card(c,"")).join("")+`<div class="card cta wide"><h3>Бонусы на почту</h3><p>Лучшие предложения раз в неделю.</p><p id="sub"><input placeholder="email" style="padding:8px;border-radius:9px;border:0;margin:8px 0"> <button class="btn" id="subb">Подписаться</button></p></div>`;
  $("#subb").onclick=()=>$("#sub").textContent="Спасибо! Вы подписаны (демо).";
  document.querySelectorAll(".heart").forEach(b=>b.onclick=e=>{e.stopPropagation();const id=b.dataset.id;favs=favs.includes(id)?favs.filter(x=>x!=id):[...favs,id];localStorage.favs=JSON.stringify(favs);b.classList.toggle("on")})}
